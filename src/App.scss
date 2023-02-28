@@ -1,0 +1,216 @@
+$primary_color: #d;
+$secondary_color: #D3FFF4;
+$text_color: #636363;
+$button_color: #f391ac;
+$button_text_color: #491c1c;
+//$text_color: #491c1c;
+
+html {
+  font-size: 16px;
+}
+
+body {
+  color: $text_color;
+}
+
+.button {
+  background-color: $button_color;
+  border: 1px solid $button_text_color;
+  color: $button_text_color;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+}
+
+ul {
+  padding-left: 20px;
+  li {
+    margin-bottom: 20px;
+  }
+}
+
+.form-input {
+  margin-top: 10px;
+  display: flex;
+  label {
+    margin-top: 14px;
+    width: 30%;
+  }
+
+  input {
+    width: 50%;
+    height: 24px;
+  }
+}
+
+.form-text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  label {
+    display: block;
+    width: 100%;
+  }
+
+  textarea {
+    width: 80%;
+    height: 200px;
+    padding: 10px;
+  }
+}
+
+header {
+  position: relative;
+  height: 80px;
+
+  background-color: $primary_color;
+  color: $text_color;
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    height: 20px;
+    margin-top: -20px;
+    margin-left: 100px;
+  }
+}
+
+.hero {
+  background-image: url("./assets/img/pink-cloud.jpeg");
+  background-position-y: -160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+  height: 550px;
+
+  div {
+    color: white;
+    position: absolute;
+    top: 50%;
+    height: 458px;
+    margin-top: -115px;
+    margin-left: 140px;
+
+    font-size: 24px;
+
+    span {
+      line-height: 1.3;
+    }
+
+    .span-large {
+      font-size: 32px;
+    }
+  }
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  padding: 10px 50px;
+
+  .service {
+    width: 25%;
+    background-color: $primary_color;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 25px;
+    text-align: center;
+
+    div {
+      height: 80%;
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+
+      p {
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 25px;
+      }
+    }
+
+    .button {
+      vertical-align: bottom;
+    }
+  }
+}
+
+.cta {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  height: 700px;
+  background-image: url("./assets/img/cta1.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .action {
+    position: absolute;
+    top: 50%;
+    height: 300px;
+    margin-top: -200px;
+    margin-left: 150px
+  }
+}
+
+.aboutus {
+  font-size: 18px;
+  > div {
+
+    display: flex;
+
+    div {
+      width: 50%;
+      padding: 100px;
+    }
+
+    img {
+      width: 50%;
+    }
+  }
+}
+
+.contact {
+  widht: 100%;
+  display: flex;
+
+  > div {
+    padding: 100px;
+    width: 50%;
+
+    .contact-header {
+      display: flex;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-top: 14px;
+      margin-left: 20px;
+    }
+  }
+
+  .contact-form h2 {
+    margin-top: 30px;
+  }
+}
+
+footer {
+  background-color: $primary_color;
+  height: 60px;
+  text-align: center;
+
+  span {
+    display: inline-block;
+    margin-top: 20px;
+  }
+}
