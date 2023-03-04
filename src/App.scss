@@ -204,6 +204,27 @@ header {
   }
 }
 
+.prices {
+  .price-table {
+    width: 30%;
+    margin: 0 auto;
+
+    .price-row {
+      display: flex;
+      margin-bottom: 5px;
+      border-bottom: 1px solid grey;
+      .item-name {
+        width: 80%;
+      }
+
+      .item-price {
+        width: 20%;
+        font-family: Roboto mono;
+      }
+    }
+  }
+}
+
 footer {
   background-color: $primary_color;
   height: 60px;

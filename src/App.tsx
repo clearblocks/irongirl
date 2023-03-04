@@ -8,6 +8,7 @@ import {SocialProof} from "./components/organisms/SocialProof";
 import {CallToAction} from "./components/organisms/CallToAction";
 import {Contact} from "./components/organisms/Contact";
 import {AboutUs} from "./components/organisms/AboutUs";
+import {Prices} from "./components/organisms/Prices";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <CallToAction />
       <AboutUs />
       <Contact />
+      <Prices />
       <Footer />
     </div>
   );
