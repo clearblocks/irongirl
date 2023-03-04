@@ -14,11 +14,12 @@ export const ContactForm = () => {
 
   const onSubmit = () => {
     console.log(`submit: ${[name, email, phone, message]}`)
-    axios.post('https://irongirl.nl/mail.php', {name, email, phone, message}).then((response) => {
-      console.log("mail success", response)
-    }).catch((error) => {
-      console.error("error", error)
-    })
+    axios.post('mail.php', {name, email, phone, message}, {headers: {'Content-Type': 'application/x-www-form-urlencoded'}})
+      .then((response) => {
+        console.log("mail success", response)
+      }).catch((error) => {
+        console.error("error", error)
+      })
   }
 
   return (
