@@ -2,6 +2,7 @@ import React from 'react';
 import WhatsAppIconSrc from "../../assets/img/whatsapp-icon.png";
 import IronIconSrc from "../../assets/img/iron-icon.png";
 import PriceIconSrc from "../../assets/img/price-icon.png";
+import MailIconSrc from "../../assets/img/mail-icon.png";
 
 export enum IconType {
   Iron,
@@ -38,9 +39,9 @@ let iconData = (iconType: IconType): IconData => {
       }
     case IconType.Email:
       return {
-        src: WhatsAppIconSrc,
-        alt: 'whastapp icoon',
-        className: 'whatsapp-icon'
+        src: MailIconSrc,
+        alt: 'mail icoon',
+        className: 'mail-icon'
       }
   }
 }
@@ -57,3 +58,4 @@ export const Icon = ({type}: IconProps) => {
 export const WhatsAppIcon = () => <Icon type={IconType.WhatsApp} />
 export const PriceIcon = () => <Icon type={IconType.Price} />
 export const IronIcon = () => <Icon type={IconType.Iron} />
+export const EmailIcon = () => <Icon type={IconType.Email} />

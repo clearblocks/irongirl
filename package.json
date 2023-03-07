@@ -23,7 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy:test": "yarn build && ./test-deploy.sh"
+    "deploy:test": "yarn build && ./test-deploy.sh",
+    "deploy:prod": "yarn build && ./prod-deploy.sh"
   },
   "eslintConfig": {
     "extends": [

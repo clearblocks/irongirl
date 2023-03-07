@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {FormInput} from "../atoms/FormInput";
-import {WhatsAppIcon} from "../atoms/Icon";
+import {EmailIcon} from "../atoms/Icon";
 import {FormText} from "../atoms/FormText";
 import {Button} from "../atoms/Button";
 import axios from 'axios';
@@ -24,7 +24,7 @@ export const ContactForm = () => {
 
   return (
     <div className={"contact-form"}>
-      <div className={"contact-header"}><WhatsAppIcon/><h2>Stuur een bericht</h2></div>
+      <div className={"contact-header"}><EmailIcon /><h2>Stuur een bericht</h2></div>
       <FormInput name={'name'} label={'Naam'} value={name} onChange={(value) => {setName(value)}}/>
       <FormInput name={'email'} label={'E-mailadres'} value={email} onChange={(value) => {setEmail(value)}}/>
       <FormInput name={'phone'} label={'Telefoon'} value={phone} onChange={(value) => {setPhone(value)}}/>

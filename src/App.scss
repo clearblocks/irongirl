@@ -24,9 +24,15 @@ body {
 }
 
 .icon {
-  width: 100px;
   height: 100px;
 }
+
+.mail-icon {
+  margin-top: 12px;
+  height: 75px;
+  width: 150px;
+}
+
 
 ul {
   padding-left: 20px;
@@ -125,11 +131,6 @@ header {
 
     div {
       height: 80%;
-
-      img {
-        width: 100px;
-        height: 100px;
-      }
 
       p {
         width: 60%;
