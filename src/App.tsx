@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {createRef, RefObject} from 'react';
 import './App.scss';
 import {Header} from "./components/organisms/Header";
 import {Footer} from "./components/organisms/Footer";
@@ -11,16 +11,26 @@ import {AboutUs} from "./components/organisms/AboutUs";
 import {Prices} from "./components/organisms/Prices";
 
 function App() {
+  const refs = {
+    aboutUsRef: createRef<HTMLDivElement>(),
+    pricesRef: createRef<HTMLDivElement>(),
+    contactRef: createRef<HTMLDivElement>()
+  }
+
+  const serviceOnClick = (ref: RefObject<HTMLElement>) => {
+    ref?.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <div className="App">
       <Header />
       <Hero />
-      <Services />
+      <Services refs={refs} serviceOnClick={serviceOnClick}/>
       <SocialProof />
       <CallToAction />
-      <AboutUs />
-      <Contact />
-      <Prices />
+      <AboutUs ref={refs.aboutUsRef} />
+      <Contact ref={refs.contactRef}/>
+      <Prices ref={refs.pricesRef}/>
       <Footer />
     </div>
   );

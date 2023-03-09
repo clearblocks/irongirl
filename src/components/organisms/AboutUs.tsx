@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {ForwardedRef, forwardRef} from 'react';
 import womanIroning from '../../assets/img/ironlady.jpeg'
 import shirts from '../../assets/img/shirts.jpeg'
 
-export const AboutUs = () => (
-  <div className={"aboutus"} id={"aboutus"}>
+export const AboutUs = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => (
+  <div className={"aboutus"} id={"aboutus"} ref={ref}>
     <div>
       <div>
         <h2>Iron Girl Strijkservice</h2>
@@ -28,4 +28,4 @@ export const AboutUs = () => (
       </div>
     </div>
   </div>
-);
+));

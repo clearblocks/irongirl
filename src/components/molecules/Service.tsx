@@ -7,10 +7,10 @@ export type ServiceProps = {
   title: string,
   text: string,
   buttonLabel: string,
-  key: number
+  onClick: () => void
 }
 
-export const Service = ({iconType, title, text, buttonLabel}: ServiceProps) => (
+export const Service = ({iconType, title, text, buttonLabel, onClick}: ServiceProps) => (
   <div className={"service"}>
     <div>
       <Icon type={iconType} />
@@ -18,6 +18,6 @@ export const Service = ({iconType, title, text, buttonLabel}: ServiceProps) => (
       <p>{text}</p>
     </div>
 
-    <Button label={buttonLabel} />
+    <Button label={buttonLabel} onClick={onClick}/>
   </div>
 );
