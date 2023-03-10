@@ -1,5 +1,5 @@
 import React from 'react';
-import WhatsAppIconSrc from "../../assets/img/whatsapp-icon.png";
+import WhatsAppIconSrc from "../../assets/img/whatsapp-icon-transparant.png";
 import IronIconSrc from "../../assets/img/iron-icon.png";
 import PriceIconSrc from "../../assets/img/price-icon.png";
 import MailIconSrc from "../../assets/img/mail-icon.png";

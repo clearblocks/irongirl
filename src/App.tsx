@@ -9,6 +9,8 @@ import {CallToAction} from "./components/organisms/CallToAction";
 import {Contact} from "./components/organisms/Contact";
 import {AboutUs} from "./components/organisms/AboutUs";
 import {Prices} from "./components/organisms/Prices";
+import {CallToAction2} from "./components/organisms/CallToAction2";
+import IronTowelsBasket from "./assets/img/iron-towels-basket.jpeg";
 
 function App() {
   const refs = {
@@ -31,6 +33,8 @@ function App() {
       <AboutUs ref={refs.aboutUsRef} />
       <Contact ref={refs.contactRef}/>
       <Prices ref={refs.pricesRef}/>
+      <CallToAction2 />
+      <img src={IronTowelsBasket} alt={"strijkijzer met handdoeken en mand"} className={"footer-image"}/>
       <Footer />
     </div>
   );
