@@ -1,16 +1,16 @@
 import React, {ForwardedRef, forwardRef} from 'react';
-import womanIroning from '../../assets/img/ironlady.jpeg'
+import womanIroning from '../../assets/img/woman-steam-shirt.jpg'
 import shirts from '../../assets/img/shirts.jpeg'
-import ironingBoard from '../../assets/img/ironing-board-pink.jpeg'
-import ironOnTable from '../../assets/img/iron-on-table.jpeg'
+import ironingBoard from '../../assets/img/ironing-board-pink.jpg'
+import ironOnTable from '../../assets/img/iron-on-table.jpg'
 
 export const AboutUs = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => (
   <div className={"aboutus"} id={"aboutus"} ref={ref}>
     <div className={"aboutus-info"}>
       <h2>Iron Girl Strijkservice</h2>
       <p>
-        Heb je het te druk? Is het strijken je te zwaar of heb je simpelweg te veel strijkgoed? Ik neem het werk graag van je over.
-        Ik verzorg al jouw strijkgoed. Van kleding tot bedden- en linnengoed. Zo maak voor jou het leven makkelijker, en hou jij meer tijd over voor leuke dingen.
+        Heb je het te druk? Is het strijken je te zwaar of heb je simpelweg te veel strijkgoed? Ik neem het werk graag van je over.<br />
+        Ik verzorg al jouw strijkgoed. Van kleding tot bedden- en linnengoed. Zo maak voor jou het leven makkelijker, en hou<br /> jij meer tijd over voor leuke dingen.
         Je kunt altijd contact opnemen om je strijkgoed langs te brengen bij mij in Vleuten.
       </p>
     </div>

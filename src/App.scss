@@ -1,26 +1,30 @@
-$primary_color: #d;
-$secondary_color: #D3FFF4;
-$text_color: #636363;
-$button_color: #f391ac;
+$header_color: #e8dce5;
+$text_color: #000000;
+$button_color: #ff5492;
+$button_border_color: #ff5492;
 $button_text_color: #491c1c;
+$font_inria: 'Inria Serif';
+$font_istok: 'Istok Web';
+$font_inter: 'Inter';
+$font_arial: 'Arial';
 //$text_color: #491c1c;
-
-html {
-  font-size: 16px;
-}
 
 body {
   color: $text_color;
+  font-size: 18px;
+  font-family: $font_istok;
 }
 
 .button {
+  font-family: $font_istok;
   background-color: $button_color;
-  border: 1px solid $button_text_color;
+  border: 1px solid $button_border_color;
   color: $button_text_color;
-  padding: 10px;
+  padding: 12px;
   border-radius: 25px;
   cursor: pointer;
   font-size: 20px;
+  width: 160px;
 }
 
 .icon {
@@ -33,7 +37,6 @@ body {
   width: 150px;
 }
 
-
 ul {
   padding-left: 20px;
   li {
@@ -45,18 +48,20 @@ ul {
   margin-top: 10px;
   display: flex;
   label {
+    font-family: $font_inter;
     margin-top: 14px;
-    width: 30%;
+    width: 20%;
   }
 
   input {
+    font-family: $font_arial;
     width: 60%;
     height: 24px;
   }
 }
 
 .form-text {
-  margin-top: 10px;
+  margin-top: 22px;
   margin-bottom: 10px;
 
   label {
@@ -65,54 +70,60 @@ ul {
   }
 
   textarea {
-    width: 88%;
-    height: 200px;
+    font-family: $font_arial;
+    width: 79%;
+    height: 300px;
     padding: 10px;
   }
 }
 
+h2, h3 {
+  font-family: $font_istok;
+}
+
 header {
+  font-family: $font_inria;
   position: relative;
   height: 80px;
 
-  background-color: $primary_color;
+  background-color: $header_color;
   color: $text_color;
 
   h1 {
+    font-weight: normal;
     position: absolute;
     top: 50%;
     height: 20px;
     margin-top: -20px;
-    margin-left: 100px;
+    right: 200px;
   }
 }
 
 .hero {
+  font-family: $font_inria;
   background-image: url("./assets/img/pink-cloud.jpeg");
   background-position-y: -140px;
   background-repeat: no-repeat;
   background-size: cover;
 
   position: relative;
-  height: 690px;
+  height: 790px;
 
   div {
     color: white;
     position: absolute;
-    width: 350px;
-    top: 50%;
+    width: 500px;
+    top: 150px;
+    left: 150px;
     height: 458px;
-    margin-top: -115px;
-    margin-left: 140px;
-
-    font-size: 24px;
+    font-size: 34px;
 
     span {
       line-height: 1.3;
     }
 
     .span-large {
-      font-size: 32px;
+      font-size: 46px;
     }
   }
 }
@@ -125,7 +136,6 @@ header {
 
   .service {
     width: 25%;
-    background-color: $primary_color;
     margin: 10px;
     padding: 10px;
     border-radius: 25px;
@@ -151,38 +161,72 @@ header {
   position: relative;
   margin: 0 auto;
   width: 80%;
-  height: 700px;
-  background-image: url("./assets/img/iron-steam-dark.jpeg");
-  background-position: center;
+  height: 828px;
+  background-image: url("./assets/img/iron-steam-dark.jpg");
+  background-position-y: -87px;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
 
   .action {
+    text-align: center;
+    font-size: 25px;
     position: absolute;
-    top: 50%;
-    height: 300px;
-    margin-top: -300px;
-    margin-left: 150px
+    top: 65px;
+    left: 150px;
+    height: 200px;
+
+    h2 {
+      font-family: $font_inria;
+      font-weight: normal;
+    }
+
+    .button {
+      font-family: $font_inter;
+    }
   }
 }
 
 .cta2 {
+  font-family: $font_inria;
+  line-height: 0;
   position: relative;
+  margin: 0 auto;
   margin-top: 50px;
-  width: 100%;
+  width: 60%;
 
   img {
     width: 100%;
   }
 
   .action {
-    display: flex;
+    line-height: normal;
+    text-align: right;
     color: $text_color;
     position: absolute;
-    top: 50px;
-    right: 100px;
+    top: 0px;
+    right: 50px;
     height: 300px;
+    width: 500px;
+
+    .button {
+      font-family: $font_inter;
+    }
+
+    > div {
+      text-align: left;
+      * {
+        display: inline-block;
+      }
+
+      h2 {
+        font-family: $font_inria;
+        font-weight: normal;
+        font-size: 32px;
+        width: 400px;
+      }
+
+    }
 
     .icon {
       width: 75px;
@@ -198,7 +242,10 @@ header {
 .aboutus {
   width: 80%;
   margin: 0 auto;
-  font-size: 18px;
+
+  p {
+    font-family: $font_inter;
+  }
 
   .aboutus-info {
     text-align: center;
@@ -215,6 +262,7 @@ header {
         height: 200px;
       }
       ul {
+        font-family: $font_inter;
         margin-left: 50px;
         margin-top: 0;
       }
@@ -222,9 +270,9 @@ header {
   }
 
   .aboutus-images {
-
+    text-align: center;
     img {
-      width: 100%;
+      width: 70%;
     }
     div {
       display: flex;
@@ -241,6 +289,7 @@ header {
   margin: 0 auto;
   margin-top: 50px;
   display: flex;
+
   > img {
     margin-top: 80px;
     height: 500px;
@@ -249,50 +298,76 @@ header {
   .contact-form {
     margin-left: 150px;
     width: 80%;
-    h2 {
-      margin-top: 30px;
+
+    .contact-header {
+      display: flex;
+
+      img {
+        margin-left: -50px;
+        display: block;
+      }
+      h2 {
+        font-family: $font_inter;
+        margin-left: 80px;
+      }
     }
   }
 }
 
 .prices {
-  text-align: center;
+  margin: 0 auto;
+  margin-top: 150px;
+  width: 30%;
+  text-align: left;
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
   .price-table {
-    margin: 0 auto;
-    width: 30%;
+    margin-bottom: 75px;
+
     .price-row {
+      font-family: $font_inter;
       display: flex;
       margin-bottom: 5px;
       border-bottom: 1px solid grey;
-
+      padding: 5px 0;
       &:first-child {
         border-top: 1px solid grey;
       }
 
       .item-name {
+        text-align: left;
         width: 80%;
       }
 
       .item-price {
+        text-align: right;
+        padding-right: 15px;
         width: 20%;
-        font-family: Roboto mono;
       }
     }
   }
 }
 
-.footer-image {
-  width: 100%;
-}
-
 footer {
-  background-color: $primary_color;
-  height: 60px;
+  font-family: $font_inria;
   text-align: center;
 
-  span {
-    display: inline-block;
-    margin-top: 20px;
+  img {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .footer-container {
+    background-color: $header_color;
+    padding: 20px 0;
   }
 }
 
