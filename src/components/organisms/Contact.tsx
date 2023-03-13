@@ -4,7 +4,8 @@ import steamerShirt from '../../assets/img/steamer-pink-shirt-cropped.jpg'
 
 export const Contact = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => (
   <div className={"contact"} ref={ref}>
-    <img src={steamerShirt} alt={"stoom shirt"} />
+    <img src={steamerShirt} alt={"stoom shirt"} className={"img-desktop"} />
     <ContactForm />
+    <img src={steamerShirt} alt={"stoom shirt"} className={"img-mobile"} />
   </div>
 ));

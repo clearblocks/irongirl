@@ -14,10 +14,11 @@ export const AboutUs = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => 
         Je kunt altijd contact opnemen om je strijkgoed langs te brengen bij mij in Vleuten.
       </p>
     </div>
+    <img src={ironingBoard} alt={"strijkplank"} className={"img-mobile"}/>
     <div className={"aboutus-workway"}>
       <h2>Mijn werkwijze</h2>
       <div>
-        <img src={ironingBoard} alt={"strijkplank"}/>
+        <img src={ironingBoard} alt={"strijkplank"} className={"img-desktop"}/>
         <ul>
           <li>Maak een afspraak: laat weten hoeveel strijkgoed je hebt</li>
           <li>Lever je strijkgoed af bij mijn locatie</li>
