@@ -209,7 +209,7 @@ header {
   .price-table {
     width: 30%;
     margin: 0 auto;
-
+    margin-bottom: 25px;
     .price-row {
       display: flex;
       margin-bottom: 5px;
@@ -234,5 +234,25 @@ footer {
   span {
     display: inline-block;
     margin-top: 20px;
+  }
+}
+
+.under-construction {
+  background-color: azure;
+  padding: 25px;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  .span {
+    display: inline-block;
+    margin-left: 25px;
+  }
+
+  .icon {
+    width: 5opx;
+    height: 50px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 25px;
   }
 }
