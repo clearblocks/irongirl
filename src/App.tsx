@@ -9,6 +9,7 @@ import {CallToAction} from "./components/organisms/CallToAction";
 import {Contact} from "./components/organisms/Contact";
 import {AboutUs} from "./components/organisms/AboutUs";
 import {Prices} from "./components/organisms/Prices";
+import {UnderConstruction} from "./components/organisms/UnderConstruction";
 
 function App() {
   const refs = {
@@ -24,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <UnderConstruction />
       <Hero />
       <Services refs={refs} serviceOnClick={serviceOnClick}/>
       <SocialProof />
@@ -31,6 +33,7 @@ function App() {
       <AboutUs ref={refs.aboutUsRef} />
       <Contact ref={refs.contactRef}/>
       <Prices ref={refs.pricesRef}/>
+      <UnderConstruction />
       <Footer />
     </div>
   );
