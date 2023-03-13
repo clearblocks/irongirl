@@ -317,6 +317,7 @@ header {
 .prices {
   margin: 0 auto;
   margin-top: 150px;
+  margin-bottom: 25px;
   width: 30%;
   text-align: left;
 
@@ -368,5 +369,25 @@ footer {
   .footer-container {
     background-color: $header_color;
     padding: 20px 0;
+  }
+}
+
+.under-construction {
+  background-color: azure;
+  padding: 25px;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  .span {
+    display: inline-block;
+    margin-left: 25px;
+  }
+
+  .icon {
+    width: 5opx;
+    height: 50px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 25px;
   }
 }
