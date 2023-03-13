@@ -10,7 +10,6 @@ import {Contact} from "./components/organisms/Contact";
 import {AboutUs} from "./components/organisms/AboutUs";
 import {Prices} from "./components/organisms/Prices";
 import {CallToAction2} from "./components/organisms/CallToAction2";
-import IronTowelsBasket from "./assets/img/iron-towels-basket.jpg";
 
 function App() {
   const refs = {

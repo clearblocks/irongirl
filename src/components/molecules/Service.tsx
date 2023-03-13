@@ -11,13 +11,22 @@ export type ServiceProps = {
 }
 
 export const Service = ({iconType, title, text, buttonLabel, onClick}: ServiceProps) => (
-  <div className={"service"}>
-    <div>
-      <Icon type={iconType} />
+  <div>
+    <div className={"service service-desktop"}>
+      <div>
+        <Icon type={iconType} />
+        <h2>{title}</h2>
+        <p>{text}</p>
+      </div>
+      <Button label={buttonLabel} onClick={onClick}/>
+    </div>
+    <div className={"service service-mobile"}>
+      <div>
+        <Icon type={iconType} />
+        <Button label={buttonLabel} onClick={onClick}/>
+      </div>
       <h2>{title}</h2>
       <p>{text}</p>
     </div>
-
-    <Button label={buttonLabel} onClick={onClick}/>
   </div>
 );

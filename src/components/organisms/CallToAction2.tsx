@@ -7,7 +7,7 @@ export const CallToAction2 = () => (
     <img src={SteamerTowels} alt={"stomer met handdoeken"} />
     <div className={"action"}>
       <div>
-        <h2>Maak een afspraak<br /> via telefoon of WhatsApp</h2>
+        <h2>Maak een afspraak via<br /> telefoon of WhatsApp</h2>
         <WhatsAppIcon />
       </div>
       <Button label={"06-33401173"} onClick={() => {}} />
