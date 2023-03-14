@@ -22,8 +22,9 @@ export const Service = ({iconType, title, text, buttonLabel, onClick}: ServicePr
     </div>
     <div className={"service service-mobile"}>
       <div>
-        <Icon type={iconType} />
+        <div><Icon type={iconType} /></div>
         <Button label={buttonLabel} onClick={onClick}/>
+        <div>&nbsp;</div>
       </div>
       <h2>{title}</h2>
       <p>{text}</p>
