@@ -37,7 +37,7 @@ function createServices({aboutUsRef, pricesRef, contactRef}: ServiceRefs) {
 
 export const Services = ({refs, serviceOnClick}: ServicesProps) => (
   <div className={"services"}>
-    {createServices(refs).map(service => <Service iconType={service.iconType} title={service.title} text={service.text}
-                                      buttonLabel={service.buttonLabel} onClick={() => serviceOnClick(service.ref)} />)}
+    {createServices(refs).map((service, key) => <Service iconType={service.iconType} title={service.title} text={service.text}
+                                      buttonLabel={service.buttonLabel} onClick={() => serviceOnClick(service.ref)} key={key}/>)}
   </div>
 );
