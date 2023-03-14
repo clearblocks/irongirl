@@ -10,6 +10,7 @@ $font_arial: 'Arial';
 $desktop: 960px;
 $screen_medium: 440px;
 $screen_large: 1400px;
+$red: #ff3838;
 //$text_color: #491c1c;
 
 body {
@@ -20,6 +21,7 @@ body {
 
 .button {
   font-family: $font_istok;
+  text-decoration: none;
   background-color: $button_color;
   border: 1px solid $button_border_color;
   color: white;
@@ -34,6 +36,12 @@ body {
     padding: 12px;
     font-size: 20px;
     width: 160px;
+  }
+
+  &.phone {
+    @media screen and (min-width: $desktop) {
+      cursor: default;
+    }
   }
 }
 
@@ -95,12 +103,19 @@ img {
     font-family: $font_arial;
     height: 24px;
     width: 60%;
+
+    &.error {
+      border-color: $red;
+
+      &:focus {
+        border-color: $red;
+      }
+    }
   }
 }
 
 .form-text {
   margin-top: 22px;
-  margin-bottom: 10px;
 
   label {
     display: block;
@@ -109,20 +124,42 @@ img {
 
   textarea {
     font-family: $font_arial;
-
+    padding: 10px;
     width: 93%;
     height: 200px;
+
     @media screen and (min-width: $desktop) {
       height: 300px;
       width: 100%;
     }
 
-    padding: 10px;
+    &.error {
+      border-color: $red;
+
+      &:focus {
+        border-color: $red;
+      }
+    }
   }
 }
 
 h2, h3 {
   font-family: $font_istok;
+}
+
+.message {
+  margin: 10px 0;
+  padding: 5px;
+
+  &.notice {
+    border: 1px solid #3d9a2b;
+    background-color: #d4ecd0;
+  }
+
+  &.error {
+    border: 1px solid $red;
+    background-color: #fae0e0;
+  }
 }
 
 header {
@@ -553,6 +590,12 @@ header {
           font-size: 27px;
         }
       }
+    }
+
+    .required-desc {
+      font-size: 13px;
+      color: grey;
+      margin-bottom: 10px;
     }
   }
 }

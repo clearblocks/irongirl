@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button} from "../atoms/Button";
+import {PhoneButton} from "../atoms/Button";
 import {WhatsAppIcon} from "../atoms/Icon";
 import SteamerTowels from "../../assets/img/steamer-towels.jpg"
 export const CallToAction2 = () => (
@@ -8,9 +8,9 @@ export const CallToAction2 = () => (
     <div className={"action"}>
       <div>
         <h2>Maak een afspraak via<br /> telefoon of WhatsApp</h2>
-        <WhatsAppIcon />
+        <a href={"whatsapp://send?phone=+31633401173"}><WhatsAppIcon /></a>
       </div>
-      <Button label={"06-33401173"} onClick={() => {}} />
+      <PhoneButton />
     </div>
   </div>
 );
