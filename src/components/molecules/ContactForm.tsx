@@ -24,7 +24,7 @@ export const ContactForm = () => {
 
   return (
     <div className={"contact-form"}>
-      <div className={"contact-header"}><EmailIcon /><h2>Stuur een bericht</h2></div>
+      <div className={"contact-header"}><div><EmailIcon /></div><h2>Stuur een bericht</h2></div>
       <FormInput name={'name'} label={'Naam'} value={name} onChange={(value) => {setName(value)}}/>
       <FormInput name={'email'} label={'E-mailadres'} value={email} onChange={(value) => {setEmail(value)}}/>
       <FormInput name={'phone'} label={'Telefoon'} value={phone} onChange={(value) => {setPhone(value)}}/>
