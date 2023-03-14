@@ -7,7 +7,9 @@ $font_inria: 'Inria Serif';
 $font_istok: 'Istok Web';
 $font_inter: 'Inter';
 $font_arial: 'Arial';
-$desktop: 480px;
+$desktop: 960px;
+$screen_medium: 440px;
+$screen_large: 1400px;
 //$text_color: #491c1c;
 
 body {
@@ -47,7 +49,7 @@ body {
   height: 50px;
   width: 100px;
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $screen_large) {
     height: 75px;
     width: 150px;
   }
@@ -85,7 +87,7 @@ img {
 
     width: 40%;
     @media screen and (min-width: $desktop) {
-      width: 20%;
+      width: 40%;
     }
   }
 
@@ -110,7 +112,7 @@ img {
 
     width: 93%;
     @media screen and (min-width: $desktop) {
-      width: 79%;
+      width: 100%;
     }
     height: 300px;
     padding: 10px;
@@ -140,6 +142,10 @@ header {
     margin: 0;
 
     font-size: 16px;
+    @media screen and (min-width: $screen_medium) {
+      font-size: 24px;
+    }
+
     @media screen and (min-width: $desktop) {
       font-size: 36px;
       position: absolute;
@@ -177,6 +183,10 @@ header {
 
     padding-top: 25px;
     padding-left: 20px;
+
+    @media screen and (min-width: $screen_medium) {
+      font-size: 18px;
+    }
 
     @media screen and (min-width: $desktop) {
       position: absolute;
@@ -281,8 +291,11 @@ header {
   height: 300px;
   color: white;
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $screen_medium) {
     background-size: cover;
+  }
+
+  @media screen and (min-width: $desktop) {
     background-position-y: -87px;
     position: relative;
     margin: 0 auto;
@@ -384,6 +397,10 @@ header {
         font-size: 16px;
         margin-top: 0;
         margin-right: 10px;
+
+        @media screen and (min-width: $screen_medium) {
+          font-size: 24px;
+        }
 
         @media screen and (min-width: $desktop) {
           font-size: 32px;
@@ -491,8 +508,13 @@ header {
     width: 100%;
 
     @media screen and (min-width: $desktop) {
-      margin-left: 150px;
+      margin-left: 50px;
       width: 80%;
+    }
+
+    @media screen and (min-width: $screen_large) {
+      width: 600px;
+      margin-left: 200px;
     }
 
     .button {
@@ -505,21 +527,24 @@ header {
     .contact-header {
       display: flex;
 
-      img {
-        display: block;
-        margin: 0;
-        @media screen and (min-width: $desktop) {
-          margin-left: -50px;
+      div {
+        width: 40%;
+
+        img {
+          display: block;
+          margin: 0;
+          @media screen and (min-width: $desktop) {
+            margin-left: -50px;
+          }
         }
       }
 
       h2 {
         font-family: $font_inter;
-        margin-left: 30px;
+        width: 60%;
         font-size: 20px;
         @media screen and (min-width: $desktop) {
           font-size: 27px;
-          margin-left: 53px;
         }
       }
     }
