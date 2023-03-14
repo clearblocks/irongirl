@@ -8,9 +8,10 @@ export const AboutUs = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => 
   <div className={"aboutus"} id={"aboutus"} ref={ref}>
     <div className={"aboutus-info"}>
       <h2>Iron Girl Strijkservice</h2>
+      <p>Heb je het te druk en geen tijd om te strijken?</p><p>Ik neem het graag van je over.</p>
+      <p>Is het strijken je te zwaar of heb je te veel strijkgoed?</p><p>Ik verzorg al jouw strijkgoed, van kleding tot bedden- en linnengoed.</p>
       <p>
-        Heb je het te druk? Is het strijken je te zwaar of heb je simpelweg te veel strijkgoed? Ik neem het werk graag van je over.<br />
-        Ik verzorg al jouw strijkgoed. Van kleding tot bedden- en linnengoed. Zo maak voor jou het leven makkelijker, en hou<br /> jij meer tijd over voor leuke dingen.
+        Zo maak voor jou het leven makkelijker, en hou jij meer tijd over voor leuke dingen.
         Je kunt altijd contact opnemen om je strijkgoed langs te brengen bij mij in Vleuten.
       </p>
     </div>
