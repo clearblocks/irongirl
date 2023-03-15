@@ -170,11 +170,6 @@ header {
   background-color: $header_color;
   color: $text_color;
 
-  @media screen and (min-width: $desktop) {
-    //position: relative;
-    //height: 80px;
-  }
-
   div:first-child {
     width: 90%;
   }
@@ -192,12 +187,6 @@ header {
     @media screen and (min-width: $desktop) {
       font-size: 36px;
       padding: 18px;
-      //position: absolute;
-      //top: 50%;
-      //height: 20px;
-      //margin-top: -20px;
-      //right: 200px;
-      //padding: 0;
     }
   }
 
