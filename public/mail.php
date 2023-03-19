@@ -13,7 +13,7 @@ $body =
     "Telefoonnummer: $phone\n\n" .
     $message;
 
-$mailTo = "theo@clearblocks.nl";
+$mailTo = "strijken@irongirl.nl";
 
 $headers = "From: Irongirl.nl Contactformulier <$mailTo>\r\nReply-To: $name <$email>";
 
