@@ -180,7 +180,8 @@ header {
     padding: 12px;
     margin: 0;
 
-    font-size: 16px;
+    font-size: 24px;
+
     @media screen and (min-width: $screen_medium) {
       font-size: 24px;
     }
@@ -192,21 +193,16 @@ header {
   }
 
   img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     padding: 7px;
     padding-left: 0;
 
-    @media screen and (min-width: $screen_medium) {
-      width: 35px;
-      height: 35px;
-      padding: 9px;
-    }
 
     @media screen and (min-width: $desktop) {
-      width: 50px;
-      height: 50px;
-      padding: 15px;
+      width: 60px;
+      height: 60px;
+      padding: 9px;
     }
   }
 }
