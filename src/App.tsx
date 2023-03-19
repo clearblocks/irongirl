@@ -10,6 +10,7 @@ import {Contact} from "./components/organisms/Contact";
 import {AboutUs} from "./components/organisms/AboutUs";
 import {Prices} from "./components/organisms/Prices";
 import {CallToAction2} from "./components/organisms/CallToAction2";
+import {CallToAction3} from "./components/organisms/CallToAction3";
 
 function App() {
   const refs = {
@@ -30,9 +31,10 @@ function App() {
       <SocialProof />
       <CallToAction />
       <AboutUs ref={refs.aboutUsRef} />
-      <Contact ref={refs.contactRef}/>
       <Prices ref={refs.pricesRef}/>
-      <CallToAction2 />
+      <CallToAction2 ref={refs.contactRef} />
+      <CallToAction3 />
+      <Contact />
       <Footer />
     </div>
   );
