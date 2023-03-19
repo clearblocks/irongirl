@@ -13,6 +13,7 @@ export const ContactForm = () => {
   const [email, setEmail] = useState('')
   const [emailValid, setEmailValid] = useState(true)
   const [phone, setPhone] = useState('')
+  const [phoneValid, setPhoneValid] = useState(true)
   const [message, setMessage] = useState('')
   const [messageValid, setMessageValid] = useState(true)
   const [success, setSuccess] = useState(false)
@@ -39,6 +40,7 @@ export const ContactForm = () => {
   const validate = () => {
     const results = [{value: name, setValid: setNameValid},
       {value: email, setValid: setEmailValid},
+      {value: phone, setValid: setPhoneValid},
       {value: message, setValid: setMessageValid}]
       .map(({value, setValid}) => validateField(value, setValid))
 
@@ -62,11 +64,10 @@ export const ContactForm = () => {
   return (
     <div className={"contact-form"}>
       <div className={"contact-header"}><div><EmailIcon /></div><h2>Stuur een bericht</h2></div>
-      <FormInput name={'name'} label={'Naam*'} value={name} onChange={(value) => {onChange(value, setName, setNameValid)}} valid={nameValid}/>
-      <FormInput name={'email'} label={'E-mailadres*'} value={email} onChange={(value) => {onChange(value, setEmail, setEmailValid)}} valid={emailValid}/>
-      <FormInput name={'phone'} label={'Telefoon'} value={phone} onChange={(value) => {setPhone(value)}} valid={true}/>
-      <FormText name={'text'} label={'Bericht*'} value={message} onChange={(value) => {onChange(value, setMessage, setMessageValid)}} valid={messageValid}/>
-      <div className={"required-desc"}>* Verplicht veld</div>
+      <FormInput name={'name'} label={'Naam'} value={name} onChange={(value) => {onChange(value, setName, setNameValid)}} valid={nameValid}/>
+      <FormInput name={'email'} label={'E-mailadres'} value={email} onChange={(value) => {onChange(value, setEmail, setEmailValid)}} valid={emailValid}/>
+      <FormInput name={'phone'} label={'Telefoon'} value={phone} onChange={(value) => {onChange(value, setPhone, setPhoneValid)}} valid={phoneValid}/>
+      <FormText name={'text'} label={'Bericht'} value={message} onChange={(value) => {onChange(value, setMessage, setMessageValid)}} valid={messageValid}/>
       {success && <Notice message={"We hebben je bericht ontvangen."} />}
       {error && <Error message={"Er is iets fout gegaan. Probeer het later nog eens."} />}
       <Button label={"Versturen"} onClick={onSubmit}/>

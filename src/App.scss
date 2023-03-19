@@ -22,6 +22,7 @@ body {
 .button {
   font-family: $font_istok;
   text-decoration: none;
+  text-align: center;
   background-color: $button_color;
   border: 1px solid $button_border_color;
   color: white;
@@ -374,7 +375,7 @@ header {
     h2 {
       font-family: $font_inria;
       font-weight: normal;
-      margin-bottom: 5px;
+      margin-bottom: 20px;
     }
 
     .button {
@@ -402,7 +403,6 @@ header {
 
   @media screen and (min-width: $desktop) {
     margin: 0 auto;
-    margin-top: 50px;
     width: 60%;
   }
 
@@ -415,24 +415,46 @@ header {
     text-align: right;
     color: $text_color;
     position: absolute;
-    top: 10px;
+    top: 5px;
     right: 10px;
+
+    &.whatsapp-action {
+
+      a {
+        margin-right: 35px;
+
+        .icon {
+          width: 40px;
+          height: 40px;
+
+          @media screen and (min-width: $desktop) {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: $screen_medium) {
+      top: 30px;
+    }
 
     @media screen and (min-width: $desktop) {
       right: 50px;
       height: 300px;
-      width: 500px;
+      width: 600px;
     }
 
     .button {
-      font-size: 12px;
+      font-size: 14px;
       font-family: $font_inter;
       padding: 8px;
       width: 100px;
+      margin-right: 33px;
       @media screen and (min-width: $desktop) {
         font-size: 20px;
         padding: 12px;
-        width: 160px;
+        width: 130px;
       }
     }
 
@@ -446,9 +468,28 @@ header {
       h2 {
         font-family: $font_inria;
         font-weight: normal;
-        font-size: 16px;
-        margin-top: 0;
+        font-size: 18px;
+        margin-top: 5px;
         margin-right: 10px;
+        margin-bottom: 8px;
+        display: block;
+
+        &:nth-child(2) {
+          font-weight: bold;
+          font-size: 20px;
+          display: inline-block;
+          vertical-align: top;
+          margin-right: 10px;
+
+          @media screen and (min-width: $screen_medium) {
+            font-size: 24px;
+          }
+
+          @media screen and (min-width: $desktop) {
+            width: 60%;
+            font-size: 32px;
+          }
+        }
 
         @media screen and (min-width: $screen_medium) {
           font-size: 24px;
@@ -456,8 +497,7 @@ header {
 
         @media screen and (min-width: $desktop) {
           font-size: 32px;
-          width: 400px;
-          margin-top: 26px;
+          width: 600px;
           margin-right: 20px;
         }
       }
@@ -541,6 +581,7 @@ header {
   width: 80%;
   margin: 0 auto;
   margin-top: 50px;
+  margin-bottom: 30px;
 
   display: block;
   @media screen and (min-width: $desktop) {
@@ -548,12 +589,12 @@ header {
   }
 
   > img {
-
-    margin-top: 30px;
     width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
 
     @media screen and (min-width: $desktop) {
-      margin-top: 80px;
+      margin-top: 96px;
       height: 500px;
       width: auto;
     }
@@ -588,9 +629,16 @@ header {
 
         img {
           display: block;
+
           margin: 0;
+          margin-top: -10px;
+
           @media screen and (min-width: $desktop) {
-            margin-left: -50px;
+            margin-top: 0px;
+          }
+
+          @media screen and (min-width: $screen_large) {
+            margin-top: -20px;
           }
         }
       }
