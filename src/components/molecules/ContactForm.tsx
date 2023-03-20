@@ -5,6 +5,7 @@ import {FormText} from "../atoms/FormText";
 import {Button} from "../atoms/Button";
 import axios from 'axios';
 import {Error, Notice} from "../atoms/Messages";
+import {GoogleMapsLink} from "../atoms/GoogleMapsLink";
 
 export const ContactForm = () => {
 
@@ -63,6 +64,14 @@ export const ContactForm = () => {
 
   return (
     <div className={"contact-form"}>
+      <h3>Ons adres</h3>
+      <div className={"address-block"}>
+        <div><GoogleMapsLink /></div>
+        <div className={"address"}>
+          <p>Paddenstoelenlaan 15<br />3451 PZ Vleuten</p>
+        </div>
+
+      </div>
       <div className={"contact-header"}><div><EmailIcon /></div><h2>Stuur een bericht</h2></div>
       <FormInput name={'name'} label={'Naam'} value={name} onChange={(value) => {onChange(value, setName, setNameValid)}} valid={nameValid}/>
       <FormInput name={'email'} label={'E-mailadres'} value={email} onChange={(value) => {onChange(value, setEmail, setEmailValid)}} valid={emailValid}/>
