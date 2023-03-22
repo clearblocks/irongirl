@@ -702,6 +702,7 @@ header {
     .price-row {
       font-family: $font_inter;
       display: flex;
+      justify-content: space-around;
       margin-bottom: 5px;
       border-bottom: 1px solid grey;
       padding: 5px 0;
@@ -714,10 +715,15 @@ header {
         width: 80%;
       }
 
+      .item-euro {
+        width: 10%;
+        text-align: right;
+      }
       .item-price {
         text-align: right;
         padding-right: 15px;
-        width: 75px;
+        width: 10%;
+        min-width: 50px;
       }
     }
   }

@@ -7,7 +7,7 @@ export type PriceData = {
 
 export const PriceRow = ({name, price}: PriceData) => (
   <div className={"price-row"} >
-    <span className={"item-name"}>{name}</span><span className={'item-price'}>&euro; {renderPrice(price)}</span>
+    <span className={"item-name"}>{name}</span><span className={'item-euro'}>&euro;</span><span className={'item-price'}>{renderPrice(price)}</span>
   </div>
 )
 
