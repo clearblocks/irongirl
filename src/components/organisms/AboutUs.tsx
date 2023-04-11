@@ -23,10 +23,10 @@ export const AboutUs = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => 
         <ul>
           <li>Maak een afspraak: laat weten hoeveel strijkgoed je hebt</li>
           <li>Lever je strijkgoed af bij mijn locatie</li>
-          <li>Laat weten welke producten je opgehangen en gevouwen terug wilt hebben</li>
           <li>Ik vertel je wanneer je het strijkgoed weer kunt ophalen</li>
           <li>Ik zorg ervoor dat alles perfect netjes gestreken is</li>
           <li>Bij ophalen is alles naar wens netjes gevouwen en opgehangen</li>
+          <li>Er is momenteel geen mogelijkheid voor een ophaal- en bezorgservice</li>
         </ul>
       </div>
     </div>
