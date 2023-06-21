@@ -7,6 +7,8 @@ if [[ -z $VERSION ]]; then
   echo "No version number given";exit 1
 fi
 
+yarn build
+
 git tag -a "$VERSION" -m "Tag prod version $VERSION"
 git push --tags
 
