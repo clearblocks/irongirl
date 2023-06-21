@@ -18,18 +18,18 @@ function createServices({aboutUsRef, pricesRef, contactRef}: ServiceRefs) {
     iconType: IconType.Iron,
     title: 'Strijken',
     text: 'Ontdek hoe gemakkelijk het is om je strijkwerk door Iron Girl te laten doen.',
-    buttonLabel: 'Mijn werkwijze',
+    buttonLabel: 'Onze werkwijze',
     ref: aboutUsRef
   }, {
     iconType: IconType.Price,
     title: 'Prijzen',
-    text: 'Ik verzorg het strijken van vele soorten producten, van kleding tot linnengoed, tegen een betaalbare prijs.',
+    text: 'Wij verzorgen het strijken van vele soorten producten, van kleding tot linnengoed, tegen een betaalbare prijs.',
     buttonLabel: 'Prijsoverzicht',
     ref: pricesRef
   }, {
     iconType: IconType.WhatsApp,
     title: 'Contact',
-    text: 'Neem contact op, vertel wat ik voor je kan doen en maak een afspraak',
+    text: 'Neem contact op, vertel wat wij voor je kunnen doen en maak een afspraak',
     buttonLabel: 'Contact',
     ref: contactRef
   }]
