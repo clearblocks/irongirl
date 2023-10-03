@@ -1,6 +1,6 @@
 {
   "name": "irongirl",
-  "version": "2.11",
+  "version": "2.12",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
