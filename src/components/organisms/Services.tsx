@@ -1,6 +1,7 @@
 import React, {RefObject} from 'react';
 import {Service} from '../molecules/Service';
 import {IconType} from "../atoms/Icon";
+import {Button} from "../atoms/Button";
 
 type ServicesProps = {
   refs: ServiceRefs,
@@ -15,6 +16,12 @@ type ServiceRefs = {
 
 function createServices({aboutUsRef, pricesRef, contactRef}: ServiceRefs) {
   return [{
+    iconType: IconType.Laundry,
+    title: 'Wassen',
+    text: 'Laat je was zorgeloos aan ons over voor een frisse en schone garderobe.',
+    buttonLabel: 'Onze werkwijze',
+    ref: aboutUsRef
+  }, {
     iconType: IconType.Iron,
     title: 'Strijken',
     text: 'Ontdek hoe gemakkelijk het is om je strijkwerk door Iron Girl te laten doen.',
@@ -36,8 +43,14 @@ function createServices({aboutUsRef, pricesRef, contactRef}: ServiceRefs) {
 }
 
 export const Services = ({refs, serviceOnClick}: ServicesProps) => (
-  <div className={"services"}>
-    {createServices(refs).map((service, key) => <Service iconType={service.iconType} title={service.title} text={service.text}
-                                      buttonLabel={service.buttonLabel} onClick={() => serviceOnClick(service.ref)} key={key}/>)}
-  </div>
+  <>
+    <div className={"services"}>
+      {createServices(refs).map((service, key) => <Service iconType={service.iconType} title={service.title} text={service.text}
+                                        buttonLabel={service.buttonLabel} onClick={() => serviceOnClick(service.ref)} key={key}/>)}
+    </div>
+    <div className={"service-buttons"}>
+      {createServices(refs).map((service, key) =>
+        <Button label={service.buttonLabel} onClick={() => serviceOnClick(service.ref)} key={key} />)}
+    </div>
+  </>
 );

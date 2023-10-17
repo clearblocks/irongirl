@@ -261,74 +261,95 @@ header {
   }
 }
 
+.service-buttons {
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 50px;
+    margin-bottom: 40px;
+  }
+
+  button {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+}
 
 .services {
   @media screen and (min-width: $desktop) {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     padding: 10px 50px;
     margin-top: 40px;
   }
 
-  .service {
-    &.service-desktop {
-      display: none;
-      @media screen and (min-width: $desktop) {
-        display: block;
-      }
-    }
+  .service-container {
+    flex-basis: 0;
+    flex-grow: 1;
 
-    &.service-mobile {
-      display: block;
-      @media screen and (min-width: $desktop) {
+    .service {
+      &.service-desktop {
         display: none;
+        @media screen and (min-width: $desktop) {
+          display: block;
+        }
       }
-    }
 
-    margin: 10px;
-    padding: 10px;
-    border-radius: 25px;
-    text-align: center;
-
-    > div {
-      height: 80%;
-      display: flex;
-      justify-content: center;
-      @media screen and (min-width: $desktop) {
+      &.service-mobile {
         display: block;
+        @media screen and (min-width: $desktop) {
+          display: none;
+        }
       }
+
+      margin: 10px;
+      padding: 10px;
+      border-radius: 25px;
+      text-align: center;
 
       > div {
-        padding-top: 4px;
-        width: 20%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        @media screen and (min-width: $desktop) {
+          display: block;
+        }
+
+        > div {
+          padding-top: 4px;
+          width: 20%;
+        }
+
+        p {
+          width: 80%;
+          margin: 0 auto;
+        }
       }
 
-      p {
-        width: 60%;
-        margin: 0 auto;
-        margin-bottom: 25px;
-      }
-    }
-
-    .button {
-      vertical-align: bottom;
-    }
-
-    img {
-      vertical-align: bottom;
-      margin-right: 0;
-
-      &.iron-icon {
-        margin-left: -20px;
+      .button {
+        vertical-align: bottom;
       }
 
-      @media screen and (min-width: $desktop) {
+      img {
+        vertical-align: bottom;
+        margin-right: 0;
 
-        vertical-align: unset;
-        margin: 0;
+        &.iron-icon {
+          margin-left: -20px;
+        }
+
+        @media screen and (min-width: $desktop) {
+
+          vertical-align: unset;
+          margin: 0;
+        }
       }
     }
   }
+
+
 }
 
 .cta {
@@ -511,7 +532,7 @@ header {
   }
 }
 
-.aboutus {
+.about-us {
   width: 80%;
   margin: 0 auto;
 
@@ -531,11 +552,11 @@ header {
     }
   }
 
-  .aboutus-info {
+  .about-us-info {
     text-align: center;
   }
 
-  .aboutus-workway {
+  .about-us-workway {
     h2 {
       text-align: center;
     }
@@ -554,7 +575,7 @@ header {
     }
   }
 
-  .aboutus-images {
+  .about-us-images {
     text-align: center;
     img {
       width: 100%;
@@ -685,7 +706,6 @@ header {
 
   @media screen and (min-width: $desktop) {
     width: 30%;
-    margin-top: 150px;
   }
 
   h2 {

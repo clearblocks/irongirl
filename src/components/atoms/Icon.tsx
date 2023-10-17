@@ -1,12 +1,14 @@
 import React from 'react';
 import WhatsAppIconSrc from "../../assets/img/whatsapp-icon-transparant.png";
 import GreenWhatsAppIconSrc from "../../assets/img/whatsapp-green-icon.png";
+import LaundryIconSrc from "../../assets/img/laundry-icon.png";
 import IronIconSrc from "../../assets/img/iron-icon.png";
 import PriceIconSrc from "../../assets/img/price-icon.png";
 import MailIconSrc from "../../assets/img/mail-icon.png";
 import UnderConstructionSrc from "../../assets/img/under-construction-icon.png";
 
 export enum IconType {
+  Laundry,
   Iron,
   Price,
   WhatsApp,
@@ -23,6 +25,12 @@ type IconData = {
 
 let iconData = (iconType: IconType): IconData => {
   switch (iconType) {
+    case IconType.Laundry:
+      return {
+        src: LaundryIconSrc,
+        alt: 'was icoon',
+        className: 'laundry-icon'
+      }
     case IconType.Iron:
       return {
         src: IronIconSrc,
@@ -74,6 +82,7 @@ export const Icon = ({type}: IconProps) => {
 export const WhatsAppIcon = () => <Icon type={IconType.WhatsApp} />
 export const GreenWhatsAppIcon = () => <Icon type={IconType.GreenWhatsApp} />
 export const PriceIcon = () => <Icon type={IconType.Price} />
+export const LaundryIcon = () => <Icon type={IconType.Laundry} />
 export const IronIcon = () => <Icon type={IconType.Iron} />
 export const EmailIcon = () => <Icon type={IconType.Email} />
 export const ConstructionIcon = () => <Icon type={IconType.Construction} />
