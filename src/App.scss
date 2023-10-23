@@ -767,7 +767,8 @@ footer {
     }
 
     span {
-      display: inline-block;
+      display: block;
+      margin-bottom: 10px;
       @media screen and (min-width: $desktop) {
         display: inline;
       }
