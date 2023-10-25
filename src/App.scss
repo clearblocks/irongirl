@@ -66,8 +66,11 @@ body {
 
 ul {
   padding-left: 20px;
+  @media screen and (min-width: $desktop) {
+    padding-left: 6px;
+  }
   li {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
 }
 
@@ -304,10 +307,19 @@ header {
         }
       }
 
-      margin: 10px;
+      width: 65%;
+      margin: 10px auto;
       padding: 10px;
       border-radius: 25px;
       text-align: center;
+
+      @media screen and (min-width: $desktop) {
+        width: 100%;
+      }
+
+      .button {
+        font-size: 22px;
+      }
 
       > div {
         height: 80%;
@@ -320,6 +332,7 @@ header {
         > div {
           padding-top: 4px;
           width: 20%;
+          margin-right: 10px;
         }
 
         p {
@@ -369,8 +382,8 @@ header {
     background-position-y: -87px;
     position: relative;
     margin: 0 auto;
-    width: 80%;
     height: 828px;
+    margin-bottom: 20px;
   }
 
   .action {
@@ -533,15 +546,60 @@ header {
 }
 
 .about-us {
-  width: 80%;
-  margin: 0 auto;
+
+  .about-service {
+
+    @media screen and (min-width: $desktop) {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+    }
+
+    .about-us-info {
+
+      width: 80%;
+      margin: 0 auto;
+
+      @media screen and (min-width: $desktop) {
+        width: 50%;
+        padding: 30px;
+
+        &:nth-child(2) {
+          border-left: 1px solid grey;
+        }
+
+        h2 {
+          margin-top: 0;
+        }
+      }
+
+      .about-us-info-images {
+        overflow: hidden;
+      }
+
+      img {
+        width: 50%;
+        vertical-align: top;
+
+        &:nth-child(2) {
+          margin-top: -66px;
+
+          @media screen and (min-width: $desktop) {
+            margin-top: 0;
+          }
+        }
+      }
+
+      ul {
+        margin: 0;
+        font-family: $font_inter;
+      }
+    }
+  }
 
   p {
     font-family: $font_inter;
     text-align: left;
-    @media screen and (min-width: $desktop) {
-      text-align: center;
-    }
   }
 
   img {
@@ -552,35 +610,19 @@ header {
     }
   }
 
-  .about-us-info {
-    text-align: center;
-  }
-
-  .about-us-workway {
-    h2 {
-      text-align: center;
-    }
-
-    div {
-      display: flex;
-
-      ul {
-        margin: 0;
-        font-family: $font_inter;
-
-        @media screen and (min-width: $desktop) {
-          margin-left: 50px;
-        }
-      }
-    }
-  }
-
   .about-us-images {
+    margin-top: 20px;
     text-align: center;
+    line-height: 0;
+
+    @media screen and (min-width: $desktop) {
+      width: 80%;
+      margin: 0 auto;
+    }
+
     img {
       width: 100%;
       @media screen and (min-width: $desktop) {
-        width: 70%;
         height: auto;
       }
     }
@@ -699,9 +741,8 @@ header {
 
 .prices {
   margin: 0 auto;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
   text-align: left;
-  margin-top: 75px;
   width: 80%;
 
   @media screen and (min-width: $desktop) {
@@ -717,7 +758,6 @@ header {
   }
 
   .price-table {
-    margin-bottom: 75px;
 
     .price-row {
       font-family: $font_inter;
