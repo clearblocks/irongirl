@@ -1,48 +1,48 @@
 [{
   "category": "Dames- en herenkleding",
   "priceDataSet": [
-    { "name": "Blouse of overhemd korte mouwen", "price": 1.3 },
-    { "name": "Blouse of overhemd lange mouwen", "price": 1.5 },
-    { "name": "Colbert", "price": 2.1 },
-    { "name": "Gilet", "price": 1.1 },
-    { "name": "Pantalon", "price": 2 },
-    { "name": "Jurk", "price": 2},
-    { "name": "Rok", "price": 1.5 },
-    { "name": "Lange blouse", "price": 2 },
-    { "name": "Topje", "price": 1.1 },
-    { "name": "Spijkerbroek", "price": 2 },
-    { "name": "Trui", "price": 1.9 },
-    { "name": "Vest", "price": 1.9 },
-    { "name": "Korte broek", "price": 1.5 },
-    { "name": "Polo", "price": 1.3 },
-    { "name": "T-shirt", "price": 1.1 },
-    { "name": "Body", "price": 1.3 },
-    { "name": "Boxershort", "price": 0.5 },
-    { "name": "Hemd", "price": 1.1 }
+    { "name": "Blouse of overhemd korte mouwen", "price": 1.55 },
+    { "name": "Blouse of overhemd lange mouwen", "price": 1.8 },
+    { "name": "Colbert", "price": 2.5 },
+    { "name": "Gilet", "price": 1.3 },
+    { "name": "Pantalon", "price": 2.4 },
+    { "name": "Jurk", "price": 2.4},
+    { "name": "Rok", "price": 1.8 },
+    { "name": "Lange blouse", "price": 2.4 },
+    { "name": "Topje", "price": 1.3 },
+    { "name": "Spijkerbroek", "price": 2.4 },
+    { "name": "Trui", "price": 2.3 },
+    { "name": "Vest", "price": 2.3 },
+    { "name": "Korte broek", "price": 1.8 },
+    { "name": "Polo", "price": 1.55 },
+    { "name": "T-shirt", "price": 1.3 },
+    { "name": "Body", "price": 1.55 },
+    { "name": "Boxershort", "price": 0.6 },
+    { "name": "Hemd", "price": 1.3 }
   ]
 },{
   "category": "Kinderkleding t/m maat 158",
   "priceDataSet": [
-    { "name": "Blouse", "price": 1 },
-    { "name": "Overhemd", "price": 1 },
-    { "name": "Colbert of jasje", "price": 1.6 },
-    { "name": "Lange broek", "price": 1.2 },
-    { "name": "Korte broek", "price": 1 },
-    { "name": "Jas", "price": 1.7 },
-    { "name": "Jurk", "price": 1.35 },
-    { "name": "Rok", "price": 1.3 },
-    { "name": "T-Shirt", "price": 1 },
-    { "name": "Polo", "price": 1.1 }
+    { "name": "Blouse", "price": 1.3 },
+    { "name": "Overhemd", "price": 1.3 },
+    { "name": "Colbert of jasje", "price": 1.7 },
+    { "name": "Lange broek", "price": 1.5 },
+    { "name": "Korte broek", "price": 1.3 },
+    { "name": "Jas", "price": 1.8 },
+    { "name": "Jurk", "price": 1.45 },
+    { "name": "Rok", "price": 1.4 },
+    { "name": "T-Shirt", "price": 1.1 },
+    { "name": "Polo", "price": 1.2 }
   ]
 },{
   "category": "Linnen- en beddengoed",
   "priceDataSet": [
-    { "name": "Laken 1-persoons", "price": 1.8 },
-    { "name": "Laken 2-persoons", "price": 2.4 },
-    { "name": "Dekbed 1-persoons", "price": 2.3 },
-    { "name": "Dekbed 2-persoons", "price": 3.4 },
-    { "name": "Kussensloop", "price": 0.7 },
-    { "name": "Tafellaken", "price": 2.5 },
+    { "name": "Laken 1-persoons", "price": 2.2 },
+    { "name": "Laken 2-persoons", "price": 3 },
+    { "name": "Dekbed 1-persoons", "price": 2.5 },
+    { "name": "Dekbed 2-persoons", "price": 3.7 },
+    { "name": "Kussensloop", "price": 1 },
+    { "name": "Tafellaken", "price": 3 },
     { "name": "Tafelloper", "price": 1.1 }
   ]
 }]
