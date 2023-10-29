@@ -9,36 +9,37 @@ type ServicesProps = {
 }
 
 type ServiceRefs = {
-  aboutUsRef: RefObject<HTMLElement>,
+  washingRef: RefObject<HTMLElement>,
+  ironingRef: RefObject<HTMLElement>,
   pricesRef: RefObject<HTMLElement>,
   contactRef: RefObject<HTMLElement>
 }
 
-function createServices({aboutUsRef, pricesRef, contactRef}: ServiceRefs) {
+function createServices({washingRef, ironingRef, pricesRef, contactRef}: ServiceRefs) {
   return [{
     iconType: IconType.Laundry,
     title: 'Wassen',
     text: 'Laat je was zorgeloos aan ons over voor een frisse en schone garderobe.',
-    buttonLabel: 'Onze werkwijze',
-    ref: aboutUsRef
+    buttonLabel: 'Wassen',
+    ref: washingRef
   }, {
     iconType: IconType.Iron,
     title: 'Strijken',
     text: 'Ontdek hoe gemakkelijk het is om je strijkwerk door Iron Girl te laten doen.',
-    buttonLabel: 'Onze werkwijze',
-    ref: aboutUsRef
-  }, {
-    iconType: IconType.Price,
-    title: 'Prijzen',
-    text: 'Wij verzorgen het strijken van vele soorten producten, van kleding tot linnengoed, tegen een betaalbare prijs.',
-    buttonLabel: 'Prijsoverzicht',
-    ref: pricesRef
+    buttonLabel: 'Strijken',
+    ref: ironingRef
   }, {
     iconType: IconType.WhatsApp,
     title: 'Contact',
     text: 'Neem contact op, vertel wat wij voor je kunnen doen en maak een afspraak',
     buttonLabel: 'Contact',
     ref: contactRef
+  }, {
+    iconType: IconType.Price,
+    title: 'Prijzen',
+    text: 'Wij verzorgen het strijken van vele soorten producten, van kleding tot linnengoed, tegen een betaalbare prijs.',
+    buttonLabel: 'Prijsoverzicht',
+    ref: pricesRef
   }]
 }
 

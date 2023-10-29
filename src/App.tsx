@@ -9,12 +9,14 @@ import {CallToAction} from "./components/organisms/CallToAction";
 import {Contact} from "./components/organisms/Contact";
 import {AboutUs} from "./components/organisms/AboutUs";
 import {Prices} from "./components/organisms/Prices";
-import {CallToAction2} from "./components/organisms/CallToAction2";
 import {CallToAction3} from "./components/organisms/CallToAction3";
+import {Washing} from "./components/molecules/Washing";
+import {Ironing} from "./components/molecules/Ironing";
 
 function App() {
   const refs = {
-    aboutUsRef: createRef<HTMLDivElement>(),
+    washingRef: createRef<HTMLDivElement>(),
+    ironingRef: createRef<HTMLDivElement>(),
     pricesRef: createRef<HTMLDivElement>(),
     contactRef: createRef<HTMLDivElement>()
   }
@@ -30,11 +32,10 @@ function App() {
       <Services refs={refs} serviceOnClick={serviceOnClick}/>
       <SocialProof />
       <CallToAction />
-      <AboutUs ref={refs.aboutUsRef} />
-      <Prices ref={refs.pricesRef}/>
-      <CallToAction2 ref={refs.contactRef} />
-      <CallToAction3 />
+      <AboutUs washingRef={refs.washingRef} ironingRef={refs.ironingRef} />
       <Contact />
+      <Prices ref={refs.pricesRef}/>
+      <CallToAction3 ref={refs.contactRef} />
       <Footer />
     </div>
   );

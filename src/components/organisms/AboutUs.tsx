@@ -5,9 +5,16 @@ import ironingBoard from '../../assets/img/ironing-board-pink.jpg'
 import bearWash from '../../assets/img/beer-was.jpg'
 import washingBackground from '../../assets/img/washing-background.jpeg'
 import washingMachineInside from '../../assets/img/washing-machine-inside.jpg'
+import {Washing} from "../molecules/Washing";
+import {Ironing} from "../molecules/Ironing";
 
-export const AboutUs = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => (
-  <div className={"about-us"} id={"about-us"} ref={ref}>
+type AboutUsProps = {
+  washingRef: ForwardedRef<HTMLDivElement>,
+  ironingRef: ForwardedRef<HTMLDivElement>
+}
+
+export const AboutUs = ({washingRef, ironingRef}: AboutUsProps) => (
+  <div className={"about-us"} id={"about-us"}>
     <div className={"about-service"}>
       <div className={"about-us-info"}>
         <h2>Iron Girl Was- en Strijkservice</h2>
@@ -34,19 +41,8 @@ export const AboutUs = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => 
           <li>Bij ophalen is alles naar wens netjes gevouwen en opgehangen</li>
           <li>Er is momenteel geen mogelijkheid voor een ophaal- en bezorgservice</li>
         </ul>
-        <h3>Wassen</h3>
-        <ul>
-          <li>Wasgoed ontvangen we graag in een zak, eventueel ook in een mand</li>
-          <li>Wit en kleur aparte was</li>
-          <li>30 graden</li>
-          <li>Drogen</li>
-          <li>Vouwen</li>
-        </ul>
-        <h3>Strijken</h3>
-        <ul>
-          <li>Het is handig als je zelf kledinghangers kunt afgeven</li>
-          <li>Wij zorgen ervoor dat alles perfect netjes gestreken is</li>
-        </ul>
+        <Washing ref={washingRef} />
+        <Ironing ref={ironingRef} />
       </div>
     </div>
     <div className={"about-us-images"}>
@@ -58,4 +54,4 @@ export const AboutUs = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => 
       <img src={washingMachineInside} alt={"wasmachine van binnen"}/>
     </div>
   </div>
-));
+);

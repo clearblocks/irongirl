@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {ForwardedRef, forwardRef} from 'react';
 import {GreenWhatsAppIcon} from "../atoms/Icon";
 import IronTowelsBasket from "../../assets/img/iron-towels-basket.jpg";
-export const CallToAction3 = () => (
-  <div className={"cta2"}>
+import TwoMachines from "../../assets/img/two-machines.jpg";
+import TableBasket from "../../assets/img/table-basket.jpg";
+export const CallToAction3 = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => (
+  <div className={"cta2"} ref={ref}>
     <img src={IronTowelsBasket} alt={"strijkijzer met handdoeken en mand"} className={"footer-image"}/>
     <div className={"action whatsapp-action"}>
       <div>
@@ -11,5 +13,7 @@ export const CallToAction3 = () => (
         <a href={"whatsapp://send?phone=+31633401173"}><GreenWhatsAppIcon /></a>
       </div>
     </div>
+    <img src={TwoMachines} alt={"wasmachine en drover"} className={"footer-image"}/>
+    <img src={TableBasket} alt={"wastafel"} className={"footer-image"}/>
   </div>
-);
+));
