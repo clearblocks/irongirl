@@ -846,7 +846,6 @@ footer {
   text-align: center;
   padding: 25px;
   border-bottom: 10px solid $grey;
-  width: 100%;
   background-color: white;
   z-index: 10000;
 
@@ -854,6 +853,7 @@ footer {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
   }
 
   h3 {
