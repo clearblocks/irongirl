@@ -11,6 +11,7 @@ $desktop: 960px;
 $screen_medium: 440px;
 $screen_large: 1400px;
 $red: #ff3838;
+$grey: #d9d9d9;
 //$text_color: #491c1c;
 
 body {
@@ -838,5 +839,24 @@ footer {
     vertical-align: middle;
     display: inline-block;
     margin-right: 25px;
+  }
+}
+
+.temp-close {
+  text-align: center;
+  padding: 25px;
+  border-bottom: 10px solid $grey;
+  width: 100%;
+  background-color: white;
+  z-index: 10000;
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  h3 {
+    margin: 0;
   }
 }

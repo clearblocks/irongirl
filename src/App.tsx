@@ -10,8 +10,7 @@ import {Contact} from "./components/organisms/Contact";
 import {AboutUs} from "./components/organisms/AboutUs";
 import {Prices} from "./components/organisms/Prices";
 import {CallToAction3} from "./components/organisms/CallToAction3";
-import {Washing} from "./components/molecules/Washing";
-import {Ironing} from "./components/molecules/Ironing";
+import {TemporaryClosure} from "./components/organisms/TemporaryClosure";
 
 function App() {
   const refs = {
@@ -29,6 +28,7 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
+      <TemporaryClosure />
       <Services refs={refs} serviceOnClick={serviceOnClick}/>
       <SocialProof />
       <CallToAction />
