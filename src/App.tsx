@@ -28,7 +28,6 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
-      <TemporaryClosure />
       <Services refs={refs} serviceOnClick={serviceOnClick}/>
       <SocialProof />
       <CallToAction />
