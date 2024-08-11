@@ -855,7 +855,7 @@ footer {
   }
 
   @media screen and (min-width: $desktop) {
-    font-size: 30px;
+    height: 30px;
 
     & + header {
       margin-top: 90px;
