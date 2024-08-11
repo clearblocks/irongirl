@@ -848,6 +848,19 @@ footer {
   border-bottom: 10px solid $grey;
   background-color: white;
   z-index: 10000;
+  height: 110px;
+
+  & + header {
+    margin-top: 170px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 30px;
+
+    & + header {
+      margin-top: 90px;
+    }
+  }
 
   &.fixed {
     position: fixed;

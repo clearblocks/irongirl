@@ -26,6 +26,7 @@ function App() {
 
   return (
     <div className="App">
+      <TemporaryClosure />
       <Header />
       <Hero />
       <Services refs={refs} serviceOnClick={serviceOnClick}/>
