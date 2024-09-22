@@ -51,7 +51,6 @@ export const AboutUs = ({washingRef, ironingRef}: AboutUsProps) => (
         <img src={shirts} alt={"gestreken overhemden"}/>
       </div>
       <img src={washingBackground} alt={"wachmachine en droger"}/>
-      <img src={washingMachineInside} alt={"wasmachine van binnen"}/>
     </div>
   </div>
 );

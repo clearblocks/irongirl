@@ -13,7 +13,5 @@ export const CallToAction3 = forwardRef((props, ref: ForwardedRef<HTMLDivElement
         <a href={"whatsapp://send?phone=+31633401173"}><GreenWhatsAppIcon /></a>
       </div>
     </div>
-    <img src={TwoMachines} alt={"wasmachine en drover"} className={"footer-image"}/>
-    <img src={TableBasket} alt={"wastafel"} className={"footer-image"}/>
   </div>
 ));

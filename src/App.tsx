@@ -10,7 +10,8 @@ import {Contact} from "./components/organisms/Contact";
 import {AboutUs} from "./components/organisms/AboutUs";
 import {Prices} from "./components/organisms/Prices";
 import {CallToAction3} from "./components/organisms/CallToAction3";
-import {TemporaryClosure} from "./components/organisms/TemporaryClosure";
+import TwoMachines from "./assets/img/two-machines.jpg";
+import TableBasket from "./assets/img/table-basket.jpg";
 
 function App() {
   const refs = {
@@ -25,18 +26,24 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Header />
-      <Hero />
-      <Services refs={refs} serviceOnClick={serviceOnClick}/>
-      <SocialProof />
-      <CallToAction />
-      <AboutUs washingRef={refs.washingRef} ironingRef={refs.ironingRef} />
-      <Contact />
-      <Prices ref={refs.pricesRef}/>
-      <CallToAction3 ref={refs.contactRef} />
-      <Footer />
-    </div>
+      <div className="App">
+          <Header/>
+          <Hero/>
+          <Services refs={refs} serviceOnClick={serviceOnClick}/>
+          <SocialProof/>
+          <CallToAction/>
+          <AboutUs washingRef={refs.washingRef} ironingRef={refs.ironingRef}/>
+          <CallToAction3 ref={refs.contactRef}/>
+          <Contact/>
+          <div className={"cta2"}>
+              <img src={TwoMachines} alt={"wasmachine en drover"} className={"footer-image"}/>
+          </div>
+          <Prices ref={refs.pricesRef}/>
+          <div className={"cta2"}>
+              <img src={TableBasket} alt={"wastafel"} className={"footer-image"}/>
+          </div>
+          <Footer/>
+      </div>
   );
 }
 
