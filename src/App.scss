@@ -771,7 +771,9 @@ header {
       .item-euro {
         width: 10%;
         text-align: right;
+        margin-right: 2px;
       }
+
       .item-price {
         text-align: right;
         padding-right: 15px;
@@ -871,5 +873,68 @@ footer {
 
   h3 {
     margin: 0;
+  }
+}
+
+.password-screen {
+  padding: 20px;
+}
+
+.calculator {
+  margin: 0 auto;
+  width: 80%;
+
+  .calculator-total {
+    font-size: 2em;
+  }
+
+  .calculator-item {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    border-bottom: 1px solid black;
+
+    span {
+      width: 50px;
+      text-align: right;
+      margin-right: 5px;
+    }
+
+    .calc-button {
+      width: 20px;
+      height: 20px;
+      padding: 3px 10px;
+      font-size: 2em;
+      border: 1px solid grey;
+      border-radius: 5px;
+      line-height: 0.6;
+      margin-right: 7px;
+      background-color: #fdd7dd;
+    }
+
+    .calc-button-plus {
+      height: 35px;
+      width: 10px;
+      line-height: 1.4;
+      font-size: 1.4em;
+      padding-left: 5px;
+      background-color: #e6fbe6;
+    }
+
+    .item-name {
+      width: 200px;
+      text-align: left;
+      font-size: 1em;
+    }
+
+    .item-amount {
+      font-size: 1.3em;
+      width: 30px;
+      margin-right: 20px;
+    }
+
+    .item-total {
+      font-size: 1.3em;
+    }
   }
 }
