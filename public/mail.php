@@ -5,6 +5,13 @@ $email = $_POST['email'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
 
+if (empty(trim($name)) ||
+    empty(trim($email)) ||
+    empty(trim($phone)) ||
+    empty(trim($message))) {
+    throw new Exception("All input fields are required");
+}
+
 $subject = "Irongirl.nl bericht van $name";
 $body =
     "Beste Irongirl,\n\n" .
