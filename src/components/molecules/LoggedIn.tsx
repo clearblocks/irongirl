@@ -15,9 +15,7 @@ export function LoggedIn({children}: {children: React.ReactNode}): JSX.Element {
 
     useEffect(() => {
         const cookiePwd = Cookies.get('calculator')
-        console.log(cookiePwd)
         if (cookiePwd == secretWord) {
-            console.log("logged in!")
             setLoggedIn(true)
         }
     })
