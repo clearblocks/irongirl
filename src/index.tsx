@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import './index.css';
 import App from './App';
-import {CalculatorApp} from "./CalculatorApp";
+import {AdminApp} from "./AdminApp";
 
 const router = createBrowserRouter([
     {
@@ -14,8 +14,8 @@ const router = createBrowserRouter([
         element: <App/>,
     },
     {
-        path: "/calculator",
-        element: <CalculatorApp/>
+        path: "/admin",
+        element: <AdminApp/>
     }
 ]);
 

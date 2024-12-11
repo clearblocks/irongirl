@@ -6,7 +6,7 @@ import {Footer} from "./components/organisms/Footer";
 import {Calculator} from "./components/organisms/Calculator";
 import {LoggedIn} from "./components/molecules/LoggedIn";
 
-export function CalculatorApp() {
+export function AdminApp() {
 
     return (
         <div>

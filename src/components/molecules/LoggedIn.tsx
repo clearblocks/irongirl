@@ -6,18 +6,33 @@ const secretWord = 'banaan'
 export function LoggedIn({children}: {children: React.ReactNode}): JSX.Element {
     const [loggedIn, setLoggedIn] = useState(false)
 
-    function checkPwd(e: React.ChangeEvent<HTMLInputElement>) {
-        if (e.target.value == secretWord) {
-            Cookies.set('calculator', e.target.value, {expires: 30})
-            setLoggedIn(true)
+    async function checkPwd(e: React.ChangeEvent<HTMLInputElement>) {
+        const response = await fetch("php/login.php", {
+            method: "POST",
+            headers:{
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams({
+                'password': e.target.value
+            })
+        })
+
+        if (response.ok) {
+            const json = await response.json()
+            setLoggedIn(json['logged_in'])
         }
     }
 
     useEffect(() => {
-        const cookiePwd = Cookies.get('calculator')
-        if (cookiePwd == secretWord) {
-            setLoggedIn(true)
+        const fetchLogin = async () => {
+            const response = await fetch("php/login.php")
+            if (response.ok) {
+                const json = await response.json()
+                setLoggedIn(json['logged_in'])
+            }
         }
+
+        fetchLogin().catch(console.error)
     })
 
     if (loggedIn) {

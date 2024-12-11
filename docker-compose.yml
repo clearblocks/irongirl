@@ -1,0 +1,23 @@
+services:
+  php:
+    image: irongirl/php-apache
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./build:/var/www/html
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: irongirl
+      MYSQL_USER: irongirl
+      MYSQL_PASSWORD: irongirl
+    volumes:
+      - irongirl_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+volumes:
+  irongirl_data:
+    external: true
