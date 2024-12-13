@@ -1,5 +1,6 @@
 [{
   "category": "Dames- en herenkleding",
+  "categoryType": "volwassene",
   "priceDataSet": [
     { "name": "Blouse of overhemd korte mouwen", "price": 155 },
     { "name": "Blouse of overhemd lange mouwen", "price": 180 },
@@ -23,6 +24,7 @@
   ]
 },{
   "category": "Kinderkleding t/m maat 158",
+  "categoryType": "kind",
   "priceDataSet": [
     { "name": "Blouse", "price": 130 },
     { "name": "Overhemd", "price": 130 },
@@ -37,6 +39,7 @@
   ]
 },{
   "category": "Linnen- en beddengoed",
+  "categoryType": "bed",
   "priceDataSet": [
     { "name": "Laken 1-persoons", "price": 220 },
     { "name": "Laken 2-persoons", "price": 300 },

@@ -9,7 +9,7 @@ export function LoggedIn({children}: {children: React.ReactNode}): JSX.Element {
     async function checkPwd(e: React.ChangeEvent<HTMLInputElement>) {
         const response = await fetch("php/login.php", {
             method: "POST",
-            headers:{
+            headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
             body: new URLSearchParams({

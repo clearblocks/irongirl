@@ -26,6 +26,25 @@ class InvoiceOrm {
         return $connection;
     }
 
+    public function getInvoices(string $month): array {
+        $monthStartStr = $month . '-01';
+        $monthStart = new DateTime($monthStartStr);
+        $nextMonthStart = new DateTime($monthStartStr);
+        $nextMonthStart->modify('+1 month');
+        $nextMonthStartStr = $nextMonthStart->format('Y-m-d');
+
+        $query = "SELECT * FROM invoices WHERE created_datetime >= ? AND created_datetime < ?;";
+        $result = $this->connection->execute_query($query, [$monthStartStr, $nextMonthStartStr]);
+        $rows = $result->fetch_all(MYSQLI_ASSOC);
+        return array_map(fn($row) => [
+            'created' => $row['created_datetime'],
+            'invoiceNumber' => $row['invoice_number'],
+            'totalPriceExVat' => $row['total_price_ex_vat'],
+            'vat' => $row['vat'],
+            'totalPrice' => $row['total_price']
+        ], $rows);
+    }
+
     public function createInvoice(int $totalPrice): int {
         $vat = round(($totalPrice / 121) * 21);
         $totalPriceExVat = $totalPrice - $vat;

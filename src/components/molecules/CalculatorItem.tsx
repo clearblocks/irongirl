@@ -7,10 +7,11 @@ type CalculatorItemProps = {
     name: string,
     price: number,
     amount: number | undefined,
-    setAmount: (id: string, amount: number | undefined) => void
+    setAmount: (id: string, amount: number | undefined) => void,
+    readOnly: boolean
 }
 
-export function CalculatorItem({id, name, price, amount, setAmount}: CalculatorItemProps) {
+export function CalculatorItem({id, name, price, amount, setAmount, readOnly}: CalculatorItemProps) {
     function up() {
         setAmount(id, (amount || 0) + 1)
     }
@@ -37,9 +38,10 @@ export function CalculatorItem({id, name, price, amount, setAmount}: CalculatorI
 
     return <div className={classNames("calculator-item ", {'active': (amount || 0) > 0})}>
         <span className={'item-name'}>{name}</span>
-        <div className={"calc-button calc-button-min"} onClick={down}>-</div>
-        <div className={"calc-button calc-button-plus"} onClick={up}>+</div>
-        <input type={'text'} value={showAmount(amount)} onFocus={onInputFocus} onChange={onInputChange} className={'item-amount'} />
+        {!readOnly && <div className={"calc-button calc-button-min"} onClick={down}>-</div>}
+        {!readOnly && <div className={"calc-button calc-button-plus"} onClick={up}>+</div>}
+        {readOnly ? <span className={'read-item-amount'}>{showAmount(amount)}:</span> :
+        <input type={'text'} value={showAmount(amount)} onFocus={onInputFocus} onChange={onInputChange} className={'item-amount'} />}
         <span className={'item-total'}><span className={'item-euro'}>&euro;</span>{renderPrice((amount || 0) * price)}</span>
     </div>
 }

@@ -14,8 +14,7 @@ if (!$loggedIn) {
 $invoiceItems = getRequestInvoiceItems();
 createInvoice($invoiceItems);
 
-function getRequestInvoiceItems(): array|null
-{
+function getRequestInvoiceItems(): array|null {
     try {
         $body = file_get_contents('php://input');
         $invoiceItems = json_decode($body, true, 10, JSON_THROW_ON_ERROR);
@@ -38,8 +37,7 @@ function getRequestInvoiceItems(): array|null
     }
 }
 
-function createInvoice(array $invoiceItems)
-{
+function createInvoice(array $invoiceItems) {
     $invoiceOrm = new InvoiceOrm();
     $totalPrice = 0;
     foreach ($invoiceItems as $idx => $invoiceItem) {

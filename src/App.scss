@@ -880,20 +880,77 @@ footer {
   padding: 20px;
 }
 
+.admin-tabs {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid black;
+}
+
+.admin-tab {
+  width: 50%;
+  text-align: center;
+  padding: 10px 0;
+
+  &:first-child {
+    border-right: 1px solid black;
+  }
+
+  &.active {
+    background-color: #dbdbff;
+  }
+}
+
 .calculator {
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
 
   .calculator-total {
     font-size: 2em;
   }
 
-  .toggle-selected {
+  .calculator-total-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3em;
+    padding-left: 10px;
+    padding-right: 14px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  .action-buttons, .action-buttons-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .action-buttons-bottom {
+    justify-content: end;
+  }
+
+  .save-error {
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #fdd7dd;
+  }
+
+  .toggle-selected, .toggle-save, .save-button {
     padding: 5px;
     display: inline-block;
     border: 1px solid black;
     border-radius: 5px;
     background-color: #dbdbff;
+    cursor: pointer;
+  }
+
+  .toggle-save, .save-button {
+    background-color: #e6fbe6;
+
+    &.cancel {
+      background-color: #fdd7dd;
+    }
   }
 
   .calculator-item {
@@ -941,14 +998,20 @@ footer {
     .item-amount {
       font-size: 1.3em;
       width: 30px;
-      margin-right: 20px;
+      margin-right: 5px;
       height: 38px;
       text-align: right;
       padding-right: 3px;
     }
 
+    .read-item-amount {
+      font-size: 1.3em;
+      padding-right: 10px;
+    }
+
     .item-total {
       font-size: 1.3em;
+      width: 100px;
     }
   }
 }
