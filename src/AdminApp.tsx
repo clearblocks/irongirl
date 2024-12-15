@@ -13,6 +13,10 @@ export function AdminApp() {
     const INVOICES = 'invoices'
     const [tab, setTab] = useState<string>('calculator')
 
+    function showInvoices() {
+        setTab(INVOICES)
+    }
+
     return (
         <div>
             <Header/>
@@ -23,7 +27,7 @@ export function AdminApp() {
                     <div className={classNames('admin-tab', {'active': tab === INVOICES})}
                         onClick={() => setTab(INVOICES)}>Facturen</div>
                 </div>
-                {tab === CALCULATOR && <Calculator />}
+                {tab === CALCULATOR && <Calculator showInvoices={showInvoices}/>}
                 {tab === INVOICES && <Invoices />}
                 <Footer/>
             </LoggedIn>

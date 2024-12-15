@@ -11,10 +11,13 @@ class InvoiceOrm {
     }
 
     private function connect() {
-        $servername = "db";
-        $username = "irongirl";
-        $password = "irongirl";
-        $database = "irongirl";
+
+        $config = require('config.php');
+
+        $servername = $config['DB_HOST'];
+        $database = $config['DB_NAME'];
+        $username = $config['DB_USER'];
+        $password = $config['DB_PASSWORD'];
 
         $connection = mysqli_connect($servername, $username, $password, $database);
 

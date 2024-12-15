@@ -6,7 +6,11 @@ import {renderPrice} from "../atoms/PriceRow";
 import classNames from "classnames";
 import {AmountMap, getTotalPrice, saveInvoice} from "../../helpers/calculator-helper";
 
-export function Calculator() {
+interface CalculatorProps {
+    showInvoices: () => void
+}
+
+export function Calculator({showInvoices}: CalculatorProps) {
 
     const [itemAmounts, setItemAmounts] = useState<AmountMap>({})
     const [viewSelected, setViewSelected] = useState<boolean>(false)
@@ -38,6 +42,8 @@ export function Calculator() {
         const result = await saveInvoice(itemAmounts)
         if (!result) {
             setSaveError("Fout bij opslaan")
+        } else {
+            showInvoices()
         }
     }
 
