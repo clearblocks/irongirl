@@ -5,4 +5,5 @@ return [
     'DB_NAME' => 'irongirl',
     'DB_USER' => 'irongirl',
     'DB_PASSWORD' => 'irongirl',
+    'CORS' => true
 ];

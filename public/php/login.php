@@ -1,4 +1,8 @@
 <?php
+$config = require_once "config.php";
+if ($config['CORS']) {
+    require_once "cors.php";
+}
 session_start();
 
 if ($_SESSION['logged_in'] ?? false) {

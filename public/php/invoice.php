@@ -1,6 +1,10 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
+$config = require_once "config.php";
+if ($config['CORS']) {
+    require_once "cors.php";
+}
 require_once "InvoiceOrm.php";
 
 session_start();
@@ -43,7 +47,11 @@ function createInvoice(array $invoiceItems) {
     $invoiceOrm = new InvoiceOrm();
     $totalPrice = 0;
     foreach ($invoiceItems as $idx => $invoiceItem) {
-        $itemTotal = $invoiceItem['amount'] * $invoiceItem['price'];
+        if ($invoiceItem['id'] == 'laundry') {
+            $itemTotal = $invoiceItem['price'];
+        } else {
+            $itemTotal = $invoiceItem['amount'] * $invoiceItem['price'];
+        }
         $totalPrice += $itemTotal;
         $invoiceItems[$idx]['totalPrice'] = $itemTotal;
     }

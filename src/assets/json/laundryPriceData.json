@@ -1,6 +1,6 @@
 [{
   "priceDataSet": [
-    { "name":  "Tot 6 kg", "price":  1650},
-    { "name":  "Elke extra kg", "price":  250}
+    { "name":  "Tot 6 kg", "slug":"<=6", "price":  1650},
+    { "name":  "Elke extra kg", "slug": ">6", "price":  250}
   ]
 }]

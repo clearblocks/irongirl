@@ -2,9 +2,11 @@ import React, {useState} from 'react'
 
 import ironPriceData from "../../assets/json/ironPriceData.json"
 import {CalculatorItem} from "../molecules/CalculatorItem";
-import {renderPrice} from "../atoms/PriceRow";
 import classNames from "classnames";
-import {AmountMap, getTotalPrice, saveInvoice} from "../../helpers/calculator-helper";
+import {AmountMap, getTotalPrice} from "../../helpers/calculator-helper";
+import {LaundryCalculatorItem} from "../molecules/LaundryCalculatorItem";
+import {saveInvoice} from "../../helpers/requests";
+import {Price} from "../atoms/Price";
 
 interface CalculatorProps {
     showInvoices: () => void
@@ -15,7 +17,7 @@ export function Calculator({showInvoices}: CalculatorProps) {
     const [itemAmounts, setItemAmounts] = useState<AmountMap>({})
     const [viewSelected, setViewSelected] = useState<boolean>(false)
     const [viewSave, setViewSave] = useState<boolean>(false)
-    const [saveError, setSaveError] = useState<string|null>(null)
+    const [saveError, setSaveError] = useState<string | null>(null)
 
     function setAmount(id: string, amount: number | undefined) {
         const updated = {
@@ -58,10 +60,11 @@ export function Calculator({showInvoices}: CalculatorProps) {
                                     onClick={() => {
                                         setViewSave(!viewSave)
                                         setViewSelected(true)
-                                    }}>{viewSave ? 'Annuleer' : 'Opslaan'}</div>}
+                                    }}>{viewSave ? 'Annuleer' : 'Factuur maken'}</div>}
         </div>
         <div className={"calculator-total"}>
-            <span>Totaal:&nbsp;</span><span className={'item-euro'}>&euro;</span><span>{renderPrice(totalPrice)}</span>
+            <span>Totaal:&nbsp;</span>
+            <Price price={totalPrice} />
         </div>
         {ironPriceData.map((priceDataSet, i: number) =>
             <div key={i}>
@@ -78,9 +81,18 @@ export function Calculator({showInvoices}: CalculatorProps) {
                                                       readOnly={viewSave}/> : null
                 })}
             </div>)}
+        <div key={'was'}>
+            <h2>Was Service</h2>
+            {(!viewSelected || itemAmounts['laundry']) ? <LaundryCalculatorItem id={'laundry'}
+                                    name={'Wasgoed (Kg)'}
+                                    price={0}
+                                    amount={itemAmounts['laundry']}
+                                    setAmount={setAmount}
+                                    readOnly={viewSave}/> : null}
+        </div>
         <div className={"calculator-total-bottom"}>
             <span>Totaal:</span>
-            <span><span className={'item-euro'}>&euro;</span>{renderPrice(totalPrice)}</span>
+            <Price price={totalPrice} />
         </div>
         {viewSave && <div className={'action-buttons-bottom'}>
             <div className={'save-button'} onClick={doSaveInvoice}>Opslaan</div>

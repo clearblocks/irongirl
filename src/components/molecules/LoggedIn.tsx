@@ -1,39 +1,21 @@
 import React, {useEffect, useState} from 'react'
-import Cookies from 'js-cookie';
-
-const secretWord = 'banaan'
+import {login} from "../../helpers/requests";
+import {isLoggedIn} from "../../helpers/requests";
 
 export function LoggedIn({children}: {children: React.ReactNode}): JSX.Element {
-    const [loggedIn, setLoggedIn] = useState(false)
+    const [loggedIn, setLoggedIn] = useState<boolean>(false)
 
     async function checkPwd(e: React.ChangeEvent<HTMLInputElement>) {
-        const response = await fetch("php/login.php", {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: new URLSearchParams({
-                'password': e.target.value
-            })
-        })
-
-        if (response.ok) {
-            const json = await response.json()
-            setLoggedIn(json['logged_in'])
-        }
+       setLoggedIn(await login(e.target.value))
     }
 
     useEffect(() => {
         const fetchLogin = async () => {
-            const response = await fetch("php/login.php")
-            if (response.ok) {
-                const json = await response.json()
-                setLoggedIn(json['logged_in'])
-            }
+            setLoggedIn(await isLoggedIn())
         }
 
         fetchLogin().catch(console.error)
-    })
+    }, [])
 
     if (loggedIn) {
         return <>{children}</>

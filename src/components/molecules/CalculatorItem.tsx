@@ -1,17 +1,22 @@
 import React from "react";
-import {renderPrice} from "../atoms/PriceRow";
 import classNames from "classnames";
+import {Price} from "../atoms/Price";
 
-type CalculatorItemProps = {
+export type CalculatorItemProps = {
     id: string,
     name: string,
     price: number,
     amount: number | undefined,
     setAmount: (id: string, amount: number | undefined) => void,
-    readOnly: boolean
+    readOnly: boolean,
+    calculatePrice?: (amount: number | undefined, price: number) => number
 }
 
-export function CalculatorItem({id, name, price, amount, setAmount, readOnly}: CalculatorItemProps) {
+function calcIroningPrice(amount: number | undefined, price: number): number {
+    return (amount || 0) * price
+}
+
+export function CalculatorItem({id, name, price, amount, setAmount, readOnly, calculatePrice = calcIroningPrice}: CalculatorItemProps) {
     function up() {
         setAmount(id, (amount || 0) + 1)
     }
@@ -42,6 +47,6 @@ export function CalculatorItem({id, name, price, amount, setAmount, readOnly}: C
         {!readOnly && <div className={"calc-button calc-button-plus"} onClick={up}>+</div>}
         {readOnly ? <span className={'read-item-amount'}>{showAmount(amount)}:</span> :
         <input type={'text'} value={showAmount(amount)} onFocus={onInputFocus} onChange={onInputChange} className={'item-amount'} />}
-        <span className={'item-total'}><span className={'item-euro'}>&euro;</span>{renderPrice((amount || 0) * price)}</span>
+        <Price className={'item-total'} price={calculatePrice(amount, price)} />
     </div>
 }

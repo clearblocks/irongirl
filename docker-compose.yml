@@ -6,6 +6,7 @@ services:
       - "8080:80"
     volumes:
       - ./build:/var/www/html
+      - ./public/php:/var/www/html/php
   db:
     image: mysql
     environment:

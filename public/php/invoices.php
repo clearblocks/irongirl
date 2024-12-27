@@ -1,6 +1,10 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
+$config = require_once "config.php";
+if ($config['CORS']) {
+    require_once "cors.php";
+}
 require_once "InvoiceOrm.php";
 
 session_start();
