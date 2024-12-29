@@ -31,6 +31,9 @@ export function Calculator({showInvoices}: CalculatorProps) {
         if (!viewSelected) {
             return true
         }
+        if (category === 'laundry') {
+            return (itemAmounts['laundry'] || 0) > 0
+        }
         const categoryIndex = ironPriceData.findIndex(catItems => catItems.category === category)
         return ironPriceData[categoryIndex]['priceDataSet'].some((priceData, itemIndex) => {
             const id = `${categoryIndex}-${itemIndex}`
@@ -81,8 +84,8 @@ export function Calculator({showInvoices}: CalculatorProps) {
                                                       readOnly={viewSave}/> : null
                 })}
             </div>)}
-        <div key={'was'}>
-            <h2>Was Service</h2>
+        <div key={'laundry'}>
+            {showCategory('laundry') ? <h2>Was Service</h2> : null}
             {(!viewSelected || itemAmounts['laundry']) ? <LaundryCalculatorItem id={'laundry'}
                                     name={'Wasgoed (Kg)'}
                                     price={0}

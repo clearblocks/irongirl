@@ -22,7 +22,7 @@ if ($month === null) {
     $month = date('Y-m');
 }
 
-$invoices = (new InvoiceOrm())->getInvoices($month);
+$invoices = new InvoiceOrm()->getInvoices($month);
 
 header('Content-Type: application/json');
 print(json_encode($invoices));

@@ -1,5 +1,5 @@
 import {AmountMap, getInvoiceItems} from "./calculator-helper";
-import {Invoice} from "../components/molecules/InvoicesList";
+import {Invoice} from "../models/Invoice";
 
 const host = window.location.hostname == 'localhost' ? 'http://localhost:8080' : ''
 

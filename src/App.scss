@@ -70,6 +70,7 @@ ul {
   @media screen and (min-width: $desktop) {
     padding-left: 6px;
   }
+
   li {
     margin-bottom: 12px;
   }
@@ -94,6 +95,7 @@ img {
 .form-input {
   margin-top: 10px;
   display: flex;
+
   label {
     font-family: $font_inter;
     margin-top: 14px;
@@ -232,7 +234,7 @@ header {
   div {
     color: white;
     font-size: 16px;
-    width:50%;
+    width: 50%;
 
     padding-top: 25px;
     padding-left: 20px;
@@ -619,6 +621,7 @@ header {
         height: auto;
       }
     }
+
     div {
       display: flex;
 
@@ -695,6 +698,7 @@ header {
     .contact-header {
       display: flex;
       margin-top: 40px;
+
       div {
         width: 40%;
 
@@ -759,6 +763,7 @@ header {
       margin-bottom: 5px;
       border-bottom: 1px solid grey;
       padding: 5px 0;
+
       &:first-child {
         border-top: 1px solid grey;
       }
@@ -830,6 +835,7 @@ footer {
   text-align: center;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+
   .span {
     display: inline-block;
     margin-left: 25px;
@@ -908,16 +914,6 @@ footer {
     font-size: 2em;
   }
 
-  .calculator-total-bottom {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.3em;
-    padding-left: 10px;
-    padding-right: 14px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-  }
-
   .action-buttons, .action-buttons-bottom {
     display: flex;
     justify-content: space-between;
@@ -952,67 +948,97 @@ footer {
       background-color: #fdd7dd;
     }
   }
+}
 
-  .calculator-item {
-    padding: 10px;
-    display: flex;
-    border-bottom: 1px solid black;
+.calculator-item {
+  padding: 10px;
+  display: flex;
+  border-bottom: 1px solid black;
 
-    &.active {
-      background-color: #eafbea;
+  &.active {
+    background-color: #eafbea;
+  }
+
+  span {
+    width: 50px;
+    text-align: right;
+    margin-right: 5px;
+  }
+
+  .calc-button {
+    width: 20px;
+    height: 20px;
+    padding: 3px 10px;
+    font-size: 2em;
+    border: 1px solid grey;
+    border-radius: 5px;
+    line-height: 0.6;
+    margin-right: 7px;
+    background-color: #fdd7dd;
+  }
+
+  .calc-button-plus {
+    height: 35px;
+    width: 10px;
+    line-height: 1.4;
+    font-size: 1.4em;
+    padding-left: 5px;
+    background-color: #e6fbe6;
+  }
+
+  .item-name {
+    width: 200px;
+    text-align: left;
+    font-size: 1.1em;
+  }
+
+  .item-amount {
+    font-size: 1.3em;
+    width: 30px;
+    margin-right: 5px;
+    height: 38px;
+    text-align: right;
+    padding-right: 3px;
+  }
+
+  .read-item-amount {
+    font-size: 1.3em;
+    padding-right: 10px;
+  }
+
+  .item-total {
+    font-size: 1.3em;
+    width: 100px;
+  }
+}
+
+.calculator-total-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3em;
+  padding-left: 10px;
+  padding-right: 14px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.invoice {
+  margin: 0 auto;
+  width: 90%;
+
+  .back-link {
+    margin: 20px 10px;
+    text-decoration: underline;
+  }
+
+  .invoice-data {
+    margin: 20px 10px;
+
+    .invoice-data-item {
+      display: flex;
+      justify-content: space-between;
     }
 
-    span {
-      width: 50px;
-      text-align: right;
-      margin-right: 5px;
-    }
-
-    .calc-button {
-      width: 20px;
-      height: 20px;
-      padding: 3px 10px;
-      font-size: 2em;
-      border: 1px solid grey;
-      border-radius: 5px;
-      line-height: 0.6;
-      margin-right: 7px;
-      background-color: #fdd7dd;
-    }
-
-    .calc-button-plus {
-      height: 35px;
-      width: 10px;
-      line-height: 1.4;
-      font-size: 1.4em;
-      padding-left: 5px;
-      background-color: #e6fbe6;
-    }
-
-    .item-name {
-      width: 200px;
-      text-align: left;
-      font-size: 1.1em;
-    }
-
-    .item-amount {
-      font-size: 1.3em;
-      width: 30px;
-      margin-right: 5px;
-      height: 38px;
-      text-align: right;
-      padding-right: 3px;
-    }
-
-    .read-item-amount {
-      font-size: 1.3em;
-      padding-right: 10px;
-    }
-
-    .item-total {
-      font-size: 1.3em;
-      width: 100px;
-    }
   }
 }
 
@@ -1051,6 +1077,10 @@ footer {
     justify-content: space-between;
     border-bottom: 1px solid black;
     padding: 10px;
+
+    &:last-child {
+      border-bottom: none
+    }
   }
 
   .invoice-total {

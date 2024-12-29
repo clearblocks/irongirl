@@ -1,15 +1,16 @@
 import React, {useEffect, useState} from "react";
 import {format, add} from "date-fns"
-import {Invoice, InvoicesList} from "../molecules/InvoicesList";
+import {InvoicesList} from "../molecules/InvoicesList";
 import {getInvoices} from "../../helpers/requests";
-
-
+import {Invoice} from "../../models/Invoice";
+import {InvoiceComponent} from "./InvoiceComponent";
 
 export function Invoices() {
 
     const [invoices, setInvoices] = useState<Invoice[]>([])
     const [yearMonth, setYearMonth] = useState<string>(format(new Date(), "yyyy-MM"));
     const [error, setError] = useState<string|null>(null);
+    const [showInvoice, setShowInvoice] = useState<Invoice|null>(null)
 
     function monthName(monthYear: string) {
         return new Intl.DateTimeFormat(navigator.language, { month: "long" }).format(new Date(`${monthYear}-01`));
@@ -37,6 +38,10 @@ export function Invoices() {
 
     }, [yearMonth]);
 
+    if (showInvoice) {
+        return <InvoiceComponent invoice={showInvoice} setShowInvoice={setShowInvoice} />
+    }
+
     return <div className={"invoices"}>
         <h1>Facturen</h1>
         <div className={'month-navigation'}>
@@ -46,6 +51,6 @@ export function Invoices() {
 
         </div>
         {error ? <div className={'message error'}>{error}</div> :
-        <InvoicesList invoices={invoices}/>}
+        <InvoicesList invoices={invoices} setShowInvoice={setShowInvoice}/>}
     </div>
 }

@@ -25,7 +25,6 @@ export function calcLaundryPrice(amount: number | undefined, price: number) {
     }
 }
 
-
 function indexItemPricesById(): PriceMap {
     return Object.fromEntries(ironPriceData.map((categoryItems, i) => {
         return categoryItems.priceDataSet.map((priceItem, j) => {
