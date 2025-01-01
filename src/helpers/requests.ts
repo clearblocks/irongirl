@@ -1,11 +1,12 @@
 import {AmountMap, getInvoiceItems} from "./calculator-helper";
 import {Invoice} from "../models/Invoice";
 
-const host = window.location.hostname == 'localhost' ? 'http://localhost:8080' : ''
+const host = window.location.hostname === 'localhost' ? 'http://localhost:8080' : ''
 
 export const loginUri = `${host}/php/login.php`
 export const getInvoicesUri = (yearMonth: string) => `${host}/php/invoices.php?month=${yearMonth}`
 export const postInvoiceUri = `${host}/php/invoice.php`
+export const getInvoiceUri = (invoiceNumber: string) => `${host}/php/invoice.php?invoiceNumber=${invoiceNumber}`
 
 export async function isLoggedIn(): Promise<boolean> {
     const response = await fetch(loginUri, {
@@ -50,7 +51,11 @@ export async function saveInvoice(itemAmounts: AmountMap) {
         credentials: 'include'
     })
 
-    return response.ok
+    if (response.ok) {
+        return await response.json()
+    } else {
+        throw Error("Error saving invoice")
+    }
 }
 
 export async function getInvoices(yearMonth: string): Promise<Invoice[]> {
@@ -61,5 +66,16 @@ export async function getInvoices(yearMonth: string): Promise<Invoice[]> {
         return await response.json()
     } else {
         throw Error(`Error getting invoices for month ${yearMonth}`)
+    }
+}
+
+export async function getInvoice(invoiceNumber: string): Promise<Invoice> {
+    const response = await fetch(getInvoiceUri(invoiceNumber), {
+        credentials: 'include'
+    })
+    if (response.ok) {
+        return await response.json()
+    } else {
+        throw Error(`Error getting invoice ${invoiceNumber}`)
     }
 }

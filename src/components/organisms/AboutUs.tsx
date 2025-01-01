@@ -1,10 +1,9 @@
-import React, {ForwardedRef, forwardRef} from 'react';
+import React, {ForwardedRef} from 'react';
 import womanIroning from '../../assets/img/woman-steam-shirt.jpg'
 import shirts from '../../assets/img/shirts.jpeg'
 import ironingBoard from '../../assets/img/ironing-board-pink.jpg'
 import bearWash from '../../assets/img/beer-was.jpg'
 import washingBackground from '../../assets/img/washing-background.jpeg'
-import washingMachineInside from '../../assets/img/washing-machine-inside.jpg'
 import {Washing} from "../molecules/Washing";
 import {Ironing} from "../molecules/Ironing";
 

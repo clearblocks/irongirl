@@ -8,10 +8,10 @@ interface PriceProps {
 export function Price({className = '', price}: PriceProps) {
     // Assume price is always an integer, no float
     let priceString = String(price)
-    if (priceString.length == 1) {
+    if (priceString.length === 1) {
         priceString = "00" + priceString
     }
-    if (priceString.length == 2) {
+    if (priceString.length === 2) {
         priceString = "0" + priceString
     }
 

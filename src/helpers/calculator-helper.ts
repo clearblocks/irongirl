@@ -14,7 +14,7 @@ const laundryExtraKgPrice = laundryPriceData[0].priceDataSet
 
 export function calcLaundryPrice(amount: number | undefined, price: number) {
     amount = amount || 0
-    if (amount == 0) {
+    if (amount === 0) {
         return 0
     }
     else if (amount <= 6) {

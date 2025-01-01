@@ -7,17 +7,16 @@ import {AmountMap, getTotalPrice} from "../../helpers/calculator-helper";
 import {LaundryCalculatorItem} from "../molecules/LaundryCalculatorItem";
 import {saveInvoice} from "../../helpers/requests";
 import {Price} from "../atoms/Price";
+import {useNavigate} from "react-router";
 
-interface CalculatorProps {
-    showInvoices: () => void
-}
-
-export function Calculator({showInvoices}: CalculatorProps) {
+export function Calculator() {
 
     const [itemAmounts, setItemAmounts] = useState<AmountMap>({})
     const [viewSelected, setViewSelected] = useState<boolean>(false)
     const [viewSave, setViewSave] = useState<boolean>(false)
     const [saveError, setSaveError] = useState<string | null>(null)
+
+    let navigate = useNavigate();
 
     function setAmount(id: string, amount: number | undefined) {
         const updated = {
@@ -44,11 +43,12 @@ export function Calculator({showInvoices}: CalculatorProps) {
 
     async function doSaveInvoice() {
         setSaveError(null)
-        const result = await saveInvoice(itemAmounts)
-        if (!result) {
+        try {
+            const result = await saveInvoice(itemAmounts)
+            navigate(`/admin/invoice/${result.invoiceNumber}`)
+        } catch (e) {
+            console.error(e)
             setSaveError("Fout bij opslaan")
-        } else {
-            showInvoices()
         }
     }
 

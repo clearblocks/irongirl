@@ -1,37 +1,27 @@
 import React, {useState} from 'react';
 
-import './App.scss';
-import {Header} from "./components/organisms/Header";
-import {Footer} from "./components/organisms/Footer";
 import {Calculator} from "./components/organisms/Calculator";
-import {LoggedIn} from "./components/molecules/LoggedIn";
 import classNames from "classnames";
 import {Invoices} from "./components/organisms/Invoices";
+import {NavLink, Route, Routes} from "react-router";
 
 export function AdminApp() {
-    const CALCULATOR = 'calculator'
-    const INVOICES = 'invoices'
-    const [tab, setTab] = useState<string>('calculator')
-
-    function showInvoices() {
-        setTab(INVOICES)
-    }
-
     return (
-        <div>
-            <Header/>
-            <LoggedIn>
-                <div className={'admin-tabs'}>
-                    <div className={classNames('admin-tab', {'active': tab === CALCULATOR})}
-                        onClick={() => setTab(CALCULATOR)}>Calculator</div>
-                    <div className={classNames('admin-tab', {'active': tab === INVOICES})}
-                        onClick={() => setTab(INVOICES)}>Facturen</div>
-                </div>
-                {tab === CALCULATOR && <Calculator showInvoices={showInvoices}/>}
-                {tab === INVOICES && <Invoices />}
-                <Footer/>
-            </LoggedIn>
-        </div>
+        <>
+            <div className={'admin-tabs'}>
+                <NavLink className={classNames('admin-tab')}
+                     to={"/admin"} end>Calculator
+                </NavLink>
+                <NavLink className={classNames('admin-tab')}
+                     to={'/admin/invoices'}>Facturen
+                </NavLink>
+            </div>
+            <Routes>
+                <Route index element={<Calculator/>}/>
+                <Route path={"/invoices"} element={<Invoices />}/>
+            </Routes>
+
+        </>
     );
 }
 

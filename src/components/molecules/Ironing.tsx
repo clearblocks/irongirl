@@ -1,8 +1,4 @@
 import React, {ForwardedRef, forwardRef} from "react";
-import womanIroning from "../../assets/img/woman-steam-shirt.jpg";
-import shirts from "../../assets/img/shirts.jpeg";
-import washingBackground from "../../assets/img/washing-background.jpeg";
-import washingMachineInside from "../../assets/img/washing-machine-inside.jpg";
 
 export const Ironing = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => (
   <div className={"about-us"} id={"about-us"} ref={ref}>

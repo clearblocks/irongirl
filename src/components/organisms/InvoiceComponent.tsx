@@ -1,22 +1,42 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {CalculatorItem} from "../molecules/CalculatorItem";
 import {Price} from "../atoms/Price";
 import {Invoice} from "../../models/Invoice";
 import {format} from "date-fns";
 import {nl} from "date-fns/locale";
+import {getInvoice} from "../../helpers/requests";
+import {useParams} from "react-router";
 
 export function formatDate(dateVal: string): string {
     return format(new Date(dateVal),  'dd MMMM yyyy', {locale: nl})
 }
 
-interface InvoiceProps {
-    invoice: Invoice
-    setShowInvoice: (invoice: Invoice|null) => void
-}
+export function InvoiceComponent() {
+    const [invoice, setInvoice] = useState<Invoice|null>(null)
+    const [error, setError] = useState<string|null>(null)
 
-export function InvoiceComponent({invoice, setShowInvoice}: InvoiceProps) {
+    let { invoiceNumber } = useParams() as { invoiceNumber: string };
+
+    useEffect(() => {
+        const fetchInvoice = async () => {
+            setInvoice(await getInvoice(invoiceNumber))
+        }
+
+        setError(null)
+        fetchInvoice().catch(() => {
+            setError("Er is een fout opgetreden bij het ophalen van de factuur. Neem contact op met uw banaan.")
+        })
+    }, []);
+
+    if (invoice === null) {
+        return <div>Loading...</div>
+    }
+
+    if (error) {
+        return <div className={"save-error"}>{error}</div>
+    }
+
     return <div className={'invoice'}>
-        <div className={'back-link'} onClick={() => setShowInvoice(null)}>Terug</div>
         <div className={'invoice-data'}>
             <div className={'invoice-data-item'}><span>Factuurnummer</span><span>{invoice.invoiceNumber}</span></div>
             <div className={'invoice-data-item'}><span>Datum</span><span>{formatDate(invoice.created)}</span></div>

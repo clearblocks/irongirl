@@ -2,8 +2,6 @@
 
 class InvoiceOrm {
 
-    static int $INITIAL_INVOICE_NUMBER = 2024002;
-
     private $connection;
 
     public function __construct() {
@@ -48,6 +46,20 @@ class InvoiceOrm {
         ], $rows);
     }
 
+    public function getInvoice(string $invoiceNumber): array {
+        $query = "SELECT * FROM invoices WHERE invoice_number = ?;";
+        $result = $this->connection->execute_query($query, [$invoiceNumber]);
+        $row = $result->fetch_assoc();
+        return [
+            'created' => $row['created_datetime'],
+            'invoiceNumber' => $row['invoice_number'],
+            'invoiceItems' => $this->getInvoiceItems($row['id']),
+            'totalPriceExVat' => $row['total_price_ex_vat'],
+            'vat' => $row['vat'],
+            'totalPrice' => $row['total_price']
+        ];
+    }
+
     public function getInvoiceItems(string $invoiceId): array {
         $query = "SELECT * FROM invoice_items WHERE invoice_id = ?;";
         $result = $this->connection->execute_query($query, [$invoiceId]);
@@ -59,14 +71,14 @@ class InvoiceOrm {
         ], $rows);
     }
 
-    public function createInvoice(int $totalPrice): int {
+    public function createInvoice(int $totalPrice): array {
         $vat = round(($totalPrice / 121) * 21);
         $totalPriceExVat = $totalPrice - $vat;
         $invoiceNumber = $this->getNextInvoiceNumber();
         $query = "INSERT INTO invoices (invoice_number, total_price_ex_vat, vat, total_price, created_datetime)
                   VALUES (?, ?, ?, ?, NOW())";
         $this->connection->execute_query($query, [$invoiceNumber, $totalPriceExVat, $vat, $totalPrice]);
-        return $this->connection->insert_id;
+        return [$this->connection->insert_id, $invoiceNumber];
     }
 
     public function createInvoiceItem(int $invoiceId, string $item, int $amount, int $itemPrice, int $totalPrice) {
@@ -87,7 +99,7 @@ class InvoiceOrm {
         $result = $this->connection->execute_query($query, [$currentYearStart, $nextYearStart]);
         $row = $result->fetch_assoc();
         if (empty($row['invoice_number'])) {
-            return self::$INITIAL_INVOICE_NUMBER;
+            return "{$currentYear}001";
         }
 
         return ((int) $row['invoice_number']) + 1;

@@ -17,8 +17,25 @@ if (!$loggedIn) {
     exit();
 }
 
-$invoiceItems = getRequestInvoiceItems();
-createInvoice($invoiceItems);
+$method = $_SERVER['REQUEST_METHOD'];
+
+if ($method == 'POST') {
+    $invoiceItems = getRequestInvoiceItems();
+    $invoiceNumber = createInvoice($invoiceItems);
+    header('Content-Type: application/json');
+    print(json_encode(['invoiceNumber' => $invoiceNumber]));
+} else {
+    $invoiceNumber = $_GET['invoiceNumber'] ?? null;
+    if ($invoiceNumber == null) {
+        http_response_code(400);
+        print('Invoice number must be provided');
+        exit();
+    }
+    $invoice = new InvoiceOrm()->getInvoice($invoiceNumber);
+    header('Content-Type: application/json');
+    print(json_encode($invoice));
+}
+
 
 function getRequestInvoiceItems(): array|null {
     try {
@@ -43,7 +60,7 @@ function getRequestInvoiceItems(): array|null {
     }
 }
 
-function createInvoice(array $invoiceItems) {
+function createInvoice(array $invoiceItems): string {
     $invoiceOrm = new InvoiceOrm();
     $totalPrice = 0;
     foreach ($invoiceItems as $idx => $invoiceItem) {
@@ -56,12 +73,14 @@ function createInvoice(array $invoiceItems) {
         $invoiceItems[$idx]['totalPrice'] = $itemTotal;
     }
 
-    $invoiceId = $invoiceOrm->createInvoice($totalPrice);
+    list($invoiceId, $invoiceNumber) = $invoiceOrm->createInvoice($totalPrice);
 
     foreach ($invoiceItems as $invoiceItem) {
         $invoiceOrm->createInvoiceItem($invoiceId, $invoiceItem['item'], $invoiceItem['amount'],
                                         $invoiceItem['price'], $invoiceItem['totalPrice']);
     }
+
+    return $invoiceNumber;
 }
 
 
