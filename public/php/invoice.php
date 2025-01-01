@@ -31,7 +31,7 @@ if ($method == 'POST') {
         print('Invoice number must be provided');
         exit();
     }
-    $invoice = new InvoiceOrm()->getInvoice($invoiceNumber);
+    $invoice = (new InvoiceOrm())->getInvoice($invoiceNumber);
     header('Content-Type: application/json');
     print(json_encode($invoice));
 }
