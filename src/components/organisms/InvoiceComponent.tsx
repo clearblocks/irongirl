@@ -9,7 +9,7 @@ import {useParams} from "react-router";
 import {LoggedIn} from "../molecules/LoggedIn";
 
 export function formatDate(dateVal: string): string {
-    return format(new Date(dateVal),  'dd MMMM yyyy', {locale: nl})
+    return format(new Date(dateVal),  'd MMMM yyyy', {locale: nl})
 }
 
 export function InvoiceComponent() {
