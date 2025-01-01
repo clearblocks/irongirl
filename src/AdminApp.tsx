@@ -4,10 +4,11 @@ import {Calculator} from "./components/organisms/Calculator";
 import classNames from "classnames";
 import {Invoices} from "./components/organisms/Invoices";
 import {NavLink, Route, Routes} from "react-router";
+import {LoggedIn} from "./components/molecules/LoggedIn";
 
 export function AdminApp() {
     return (
-        <>
+        <LoggedIn>
             <div className={'admin-tabs'}>
                 <NavLink className={classNames('admin-tab')}
                      to={"/admin"} end>Calculator
@@ -21,7 +22,7 @@ export function AdminApp() {
                 <Route path={"/invoices"} element={<Invoices />}/>
             </Routes>
 
-        </>
+        </LoggedIn>
     );
 }
 
