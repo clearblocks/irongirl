@@ -20,8 +20,8 @@ if (!$loggedIn) {
 $method = $_SERVER['REQUEST_METHOD'];
 
 if ($method == 'POST') {
-    $invoiceItems = getRequestInvoiceItems();
-    $invoiceNumber = createInvoice($invoiceItems);
+    $invoiceRequest = getInvoiceRequest();
+    $invoiceNumber = createInvoice($invoiceRequest);
     header('Content-Type: application/json');
     print(json_encode(['invoiceNumber' => $invoiceNumber]));
 } else {
@@ -37,22 +37,12 @@ if ($method == 'POST') {
 }
 
 
-function getRequestInvoiceItems(): array|null {
+function getInvoiceRequest(): array|null {
     try {
         $body = file_get_contents('php://input');
-        $invoiceItems = json_decode($body, true, 10, JSON_THROW_ON_ERROR);
-        if (!is_array($invoiceItems) ||
-            count($invoiceItems) == 0) {
-            throw new RuntimeException("Invalid invoiceItems");
-        }
-        foreach ($invoiceItems as $invoiceItem) {
-            if (empty($invoiceItem['item'] ?? '') ||
-                ($invoiceItem['amount'] ?? 0) == 0 ||
-                ($invoiceItem['price'] ?? 0) == 0) {
-                throw new RuntimeException("Invalid invoiceItem");
-            }
-        }
-        return $invoiceItems;
+        $json = json_decode($body, true, 10, JSON_THROW_ON_ERROR);
+        validateInvoiceRequest($json);
+        return $json;
     } catch (Exception) {
         http_response_code(400);
         print('Invalid Request body');
@@ -60,9 +50,29 @@ function getRequestInvoiceItems(): array|null {
     }
 }
 
-function createInvoice(array $invoiceItems): string {
+function validateInvoiceRequest($json) {
+    if (!is_array($json) ||
+        !array_key_exists('customerName', $json) ||
+        empty($json['customerName']) ||
+        !array_key_exists('invoiceItems', $json) ||
+        !is_array($json['invoiceItems']) ||
+        count($json['invoiceItems']) == 0) {
+        throw new RuntimeException("Invalid Request body");
+    }
+    foreach ($json['invoiceItems'] as $invoiceItem) {
+        if (empty($invoiceItem['item'] ?? '') ||
+            ($invoiceItem['amount'] ?? 0) == 0 ||
+            ($invoiceItem['price'] ?? 0) == 0) {
+            throw new RuntimeException("Invalid invoiceItem");
+        }
+    }
+}
+
+function createInvoice(array $invoiceRequest): string {
     $invoiceOrm = new InvoiceOrm();
     $totalPrice = 0;
+    $invoiceItems = $invoiceRequest['invoiceItems'];
+    $customerName = $invoiceRequest['customerName'];
     foreach ($invoiceItems as $idx => $invoiceItem) {
         if ($invoiceItem['id'] == 'laundry') {
             $itemTotal = $invoiceItem['price'];
@@ -73,11 +83,11 @@ function createInvoice(array $invoiceItems): string {
         $invoiceItems[$idx]['totalPrice'] = $itemTotal;
     }
 
-    list($invoiceId, $invoiceNumber) = $invoiceOrm->createInvoice($totalPrice);
+    list($invoiceId, $invoiceNumber) = $invoiceOrm->createInvoice($customerName, $totalPrice);
 
     foreach ($invoiceItems as $invoiceItem) {
         $invoiceOrm->createInvoiceItem($invoiceId, $invoiceItem['item'], $invoiceItem['amount'],
-                                        $invoiceItem['price'], $invoiceItem['totalPrice']);
+            $invoiceItem['price'], $invoiceItem['totalPrice']);
     }
 
     return $invoiceNumber;

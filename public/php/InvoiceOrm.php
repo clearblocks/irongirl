@@ -53,6 +53,7 @@ class InvoiceOrm {
         return [
             'created' => $row['created_datetime'],
             'invoiceNumber' => $row['invoice_number'],
+            'customerName' => $row['customer_name'],
             'invoiceItems' => $this->getInvoiceItems($row['id']),
             'totalPriceExVat' => $row['total_price_ex_vat'],
             'vat' => $row['vat'],
@@ -71,13 +72,14 @@ class InvoiceOrm {
         ], $rows);
     }
 
-    public function createInvoice(int $totalPrice): array {
+    public function createInvoice(string $customerName, int $totalPrice): array {
         $vat = round(($totalPrice / 121) * 21);
         $totalPriceExVat = $totalPrice - $vat;
         $invoiceNumber = $this->getNextInvoiceNumber();
-        $query = "INSERT INTO invoices (invoice_number, total_price_ex_vat, vat, total_price, created_datetime)
-                  VALUES (?, ?, ?, ?, NOW())";
-        $this->connection->execute_query($query, [$invoiceNumber, $totalPriceExVat, $vat, $totalPrice]);
+        $query = "INSERT INTO invoices (invoice_number, customer_name, total_price_ex_vat, vat, total_price, created_datetime)
+                  VALUES (?, ?, ?, ?, ?, NOW())";
+        $this->connection->execute_query($query, [$invoiceNumber, $customerName, $totalPriceExVat,
+            $vat, $totalPrice]);
         return [$this->connection->insert_id, $invoiceNumber];
     }
 

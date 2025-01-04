@@ -39,8 +39,9 @@ export function InvoiceComponent() {
 
     return (
     <LoggedIn>
-            <div className={'invoice'}>
+        <div className={'invoice'}>
             <div className={'invoice-data'}>
+                <div className={'invoice-data-item invoice-customer'}><span>{invoice.customerName}</span><span></span></div>
                 <div className={'invoice-data-item'}><span>Factuurnummer</span><span>{invoice.invoiceNumber}</span></div>
                 <div className={'invoice-data-item'}><span>Datum</span><span>{formatDate(invoice.created)}</span></div>
             </div>

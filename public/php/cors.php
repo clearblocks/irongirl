@@ -1,7 +1,7 @@
 <?php
 
 ini_set('session.cookie_samesite', 'None');
-ini_set('session.cookie_secure', '0');
+ini_set('session.cookie_secure', 'On');
 ini_set('session.cookie_domain', 'localhost');
 
 header("Access-Control-Allow-Origin: http://localhost:3000");

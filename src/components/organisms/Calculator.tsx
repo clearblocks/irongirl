@@ -15,6 +15,7 @@ export function Calculator() {
     const [viewSelected, setViewSelected] = useState<boolean>(false)
     const [viewSave, setViewSave] = useState<boolean>(false)
     const [saveError, setSaveError] = useState<string | null>(null)
+    const [customerName, setCustomerName] = useState<string>('')
 
     let navigate = useNavigate();
 
@@ -43,12 +44,16 @@ export function Calculator() {
 
     async function doSaveInvoice() {
         setSaveError(null)
-        try {
-            const result = await saveInvoice(itemAmounts)
-            navigate(`/admin/invoice/${result.invoiceNumber}`)
-        } catch (e) {
-            console.error(e)
-            setSaveError("Fout bij opslaan")
+        if (customerName.trim() === '') {
+            setSaveError("Klantnaam moet ingevuld zijn")
+        } else {
+            try {
+                const result = await saveInvoice(customerName, itemAmounts)
+                navigate(`/admin/invoice/${result.invoiceNumber}`)
+            } catch (e) {
+                console.error(e)
+                setSaveError("Fout bij opslaan")
+            }
         }
     }
 
@@ -98,6 +103,11 @@ export function Calculator() {
             <Price price={totalPrice} />
         </div>
         {viewSave && <div className={'action-buttons-bottom'}>
+            <div className={'input-customer-name'}>
+                <span>Klantnaam: </span>
+                <input type={'text'} value={customerName}
+                       onChange={(e) => setCustomerName(e.target.value)} />
+            </div>
             <div className={'save-button'} onClick={doSaveInvoice}>Opslaan</div>
         </div>}
         {saveError && <div className={'save-error'}>{saveError}</div>}

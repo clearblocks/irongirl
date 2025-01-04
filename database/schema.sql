@@ -42,3 +42,6 @@ CREATE TABLE invoice_items (
         ON DELETE CASCADE
         ON UPDATE CASCADE
 )
+
+ALTER TABLE invoices
+ADD COLUMN customer_name VARCHAR(255) AFTER invoice_number;

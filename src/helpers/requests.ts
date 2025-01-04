@@ -40,14 +40,17 @@ export async function login(password: string): Promise<boolean> {
     return false
 }
 
-export async function saveInvoice(itemAmounts: AmountMap) {
+export async function saveInvoice(customerName: string, itemAmounts: AmountMap) {
     const invoiceItems = getInvoiceItems(itemAmounts)
     const response = await fetch(postInvoiceUri, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(invoiceItems),
+        body: JSON.stringify({
+            customerName: customerName,
+            invoiceItems: invoiceItems
+        }),
         credentials: 'include'
     })
 
