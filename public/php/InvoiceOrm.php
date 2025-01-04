@@ -39,6 +39,7 @@ class InvoiceOrm {
         return array_map(fn($row) => [
             'created' => $row['created_datetime'],
             'invoiceNumber' => $row['invoice_number'],
+            'customerName' => $row['customer_name'],
             'invoiceItems' => $this->getInvoiceItems($row['id']),
             'totalPriceExVat' => $row['total_price_ex_vat'],
             'vat' => $row['vat'],

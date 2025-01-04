@@ -28,6 +28,7 @@ export function InvoicesList({invoices}: InvoicesListProps) {
         {invoices.map((invoice, idx) => {
             return <Link className={'invoice-item'} key={idx} to={`/admin/invoice/${invoice.invoiceNumber}`}>
                 <span>{formatDate(invoice.created)}</span>
+                <span>{invoice.customerName}</span>
                 <Price price={invoice.totalPrice}/>
             </Link>
         })}
