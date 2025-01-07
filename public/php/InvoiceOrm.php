@@ -18,6 +18,7 @@ class InvoiceOrm {
         $password = $config['DB_PASSWORD'];
 
         $connection = mysqli_connect($servername, $username, $password, $database);
+        mysqli_set_charset($connection, 'utf8mb4');
 
         if ($connection->connect_error) {
             http_response_code(500);
@@ -54,7 +55,7 @@ class InvoiceOrm {
         return [
             'created' => $row['created_datetime'],
             'invoiceNumber' => $row['invoice_number'],
-            'customerName' => $row['customer_name'],
+            'customerName' => mb_convert_encoding($row['customer_name'], 'UTF-8', 'UTF-8'),
             'invoiceItems' => $this->getInvoiceItems($row['id']),
             'totalPriceExVat' => $row['total_price_ex_vat'],
             'vat' => $row['vat'],
