@@ -7,6 +7,7 @@ if ($config['CORS']) {
 }
 require_once "InvoiceOrm.php";
 
+ini_set('session.cookie_lifetime', 5184000);
 session_start();
 
 $loggedIn = $_SESSION['logged_in'] ?? false;
