@@ -1054,6 +1054,7 @@ footer {
 .invoice {
   margin: 0 auto;
   width: 90%;
+  font-size: 2em;
 
   .back-link {
     margin: 20px 10px;
@@ -1089,6 +1090,7 @@ footer {
 .invoices {
   margin: 0 auto;
   width: 90%;
+  font-size: 2em;
 
   .month-navigation {
     display: flex;
@@ -1098,12 +1100,11 @@ footer {
     margin-right: 20px;
 
     button {
-      height: 40px;
-      font-size: 24px;
+      height: 80px;
+      font-size: 2em;
       background-color: #dbdbff;
       border: 1px solid black;
       border-radius: 5px;
-
     }
 
     h2 {

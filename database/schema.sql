@@ -26,7 +26,7 @@ CREATE TABLE invoices (
     total_price int NOT NULL,
     created_datetime datetime NOT NULL,
     PRIMARY KEY (id)
-)
+);
 
 CREATE TABLE invoice_items (
     id int NOT NULL AUTO_INCREMENT,
@@ -41,7 +41,7 @@ CREATE TABLE invoice_items (
     FOREIGN KEY (invoice_id) REFERENCES invoices(id)
         ON DELETE CASCADE
         ON UPDATE CASCADE
-)
+);
 
 ALTER TABLE invoices
 ADD COLUMN customer_name VARCHAR(255) AFTER invoice_number;
