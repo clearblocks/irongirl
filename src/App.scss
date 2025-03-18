@@ -16,7 +16,10 @@ $grey: #d9d9d9;
 
 body {
   color: $text_color;
-  font-size: 18px;
+  font-size: 32px;
+  @media screen and (min-width: $desktop) {
+    font-size: 18px;
+  }
   font-family: $font_istok;
 }
 
@@ -27,12 +30,12 @@ body {
   background-color: $button_color;
   border: 1px solid $button_border_color;
   color: white;
-  border-radius: 25px;
+  border-radius: 35px;
   cursor: pointer;
 
   padding: 10px;
-  font-size: 18px;
-  width: 150px;
+  font-size: 1.5em;
+  width: 300px;
 
   @media screen and (min-width: $desktop) {
     padding: 12px;
@@ -51,7 +54,7 @@ body {
   @media screen and (min-width: $desktop) {
     height: 100px;
   }
-  height: 50px;
+  height: 75px;
 }
 
 .mail-icon {
@@ -108,8 +111,9 @@ img {
 
   input {
     font-family: $font_arial;
-    height: 24px;
+    height: 45px;
     width: 60%;
+    font-size: 30px;
 
     &.error {
       border-color: $red;
@@ -134,6 +138,7 @@ img {
     padding: 10px;
     width: 93%;
     height: 200px;
+    font-size: 30px;
 
     @media screen and (min-width: $desktop) {
       height: 300px;
@@ -233,15 +238,15 @@ header {
 
   div {
     color: white;
-    font-size: 16px;
+
     width: 50%;
 
     padding-top: 25px;
     padding-left: 20px;
 
-    @media screen and (min-width: $screen_medium) {
-      font-size: 18px;
-    }
+    //@media screen and (min-width: $screen_medium) {
+    //  font-size: 18px;
+    //}
 
     @media screen and (min-width: $desktop) {
       position: absolute;
@@ -258,7 +263,7 @@ header {
     }
 
     .span-large {
-      font-size: 18px;
+      font-size: 26px;
 
       @media screen and (min-width: $desktop) {
         font-size: 46px;
@@ -320,10 +325,6 @@ header {
         width: 100%;
       }
 
-      .button {
-        font-size: 22px;
-      }
-
       > div {
         height: 80%;
         display: flex;
@@ -374,7 +375,7 @@ header {
   background-size: contain;
   background-position: 0;
 
-  height: 300px;
+  height: 400px;
   color: white;
 
   @media screen and (min-width: $screen_medium) {
@@ -391,8 +392,8 @@ header {
 
   .action {
     padding-top: 32px;
-    padding-left: 10px;
-    font-size: 14px;
+    padding-left: 40px;
+    font-size: 24px;
 
     @media screen and (min-width: $desktop) {
       padding: 0;
@@ -412,7 +413,7 @@ header {
     }
 
     .button {
-      font-size: 13px;
+      font-size: 24px;
       font-family: $font_inter;
       padding: 8px;
       width: 100px;
@@ -479,7 +480,7 @@ header {
     }
 
     .button {
-      font-size: 14px;
+      font-size: 30px;
       font-family: $font_inter;
       padding: 8px;
       width: 100px;
@@ -501,7 +502,7 @@ header {
       h2 {
         font-family: $font_inria;
         font-weight: normal;
-        font-size: 18px;
+        font-size: 30px;
         margin-top: 5px;
         margin-right: 10px;
         margin-bottom: 8px;
@@ -515,7 +516,7 @@ header {
           margin-right: 10px;
 
           @media screen and (min-width: $screen_medium) {
-            font-size: 24px;
+            font-size: 30px;
           }
 
           @media screen and (min-width: $desktop) {
@@ -525,7 +526,7 @@ header {
         }
 
         @media screen and (min-width: $screen_medium) {
-          font-size: 24px;
+          font-size: 30px;
         }
 
         @media screen and (min-width: $desktop) {
@@ -678,7 +679,6 @@ header {
     }
 
     p {
-      font-size: 24px;
       margin-top: 0;
     }
 
@@ -689,7 +689,6 @@ header {
     }
 
     .button {
-      width: 115px;
       @media screen and (min-width: $desktop) {
         width: 135px;
       }
@@ -706,7 +705,7 @@ header {
           display: block;
 
           margin: 0;
-          margin-top: -10px;
+          margin-top: 20px;
 
           @media screen and (min-width: $desktop) {
             margin-top: 0px;
@@ -721,7 +720,7 @@ header {
       h2 {
         font-family: $font_inter;
         width: 60%;
-        font-size: 20px;
+        font-size: 36px;
         @media screen and (min-width: $desktop) {
           font-size: 27px;
         }
