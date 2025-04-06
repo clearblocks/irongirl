@@ -11,7 +11,7 @@ $desktop: 1000px;
 $screen_medium: 440px;
 $screen_large: 1400px;
 $font_size_desktop: 18px;
-$font_size_mobile: 24px;
+$font_size_mobile: 36px;
 $red: #ff3838;
 $grey: #d9d9d9;
 //$text_color: #491c1c;
@@ -27,18 +27,19 @@ body {
 }
 
 .button {
+  display: inline-block;
   font-family: $font_istok;
   text-decoration: none;
   text-align: center;
   background-color: $button_color;
   border: 1px solid $button_border_color;
   color: white;
-  border-radius: 25px;
+  border-radius: 50px;
   cursor: pointer;
 
   padding: 10px;
-  width: 150px;
-  font-size: 24px;
+  width: 180px;
+  font-size: $font_size_mobile;
 
   @media screen and (min-width: $desktop) {
     padding: 12px;
@@ -53,10 +54,7 @@ body {
 }
 
 .icon {
-  @media screen and (min-width: $desktop) {
-    height: 100px;
-  }
-  height: 50px;
+  height: 100px;
 }
 
 .mail-icon {
@@ -109,9 +107,9 @@ img {
 
   input {
     font-family: $font_arial;
-    height: 24px;
-    font-size: 20px;
-    width: 60%;
+    height: 40px;
+    font-size: 36px;
+    width: 80%;
 
     &.error {
       border-color: $red;
@@ -136,7 +134,7 @@ img {
     padding: 10px;
     width: 93%;
     height: 200px;
-    font-size: 20px;
+    font-size: 36px;
 
     @media screen and (min-width: $desktop) {
       height: 300px;
@@ -218,10 +216,10 @@ header {
 
   div {
     position: absolute;
-    top: 50px;
+    top: 20px;
     left: 20px;
     color: white;
-    width: 37%;
+    width: 50%;
 
     @media screen and (min-width: $desktop) {
       width: 26%;
@@ -231,7 +229,7 @@ header {
     }
 
     .span-large {
-      font-size: 30px;
+      font-size: 40px;
       @media screen and (min-width: $desktop) {
         font-size: 46px;
       }
@@ -284,7 +282,7 @@ header {
         }
       }
 
-      width: 65%;
+      width: 90%;
       margin: 10px auto;
       padding: 10px;
       text-align: center;
@@ -329,10 +327,10 @@ header {
   color: white;
 
   &.whatsapp-cta {
-    margin: 0 auto;
     color: $text_color;
 
     @media screen and (min-width: $desktop) {
+      margin: 0 auto;
       width: 80%;
     }
 
@@ -342,7 +340,7 @@ header {
 
     h2.click {
       display: inline-block;
-      vertical-align: super;
+      vertical-align: bottom;
       margin-top: 0;
       margin-right: 11px;
       font-weight: bold;
@@ -362,8 +360,8 @@ header {
   }
 
   .icon {
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
 
     @media screen and (min-width: $desktop) {
       width: 50px;
@@ -383,15 +381,13 @@ header {
     h2 {
       font-family: $font_inria;
       font-weight: normal;
-      font-size: 36px;
       margin-bottom: 20px;
+      margin-top: 0;
     }
 
     .button {
       font-family: $font_inter;
-      padding: 8px;
-      width: 100px;
-      margin-left: 80px;
+      width: 250px;
 
       @media screen and (min-width: $desktop) {
         padding: 12px;
