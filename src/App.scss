@@ -59,8 +59,8 @@ body {
 
 .mail-icon {
   margin-top: 12px;
-  height: 50px;
-  width: 100px;
+  height: 100px;
+  width: 200px;
 
   @media screen and (min-width: $screen_large) {
     height: 75px;
@@ -193,8 +193,8 @@ header {
   }
 
   img {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     padding: 20px 20px 20px 0;
 
 
@@ -563,9 +563,7 @@ header {
 
       h2 {
         font-family: $font_inter;
-        width: 60%;
-        @media screen and (min-width: $desktop) {
-        }
+        margin-top: 10px;
       }
     }
 
@@ -647,10 +645,15 @@ footer {
     }
 
     .google-maps-icon {
-      width: 25px;
-      height: 25px;
+      width: 100px;
+      height: 100px;
       margin-left: 10px;
       vertical-align: bottom;
+
+      @media screen and (min-width: $desktop) {
+        width: 25px;
+        height: 25px;
+      }
     }
   }
 }
