@@ -2,13 +2,14 @@ import React, {createRef, RefObject} from 'react'
 import {Hero} from "./components/organisms/Hero";
 import {Services} from "./components/organisms/Services";
 import {SocialProof} from "./components/organisms/SocialProof";
-import {CallToAction} from "./components/organisms/CallToAction";
+import {CallToActionPhone} from "./components/organisms/CallToActionPhone";
 import {AboutUs} from "./components/organisms/AboutUs";
-import {CallToAction3} from "./components/organisms/CallToAction3";
+import {CallToActionWhatsApp} from "./components/organisms/CallToActionWhatsApp";
 import {Contact} from "./components/organisms/Contact";
 import TwoMachines from "./assets/img/two-machines.jpg";
 import {Prices} from "./components/organisms/Prices";
 import TableBasket from "./assets/img/table-basket.jpg";
+import {ImageDiv} from "./components/molecules/ImageDiv";
 
 export function WebApp() {
     const refs = {
@@ -26,16 +27,12 @@ export function WebApp() {
         <Hero/>
         <Services refs={refs} serviceOnClick={serviceOnClick}/>
         <SocialProof/>
-        <CallToAction/>
+        <CallToActionPhone/>
         <AboutUs washingRef={refs.washingRef} ironingRef={refs.ironingRef}/>
-        <CallToAction3 ref={refs.contactRef}/>
+        <CallToActionWhatsApp ref={refs.contactRef}/>
         <Contact/>
-        <div className={"cta2"}>
-            <img src={TwoMachines} alt={"wasmachine en drover"} className={"footer-image"}/>
-        </div>
+        <ImageDiv src={TwoMachines} alt={"wasmachine en drover"} />
         <Prices ref={refs.pricesRef}/>
-        <div className={"cta2"}>
-            <img src={TableBasket} alt={"wastafel"} className={"footer-image"}/>
-        </div>
+        <ImageDiv src={TableBasket} alt={"wastafel"} />
     </>
 }
