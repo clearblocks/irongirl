@@ -22,7 +22,10 @@ export function LoggedIn({children}: {children: React.ReactNode}): JSX.Element {
     } else {
         {
             return <div className={'password-screen'}>
-                <span>Password:</span><input type={'text'} onChange={checkPwd} />
+                <h1>Irongirl Admin</h1>
+                <div>
+                    <span>Password:</span><input type={'text'} onChange={checkPwd} />
+                </div>
             </div>
         }
     }

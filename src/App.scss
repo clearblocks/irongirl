@@ -703,31 +703,33 @@ footer {
 
 /*** Admin CSS ***/
 
+.password-screen {
+  font-size: 36px;
+  text-align: center;
+  padding: 100px 20px;
+  //font-size: 3em;
+
+  span {
+    vertical-align: top;
+  }
+
+  input {
+    width: 300px;
+    height: 60px;
+    font-size: 36px;
+    margin-left: 10px;
+  }
+}
+
 .admin {
 
-  font-size: 24px;
-
-  .password-screen {
-    padding: 20px;
-    font-size: 3em;
-
-    span {
-      vertical-align: top;
-    }
-
-    input {
-      width: 300px;
-      height: 60px;
-      font-size: 1.2em;
-      margin-left: 10px;
-    }
-  }
+  font-size: 40px;
 
   .admin-tabs {
     display: flex;
     justify-content: space-around;
     border-bottom: 1px solid black;
-    font-size: 3em;
+    font-size: 50px;
   }
 
   .admin-tab {
@@ -736,7 +738,6 @@ footer {
     text-decoration: none;
     color: black;
     padding: 10px 0;
-
 
     &:first-child {
       border-right: 1px solid black;
@@ -750,7 +751,6 @@ footer {
   .calculator {
     margin: 0 auto;
     width: 90%;
-    font-size: 2em;
 
     .calculator-total {
       font-size: 2em;
@@ -760,10 +760,6 @@ footer {
       display: flex;
       justify-content: start;
       margin-bottom: 20px;
-
-      div {
-        margin-right: 50px;
-      }
     }
 
     .action-buttons-bottom {
@@ -774,7 +770,8 @@ footer {
 
         input {
           height: 50px;
-          font-size: 1.1em;
+          width: 400px;
+          font-size: 36px;
         }
       }
     }
@@ -788,7 +785,7 @@ footer {
     }
 
     .toggle-selected, .toggle-save, .save-button {
-      padding: 5px;
+      padding: 10px;
       display: inline-block;
       border: 1px solid black;
       border-radius: 5px;
@@ -806,7 +803,7 @@ footer {
   }
 
   .calculator-item {
-    padding: 10px;
+    padding: 20px 10px 10px;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid black;
@@ -821,13 +818,13 @@ footer {
     }
 
     .calc-button {
-      width: 40px;
-      height: 60px;
-      padding: 3px 10px;
-      font-size: 2.2em;
+      font-size: 46px;
+      width: 20px;
+      height: 40px;
+      padding: 3px 10px 3px 16px;
       border: 1px solid grey;
       border-radius: 5px;
-      line-height: 0.6;
+      line-height: 0.9;
       background-color: #fdd7dd;
     }
 
@@ -835,7 +832,7 @@ footer {
       height: 60px;
       width: 40px;
       line-height: 1.4;
-      font-size: 1.4em;
+      //font-size: 1.4em;
       padding-left: 20px;
       background-color: #e6fbe6;
     }
@@ -843,38 +840,39 @@ footer {
     .item-name {
       width: 300px;
       text-align: left;
-      font-size: 1.1em;
+      //font-size: 1.1em;
     }
 
     .item-amount {
-      font-size: 1.2em;
+      font-size: 40px;
       width: 50px;
       height: 50px;
       text-align: right;
     }
 
     .read-item-amount {
-      font-size: 1.2em;
+      //font-size: 1.2em;
       padding-right: 10px;
     }
 
     .item-total {
-      font-size: 1.1em;
+      //font-size: 1.1em;
     }
   }
 
   .calculator-total-bottom {
     display: flex;
     justify-content: space-between;
-    font-size: 1.3em;
+    font-size: 46px;
     margin-top: 5px;
     margin-bottom: 20px;
-    padding: 0 40px;
+    padding: 0 10px;
   }
 
   .invoice {
+    width: 90%;
     margin: 0 auto;
-    font-size: 2em;
+    //font-size: 2em;
 
     .back-link {
       margin: 20px 10px;
@@ -889,26 +887,27 @@ footer {
         justify-content: space-between;
 
         &.invoice-customer {
-          font-size: 1.5em;
+          font-size: 50px;
         }
       }
     }
 
     .calculator-item {
       background-color: #f1e5ee;
-      padding: 0 40px;
+      padding: 10px;
     }
 
     .calculator-total-bottom {
       background-color: #e7e7f9;
       margin-top: 0;
+      padding: 10px;
     }
   }
 
   .invoices {
     margin: 0 auto;
     width: 90%;
-    font-size: 2em;
+    //font-size: 2em;
 
     .month-navigation {
       display: flex;
@@ -919,7 +918,7 @@ footer {
 
       button {
         height: 80px;
-        font-size: 2em;
+        //font-size: 2em;
         background-color: #dbdbff;
         border: 1px solid black;
         border-radius: 5px;
