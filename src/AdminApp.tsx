@@ -9,6 +9,7 @@ import {LoggedIn} from "./components/molecules/LoggedIn";
 export function AdminApp() {
     return (
         <LoggedIn>
+          <div className={'admin'}>
             <div className={'admin-tabs'}>
                 <NavLink className={classNames('admin-tab')}
                      to={"/admin"} end>Calculator
@@ -21,7 +22,7 @@ export function AdminApp() {
                 <Route index element={<Calculator/>}/>
                 <Route path={"/invoices"} element={<Invoices />}/>
             </Routes>
-
+          </div>
         </LoggedIn>
     );
 }

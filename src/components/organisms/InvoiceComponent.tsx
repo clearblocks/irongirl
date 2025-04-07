@@ -39,21 +39,23 @@ export function InvoiceComponent() {
 
     return (
     <LoggedIn>
-        <div className={'invoice'}>
-            <div className={'invoice-data'}>
-                <div className={'invoice-data-item invoice-customer'}><span>{invoice.customerName}</span><span></span></div>
-                <div className={'invoice-data-item'}><span>Factuurnummer</span><span>{invoice.invoiceNumber}</span></div>
-                <div className={'invoice-data-item'}><span>Datum</span><span>{formatDate(invoice.created)}</span></div>
-            </div>
-            <div className={'invoice-items'}>
-                {invoice.invoiceItems.map((item, idx) =>
-                    <CalculatorItem id={`${idx}`} name={item.item} price={0} amount={item.amount}
-                                    setAmount={() => {
-                                    }} readOnly={true}
-                                    calculatePrice={() => item.totalPrice}/>)}
-                <div className={"calculator-total-bottom"}>
-                    <span>Totaal:</span>
-                    <Price price={invoice.totalPrice}/>
+        <div className={'admin'}>
+            <div className={'invoice'}>
+                <div className={'invoice-data'}>
+                    <div className={'invoice-data-item invoice-customer'}><span>{invoice.customerName}</span><span></span></div>
+                    <div className={'invoice-data-item'}><span>Factuurnummer</span><span>{invoice.invoiceNumber}</span></div>
+                    <div className={'invoice-data-item'}><span>Datum</span><span>{formatDate(invoice.created)}</span></div>
+                </div>
+                <div className={'invoice-items'}>
+                    {invoice.invoiceItems.map((item, idx) =>
+                        <CalculatorItem id={`${idx}`} name={item.item} price={0} amount={item.amount}
+                                        setAmount={() => {
+                                        }} readOnly={true}
+                                        calculatePrice={() => item.totalPrice}/>)}
+                    <div className={"calculator-total-bottom"}>
+                        <span>Totaal:</span>
+                        <Price price={invoice.totalPrice}/>
+                    </div>
                 </div>
             </div>
         </div>

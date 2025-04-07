@@ -703,256 +703,254 @@ footer {
 
 /*** Admin CSS ***/
 
-.password-screen {
-  padding: 20px;
-  font-size: 3em;
+.admin {
 
-  span {
-    vertical-align: top;
-  }
+  font-size: 24px;
 
-  input {
-    width: 300px;
-    height: 60px;
-    font-size: 1.2em;
-    margin-left: 10px;
-  }
-}
+  .password-screen {
+    padding: 20px;
+    font-size: 3em;
 
-.admin-tabs {
-  display: flex;
-  justify-content: space-around;
-  border-bottom: 1px solid black;
-  font-size: 3em;
-}
+    span {
+      vertical-align: top;
+    }
 
-.admin-tab {
-  width: 50%;
-  text-align: center;
-  text-decoration: none;
-  color: black;
-  padding: 10px 0;
-
-
-  &:first-child {
-    border-right: 1px solid black;
-  }
-
-  &.active {
-    background-color: #dbdbff;
-  }
-}
-
-.calculator {
-  margin: 0 auto;
-  width: 90%;
-  font-size: 2em;
-
-  .calculator-total {
-    font-size: 2em;
-  }
-
-  .action-buttons, .action-buttons-bottom {
-    display: flex;
-    justify-content: start;
-    margin-bottom: 20px;
-
-    div {
-      margin-right: 50px;
+    input {
+      width: 300px;
+      height: 60px;
+      font-size: 1.2em;
+      margin-left: 10px;
     }
   }
 
-  .action-buttons-bottom {
-    justify-content: space-between;
+  .admin-tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid black;
+    font-size: 3em;
+  }
 
-    .input-customer-name {
-      padding-top: 5px;
+  .admin-tab {
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 10px 0;
 
-      input {
-        height: 30px;
-        width: 160px;
-        font-size: 1.1em;
+
+    &:first-child {
+      border-right: 1px solid black;
+    }
+
+    &.active {
+      background-color: #dbdbff;
+    }
+  }
+
+  .calculator {
+    margin: 0 auto;
+    width: 90%;
+    font-size: 2em;
+
+    .calculator-total {
+      font-size: 2em;
+    }
+
+    .action-buttons, .action-buttons-bottom {
+      display: flex;
+      justify-content: start;
+      margin-bottom: 20px;
+
+      div {
+        margin-right: 50px;
       }
     }
-  }
 
-  .save-error {
-    border: 1px solid red;
-    border-radius: 5px;
-    padding: 5px;
-    margin-bottom: 10px;
-    background-color: #fdd7dd;
-  }
-
-  .toggle-selected, .toggle-save, .save-button {
-    padding: 5px;
-    display: inline-block;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: #dbdbff;
-    cursor: pointer;
-  }
-
-  .toggle-save, .save-button {
-    background-color: #e6fbe6;
-
-    &.cancel {
-      background-color: #fdd7dd;
-    }
-  }
-}
-
-.calculator-item {
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid black;
-
-  &.active {
-    background-color: #eafbea;
-  }
-
-  span {
-    width: 50px;
-    text-align: right;
-    margin-right: 5px;
-  }
-
-  .calc-button {
-    width: 40px;
-    height: 40px;
-    padding: 3px 10px;
-    font-size: 2.2em;
-    border: 1px solid grey;
-    border-radius: 5px;
-    line-height: 0.6;
-    background-color: #fdd7dd;
-  }
-
-  .calc-button-plus {
-    height: 60px;
-    width: 40px;
-    line-height: 1.4;
-    font-size: 1.4em;
-    padding-left: 20px;
-    background-color: #e6fbe6;
-  }
-
-  .item-name {
-    width: 300px;
-    text-align: left;
-    font-size: 1.1em;
-  }
-
-  .item-amount {
-    font-size: 1.2em;
-    width: 50px;
-    height: 50px;
-    text-align: right;
-  }
-
-  .read-item-amount {
-    font-size: 1.2em;
-    padding-right: 10px;
-  }
-
-  .item-total {
-    font-size: 1.1em;
-    width: 100px;
-  }
-}
-
-.calculator-total-bottom {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.3em;
-  padding-left: 10px;
-  padding-right: 14px;
-  margin-top: 5px;
-  margin-bottom: 20px;
-}
-
-.invoice {
-  margin: 0 auto;
-  width: 90%;
-  font-size: 2em;
-
-  .back-link {
-    margin: 20px 10px;
-    text-decoration: underline;
-  }
-
-  .invoice-data {
-    margin: 20px 10px;
-
-    .invoice-data-item {
-      display: flex;
+    .action-buttons-bottom {
       justify-content: space-between;
 
-      &.invoice-customer {
-        font-size: 1.5em;
+      .input-customer-name {
+        padding-top: 5px;
+
+        input {
+          height: 50px;
+          font-size: 1.1em;
+        }
+      }
+    }
+
+    .save-error {
+      border: 1px solid red;
+      border-radius: 5px;
+      padding: 5px;
+      margin-bottom: 10px;
+      background-color: #fdd7dd;
+    }
+
+    .toggle-selected, .toggle-save, .save-button {
+      padding: 5px;
+      display: inline-block;
+      border: 1px solid black;
+      border-radius: 5px;
+      background-color: #dbdbff;
+      cursor: pointer;
+    }
+
+    .toggle-save, .save-button {
+      background-color: #e6fbe6;
+
+      &.cancel {
+        background-color: #fdd7dd;
       }
     }
   }
 
   .calculator-item {
-    background-color: #f1e5ee;
-  }
-
-  .calculator-total-bottom {
-    background-color: #e7e7f9;
-    margin-top: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 20px;
-  }
-}
-
-.invoices {
-  margin: 0 auto;
-  width: 90%;
-  font-size: 2em;
-
-  .month-navigation {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
-
-    button {
-      height: 80px;
-      font-size: 2em;
-      background-color: #dbdbff;
-      border: 1px solid black;
-      border-radius: 5px;
-    }
-
-    h2 {
-      margin: 3px 30px;
-    }
-  }
-
-  .invoices-empty {
-    margin: 20px 0;
-    text-align: center;
-  }
-
-  .invoice-item {
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid black;
-    padding: 10px;
-    text-decoration: none;
-    color: black;
 
-    &:last-child {
-      border-bottom: none
+    &.active {
+      background-color: #eafbea;
+    }
+
+    span {
+      text-align: right;
+      margin-right: 5px;
+    }
+
+    .calc-button {
+      width: 40px;
+      height: 60px;
+      padding: 3px 10px;
+      font-size: 2.2em;
+      border: 1px solid grey;
+      border-radius: 5px;
+      line-height: 0.6;
+      background-color: #fdd7dd;
+    }
+
+    .calc-button-plus {
+      height: 60px;
+      width: 40px;
+      line-height: 1.4;
+      font-size: 1.4em;
+      padding-left: 20px;
+      background-color: #e6fbe6;
+    }
+
+    .item-name {
+      width: 300px;
+      text-align: left;
+      font-size: 1.1em;
+    }
+
+    .item-amount {
+      font-size: 1.2em;
+      width: 50px;
+      height: 50px;
+      text-align: right;
+    }
+
+    .read-item-amount {
+      font-size: 1.2em;
+      padding-right: 10px;
+    }
+
+    .item-total {
+      font-size: 1.1em;
     }
   }
 
-  .invoice-total {
-    font-weight: bold;
-    border-top: 2px solid black;
+  .calculator-total-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3em;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding: 0 40px;
+  }
+
+  .invoice {
+    margin: 0 auto;
+    font-size: 2em;
+
+    .back-link {
+      margin: 20px 10px;
+      text-decoration: underline;
+    }
+
+    .invoice-data {
+      padding: 40px 40px;
+
+      .invoice-data-item {
+        display: flex;
+        justify-content: space-between;
+
+        &.invoice-customer {
+          font-size: 1.5em;
+        }
+      }
+    }
+
+    .calculator-item {
+      background-color: #f1e5ee;
+      padding: 0 40px;
+    }
+
+    .calculator-total-bottom {
+      background-color: #e7e7f9;
+      margin-top: 0;
+    }
+  }
+
+  .invoices {
+    margin: 0 auto;
+    width: 90%;
+    font-size: 2em;
+
+    .month-navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      margin-left: 20px;
+      margin-right: 20px;
+
+      button {
+        height: 80px;
+        font-size: 2em;
+        background-color: #dbdbff;
+        border: 1px solid black;
+        border-radius: 5px;
+      }
+
+      h2 {
+        margin: 3px 30px;
+      }
+    }
+
+    .invoices-empty {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .invoice-item {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid black;
+      padding: 10px;
+      text-decoration: none;
+      color: black;
+
+      &:last-child {
+        border-bottom: none
+      }
+    }
+
+    .invoice-total {
+      font-weight: bold;
+      border-top: 2px solid black;
+    }
   }
 }
