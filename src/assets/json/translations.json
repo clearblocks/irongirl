@@ -1,0 +1,348 @@
+{
+  "general": {
+    "laundry": {
+      "nl": "Wassen",
+      "en": "Washing"
+    },
+    "ironing": {
+      "nl": "Strijken",
+      "en": "Ironing"
+    },
+    "contact": {
+      "nl": "Contact",
+      "en": "Contact"
+    },
+    "pricing": {
+      "nl": "Prijzen",
+      "en": "Pricing"
+    }
+  },
+  "contact-form": {
+    "address": {
+      "nl": "Ons adres",
+      "en": "Our address"
+    },
+    "title": {
+      "nl": "Stuur een bericht",
+      "en": "Send a message"
+    },
+    "name": {
+      "nl": "Naam",
+      "en": "Name"
+    },
+    "email": {
+      "nl": "E-mailadres",
+      "en": "Email address"
+    },
+    "phone": {
+      "nl": "Telefoon",
+      "en": "Phone"
+    },
+    "message": {
+      "nl": "Bericht",
+      "en": "Message"
+    },
+    "success": {
+      "nl": "We hebben je bericht ontvangen.",
+      "en": "We have received your message."
+    },
+    "error": {
+      "nl": "Er is iets fout gegaan. Probeer het later nog eens.",
+      "en": "Something went wrong. Please try again later."
+    },
+    "send": {
+      "nl": "Versturen",
+      "en": "Send"
+    }
+  },
+  "ironing": {
+    "list-items": {
+      "nl": [
+        "Het is handig als je zelf kledinghangers kunt afgeven",
+        "Wij zorgen ervoor dat alles perfect netjes gestreken is",
+        "Binnen 3 tot 5 dagen kun je het strijkgoed weer ophalen"
+      ],
+      "en": [
+        "It would be convenient if you can provide your own hangers",
+        "We will ensure everything is ironed perfectly",
+        "You can pick up your ironing within 3 to 5 days"
+      ]
+    }
+  },
+  "laundry": {
+    "list-items": {
+      "nl": [
+        "Wasgoed ontvangen we graag in een zak, eventueel ook in een mand",
+        "Wit en kleur aparte was",
+        "30 graden",
+        "Drogen",
+        "Vouwen"
+      ],
+      "en": [
+        "We prefer to receive laundry in a bag, or in a basket",
+        "white and colored laundry are washed separately",
+        "30 degrees",
+        "Drying",
+        "Folding"
+      ]
+    }
+  },
+  "about-us": {
+    "title": {
+      "nl": "Iron Girl Was- en Strijkservice",
+      "en": "Iron Girl Laundry and Ironing Service"
+    },
+    "paragraphs": {
+      "nl": [
+        "Heb je het te druk en geen tijd om te wassen of strijken?",
+        "Wij nemen het graag van je over.",
+        "Is het strijken je te zwaar of heb je te veel strijkgoed?",
+        "Wij verzorgen al jouw strijkgoed, van kleding tot bedden- en linnengoed.",
+        "Ook als je het wassen liever aan ons wilt overlaten kun je op ons rekenen. Helemaal makkelijk is het natuurlijk om ons het wassen en strijken beide te laten doen.",
+        "Zo maak voor jou het leven makkelijker, en hou jij meer tijd over voor leuke dingen. Je kunt altijd contact opnemen om je was- en strijkgoed langs te brengen bij ons in Vleuten."
+      ],
+      "en": [
+        "Are you too busy and have no time to wash or iron?",
+        "We are happy to take it off your hands.",
+        "Is ironing too much work or do you have too much to iron?",
+        "We will take care of all your ironing, from clothes to bedding and linens.",
+        "You can also count on us if you prefer to leave the washing to us. Of course, it’s even easier to let us handle both washing and ironing.",
+        "This way, we make your life easier, leaving you more time for enjoyable things. You can always contact us to drop off your laundry and ironing in Vleuten."
+      ]
+    }
+  },
+  "our-method": {
+    "title": {
+      "nl": "Onze werkwijze",
+      "en": "Our method"
+    },
+    "list-items": {
+      "nl": [
+        "Maak een afspraak: laat weten hoeveel was- of strijkgoed je hebt",
+        "Lever je was- en strijkgoed af bij onze locatie",
+        "Wij laten je weten wanneer je het weer kunt ophalen",
+        "Bij ophalen is alles naar wens netjes gevouwen en opgehangen",
+        "Er is momenteel geen mogelijkheid voor een ophaal- en bezorgservice"
+      ],
+      "en": [
+        "Make an appointment: let us know how much laundry or ironing you have",
+        "Drop off your laundry and ironing at our location",
+        "We will let you know when you can pick it up",
+        "Upon pickup, everything is neatly folded and hung as desired",
+        "There is currently no pickup or delivery service available"
+      ]
+    }
+  },
+  "cta-phone": {
+    "title": {
+      "nl": "Maak direct een afspraak",
+      "en": "Call us to make an appointment"
+    }
+  },
+  "cta-whatsapp": {
+    "title": {
+      "nl": "Maak een afspraak via WhatsApp",
+      "en": "Make an appointment via WhatsApp"
+    },
+    "click": {
+      "nl": "Klik hier",
+      "en": "Click here"
+    }
+  },
+  "hero": {
+    "title": {
+      "nl": "Was- en Strijkservice Vleuten - De Meern",
+      "en": "Laundry and Ironing Service Vleuten - De Meern"
+    },
+    "lines": {
+      "nl": [
+        "Persoonlijke service",
+        "Snel, voordelig en zorgvuldig gewassen en gestreken",
+        "Telefoon of WhatsApp"
+      ],
+      "en": [
+        "Personal service",
+        "Fast, affordable, and carefully washed and ironed",
+        "Phone or WhatsApp"
+      ]
+    }
+  },
+  "pricing": {
+    "payment": {
+      "nl": "De betaling kan gedaan worden met een Tikkie of met PIN",
+      "en": "Payment can be made via Tikkie or by card"
+    }
+  },
+  "services": {
+    "laundry": {
+      "nl": "Laat je was zorgeloos aan ons over voor een frisse en schone garderobe.",
+      "en": "Leave your laundry to us worry-free for a fresh and clean wardrobe."
+    },
+    "ironing": {
+      "nl": "Ontdek hoe gemakkelijk het is om je strijkwerk door Iron Girl te laten doen.",
+      "en": "Discover how easy it is to have your ironing done by Iron Girl."
+    },
+    "contact": {
+      "nl": "Neem contact op, vertel wat wij voor je kunnen doen en maak een afspraak",
+      "en": "Get in touch, tell us what we can do for you, and make an appointment"
+    },
+    "pricing": {
+      "nl": "Wij verzorgen het strijken van vele soorten producten, van kleding tot linnengoed, tegen een betaalbare prijs.",
+      "en": "We handle the ironing of many types of products, from clothing to linens, at an affordable price."
+    },
+    "pricing-button": {
+      "nl": "Prijsoverzicht",
+      "en": "Pricing"
+    }
+  },
+  "temp-closure": {
+    "text": {
+      "nl": "Wegens vakantie zijn wij tijdelijk gesloten. Vanaf 24 augustus is de was- en strijkservice weer beschikbaar.",
+      "en": "Due to vacation, we are temporarily closed. The laundry and ironing service will be available again from ..."
+    }
+  },
+  "construction": {
+    "text": {
+      "nl": "Deze website is momenteel onder constructie. Sommige onderdelen zullen niet werken zoals je zou verwachten. Je kunt altijd contact opnemen voor meer informatie over onze diensten.",
+      "en": "This website is currently under construction. Some parts may not work as expected. You can always contact us for more information about our services."
+    }
+  },
+  "items": {
+    "adult-category": {
+      "nl": "Dames- en herenkleding",
+      "en": "Women's and men's clothing"
+    },
+    "shirt": {
+      "nl": "Overhemd",
+      "en": "Shirt"
+    },
+    "blouse": {
+      "nl": "Blouse",
+      "en": "Blouse"
+    },
+    "shirt-short": {
+      "nl": "Blouse of overhemd korte mouwen",
+      "en": "Short-sleeve blouse or shirt"
+    },
+    "colbert": {
+      "nl": "Colbert",
+      "en": "Blazer"
+    },
+    "denim": {
+      "nl": "Denim overhemd",
+      "en": "Denim shirt"
+    },
+    "gilet": {
+      "nl": "Gilet",
+      "en": "Vest"
+    },
+    "pants": {
+      "nl": "Pantalon",
+      "en": "Trousers"
+    },
+    "dress": {
+      "nl": "Jurk",
+      "en": "Dress"
+    },
+    "skirt": {
+      "nl": "Rok",
+      "en": "Skirt"
+    },
+    "long-blouse": {
+      "nl": "Lange blouse",
+      "en": "Long blouse"
+    },
+    "top": {
+      "nl": "Topje",
+      "en": "Top"
+    },
+    "jeans": {
+      "nl": "Spijkerbroek",
+      "en": "Jeans"
+    },
+    "sweater": {
+      "nl": "Trui",
+      "en": "Sweater"
+    },
+    "vest": {
+      "nl": "Vest",
+      "en": "Cardigan"
+    },
+    "shorts": {
+      "nl": "Korte broek",
+      "en": "Shorts"
+    },
+    "polo": {
+      "nl": "Polo",
+      "en": "Polo shirt"
+    },
+    "t-shirt": {
+      "nl": "T-shirt",
+      "en": "T-shirt"
+    },
+    "body": {
+      "nl": "Body",
+      "en": "Bodysuit"
+    },
+    "boxer": {
+      "nl": "Boxershort",
+      "en": "Boxer shorts"
+    },
+    "undershirt": {
+      "nl": "Hemd",
+      "en": "Undershirt"
+    },
+    "kids-category": {
+      "nl": "Kinderkleding t/m maat 158",
+      "en": "Children's clothing up to size 158"
+    },
+    "kids-pants": {
+      "nl": "Lange broek",
+      "en": "Trousers"
+    },
+    "jacket": {
+      "nl": "Jas",
+      "en": "Jacket"
+    },
+    "linnen-category": {
+      "nl": "Linnen- en beddengoed",
+      "en": "Linens and bedding"
+    },
+    "sheet-1": {
+      "nl": "Laken 1-persoons",
+      "en": "Single bed sheet"
+    },
+    "sheet-2": {
+      "nl": "Laken 2-persoons",
+      "en": "Double bed sheet"
+    },
+    "bed-1": {
+      "nl": "Dekbed 1-persoons",
+      "en": "Single duvet"
+    },
+    "bed-2": {
+      "nl": "Dekbed 2-persoons",
+      "en": "Double duvet"
+    },
+    "pillowcase": {
+      "nl": "Kussensloop",
+      "en": "Pillowcase"
+    },
+    "table-cloth": {
+      "nl": "Tafellaken",
+      "en": "Tablecloth"
+    },
+    "table-runner": {
+      "nl": "Tafelloper",
+      "en": "Table runner"
+    },
+    "laundry-6": {
+      "nl": "Tot 6 kg",
+      "en": "Up to 6 kg"
+    },
+    "laundry-extra": {
+      "nl": "Elke extra kg",
+      "en": "Each additional kg"
+    }
+  }
+}

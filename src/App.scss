@@ -199,6 +199,32 @@ header {
       padding: 9px;
     }
   }
+
+  .language-select {
+
+    position: absolute;
+    right: 0;
+    z-index: 1;
+
+    padding: 14px;
+
+    img {
+      width: 70px;
+      height: auto;
+      cursor: pointer;
+
+      &:nth-child(2) {
+        display: none;
+        padding-top: 0;
+      }
+    }
+
+    &.open {
+      img {
+        display: block;
+      }
+    }
+  }
 }
 
 .hero {

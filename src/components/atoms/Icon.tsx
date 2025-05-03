@@ -28,43 +28,43 @@ let iconData = (iconType: IconType): IconData => {
     case IconType.Laundry:
       return {
         src: LaundryIconSrc,
-        alt: 'was icoon',
+        alt: 'laundry icon',
         className: 'laundry-icon'
       }
     case IconType.Iron:
       return {
         src: IronIconSrc,
-        alt: 'strijk icoon',
+        alt: 'ironing icon',
         className: 'iron-icon'
       }
     case IconType.Price:
       return {
         src: PriceIconSrc,
-        alt: 'prijskaartje icoon',
+        alt: 'price icon',
         className: 'price-icon'
       }
     case IconType.WhatsApp:
       return {
         src: WhatsAppIconSrc,
-        alt: 'whastapp icoon',
+        alt: 'whatsapp icon',
         className: 'whatsapp-icon'
       }
     case IconType.GreenWhatsApp:
       return {
         src: GreenWhatsAppIconSrc,
-        alt: 'whastapp icoon',
+        alt: 'whatsapp icon',
         className: 'whatsapp-icon'
       }
     case IconType.Email:
       return {
         src: MailIconSrc,
-        alt: 'mail icoon',
+        alt: 'mail icon',
         className: 'mail-icon'
       }
     case IconType.Construction:
       return {
         src: UnderConstructionSrc,
-        alt: 'onderhoud',
+        alt: 'construction icon',
         className: 'construction-icon'
       }
   }

@@ -1,4 +1,4 @@
-import React, {createRef, RefObject} from 'react'
+import React, {createRef, RefObject, useState} from 'react'
 import {Hero} from "./components/organisms/Hero";
 import {Services} from "./components/organisms/Services";
 import {SocialProof} from "./components/organisms/SocialProof";
@@ -7,7 +7,7 @@ import {AboutUs} from "./components/organisms/AboutUs";
 import {CallToActionWhatsApp} from "./components/organisms/CallToActionWhatsApp";
 import {Contact} from "./components/organisms/Contact";
 import TwoMachines from "./assets/img/two-machines.jpg";
-import {Prices} from "./components/organisms/Prices";
+import {Pricing} from "./components/organisms/Pricing";
 import TableBasket from "./assets/img/table-basket.jpg";
 import {ImageDiv} from "./components/molecules/ImageDiv";
 
@@ -31,8 +31,8 @@ export function WebApp() {
         <AboutUs washingRef={refs.washingRef} ironingRef={refs.ironingRef}/>
         <CallToActionWhatsApp ref={refs.contactRef}/>
         <Contact/>
-        <ImageDiv src={TwoMachines} alt={"wasmachine en drover"} />
-        <Prices ref={refs.pricesRef}/>
-        <ImageDiv src={TableBasket} alt={"wastafel"} />
+        <ImageDiv src={TwoMachines} alt={"washing machine and dryer"} />
+        <Pricing ref={refs.pricesRef}/>
+        <ImageDiv src={TableBasket} alt={"washing table"} />
     </>
 }

@@ -1,14 +1,15 @@
 import React, {ForwardedRef, forwardRef} from "react";
+import {useLanguage} from "../../contexts/LanguageContext";
 
-export const Washing = forwardRef((props, washingRef: ForwardedRef<HTMLDivElement>) => (
-  <div className={"about-us"} id={"about-us"} ref={washingRef}>
-  <h3>Wassen</h3>
-  <ul>
-    <li>Wasgoed ontvangen we graag in een zak, eventueel ook in een mand</li>
-    <li>Wit en kleur aparte was</li>
-    <li>30 graden</li>
-    <li>Drogen</li>
-    <li>Vouwen</li>
-  </ul>
-  </div>
-));
+export const Washing = forwardRef((props, washingRef: ForwardedRef<HTMLDivElement>) => {
+  const {translate} = useLanguage();
+  const listItems = translate<string[]>('laundry.list-items');
+  return (
+    <div className={"about-us"} id={"about-us"} ref={washingRef}>
+      <h3>{translate('general.laundry')}</h3>
+      <ul>
+        {listItems.map((li, index) => <li key={index}>{li}</li>)}
+      </ul>
+    </div>
+  )
+});

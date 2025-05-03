@@ -1,15 +1,21 @@
 import React from 'react';
 import PinkCloud from "../../assets/img/pink-cloud-wide.jpeg"
+import {useLanguage} from "../../contexts/LanguageContext";
 
-export const Hero = () => (
-  <div className={"hero"}>
-      <img src={PinkCloud} />
-    <div>
-      <span className={"span-large"}>Was- en Strijkservice Vleuten - De Meern</span><br /><br />
-      <span>Persoonlijke service</span><br />
-      <span>Snel, voordelig en zorgvuldig gewassen en gestreken</span><br /><br />
-      <span>Telefoon of WhatsApp:</span><br />
-      <span>06-33401173</span>
+export const Hero = () => {
+
+  const { translate } = useLanguage();
+  const lines = translate<string[]>('hero.lines');
+  return (
+    <div className={"hero"}>
+      <img src={PinkCloud} alt={"Pink Cloud"}/>
+      <div>
+        <span className={"span-large"}>{translate('hero.title')}</span><br/><br/>
+        <span>{lines[0]}</span><br/>
+        <span>{lines[1]}</span><br/><br/>
+        <span>{lines[2]}:</span><br/>
+        <span>06-33401173</span>
+      </div>
     </div>
-  </div>
-);
+  )
+}

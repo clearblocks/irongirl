@@ -6,9 +6,10 @@ import {Button} from "../atoms/Button";
 import axios from 'axios';
 import {Error, Notice} from "../atoms/Messages";
 import {GoogleMapsLink} from "../atoms/GoogleMapsLink";
+import {useLanguage} from "../../contexts/LanguageContext";
 
 export const ContactForm = () => {
-
+  const {translate} = useLanguage();
   const [name, setName] = useState('')
   const [nameValid, setNameValid] = useState(true)
   const [email, setEmail] = useState('')
@@ -64,7 +65,7 @@ export const ContactForm = () => {
 
   return (
     <div className={"contact-form"}>
-      <h3>Ons adres</h3>
+      <h3>{translate('contact-form.address')}</h3>
       <div className={"address-block"}>
         <div><GoogleMapsLink /></div>
         <div className={"address"}>
@@ -72,14 +73,14 @@ export const ContactForm = () => {
         </div>
 
       </div>
-      <div className={"contact-header"}><div><EmailIcon /></div><h2>Stuur een bericht</h2></div>
-      <FormInput name={'name'} label={'Naam'} value={name} onChange={(value) => {onChange(value, setName, setNameValid)}} valid={nameValid}/>
-      <FormInput name={'email'} label={'E-mailadres'} value={email} onChange={(value) => {onChange(value, setEmail, setEmailValid)}} valid={emailValid}/>
-      <FormInput name={'phone'} label={'Telefoon'} value={phone} onChange={(value) => {onChange(value, setPhone, setPhoneValid)}} valid={phoneValid}/>
-      <FormText name={'text'} label={'Bericht'} value={message} onChange={(value) => {onChange(value, setMessage, setMessageValid)}} valid={messageValid}/>
-      {success && <Notice message={"We hebben je bericht ontvangen."} />}
-      {error && <Error message={"Er is iets fout gegaan. Probeer het later nog eens."} />}
-      <Button label={"Versturen"} onClick={onSubmit}/>
+      <div className={"contact-header"}><div><EmailIcon /></div><h2>{translate('contact-form.title')}</h2></div>
+      <FormInput name={'name'} label={translate('contact-form.name')} value={name} onChange={(value) => {onChange(value, setName, setNameValid)}} valid={nameValid}/>
+      <FormInput name={'email'} label={translate('contact-form.email')} value={email} onChange={(value) => {onChange(value, setEmail, setEmailValid)}} valid={emailValid}/>
+      <FormInput name={'phone'} label={translate('contact-form.phone')} value={phone} onChange={(value) => {onChange(value, setPhone, setPhoneValid)}} valid={phoneValid}/>
+      <FormText name={'text'} label={translate('contact-form.message')} value={message} onChange={(value) => {onChange(value, setMessage, setMessageValid)}} valid={messageValid}/>
+      {success && <Notice message={translate('contact-form.success')} />}
+      {error && <Error message={translate('contact-form.error')} />}
+      <Button label={translate<string>('contact-form.send')} onClick={onSubmit}/>
     </div>
   )
 };

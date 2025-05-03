@@ -1,0 +1,133 @@
+{
+  "general": {
+    "laundry": "Wassen",
+    "ironing": "Strijken",
+    "contact": "Contact",
+    "prices": "Prijzen"
+  },
+  "contact-form": {
+    "address": "Ons adres",
+    "title": "Stuur een bericht",
+    "name": "Naam",
+    "email": "E-mailadres",
+    "phone": "Telefoon",
+    "message": "Bericht",
+    "success": "We hebben je bericht ontvangen.",
+    "error": "Er is iets fout gegaan. Probeer het later nog eens.",
+    "send": "Versturen"
+  },
+  "ironing": {
+    "list-items": [
+      "Het is handig als je zelf kledinghangers kunt afgeven",
+      "Wij zorgen ervoor dat alles perfect netjes gestreken is",
+      "Binnen 3 tot 5 dagen kun je het strijkgoed weer ophalen"
+    ]
+  },
+  "washing": {
+    "list-items": [
+      "Wasgoed ontvangen we graag in een zak, eventueel ook in een mand",
+      "Wit en kleur aparte was",
+      "30 graden",
+      "Drogen",
+      "Vouwen"
+    ]
+  },
+  "about-us": {
+    "title": "Iron Girl Was- en Strijkservice",
+    "paragraphs": [
+      "Heb je het te druk en geen tijd om te wassen of strijken?",
+      "Wij nemen het graag van je over.",
+      "Is het strijken je te zwaar of heb je te veel strijkgoed?",
+      "Wij verzorgen al jouw strijkgoed, van kleding tot bedden- en linnengoed.",
+      "Ook als je het wassen liever aan ons wilt overlaten kun je op ons rekenen. Helemaal makkelijk is het natuurlijk om ons het wassen en strijken beide te laten doen.",
+      "Zo maak voor jou het leven makkelijker, en hou jij meer tijd over voor leuke dingen. Je kunt altijd contact opnemen om je was- en strijkgoed langs te brengen bij ons in Vleuten."
+    ]
+  },
+  "way-of-working": {
+    "title": "Onze werkwijze",
+    "list-items": [
+      "Maak een afspraak: laat weten hoeveel was- of strijkgoed je hebt",
+      "Lever je was- en strijkgoed af bij onze locatie",
+      "Wij laten je weten wanneer je het weer kunt ophalen",
+      "Bij ophalen is alles naar wens netjes gevouwen en opgehangen",
+      "Er is momenteel geen mogelijkheid voor een ophaal- en bezorgservice"
+    ]
+  },
+  "cta-phone": {
+    "title": "Maak direct een afspraak"
+  },
+  "cta-whatsapp": {
+    "title": "Maak een afspraak via WhatsApp",
+    "click": "Klik hier"
+  },
+  "hero": {
+    "title": "Was- en Strijkservice Vleuten - De Meern",
+    "lines": [
+      "Persoonlijke service",
+      "Snel, voordelig en zorgvuldig gewassen en gestreken",
+      "Telefoon of WhatsApp"
+    ]
+  },
+  "prices": {
+    "payment": "De betaling kan gedaan worden met een tikkie of met PIN"
+  },
+  "services": {
+    "laundry": "Laat je was zorgeloos aan ons over voor een frisse en schone garderobe.",
+    "ironing": "Ontdek hoe gemakkelijk het is om je strijkwerk door Iron Girl te laten doen.",
+    "contact": "Neem contact op, vertel wat wij voor je kunnen doen en maak een afspraak",
+    "prices": "Wij verzorgen het strijken van vele soorten producten, van kleding tot linnengoed, tegen een betaalbare prijs.",
+    "prices-button": "Prijsoverzicht"
+  },
+  "temp-closure": {
+    "text": "Wegens vakantie zijn wij tijdelijk gesloten. Vanaf 24 augustus is de was- en strijkservice weer beschikbaar."
+  },
+  "construction": {
+    "text": "Deze website is momenteel onder constructie. Sommige onderdelen zullen niet werken zoals je zou verwachten. Je kunt altijd contact opnemen voor meer informatie over onze diensten."
+  },
+  "items": {
+    "adult-category": "Dames- en herenkleding",
+    "shirt": "Overhemd",
+    "blouse": "Blouse",
+    "shirt-short": "Blouse of overhemd korte mouwen",
+    "colbert": "Colbert",
+    "denim": "Denim overhemd",
+    "gilet": "Gilet",
+    "pants": "Pantalon",
+    "dress": "Jurk",
+    "skirt": "Rok",
+    "long-blouse": "Lange blouse",
+    "top": "Topje",
+    "jeans": "Spijkerbroek",
+    "sweater": "Trui",
+    "vest": "Vest",
+    "shorts": "Korte broek",
+    "polo": "Polo",
+    "t-shirt": "T-shirt",
+    "body": "Body",
+    "boxer": "Boxershort",
+    "something": "Hemd",
+    "kids-category": "Kinderkleding t/m maat 158",
+    "kids-shirt": "Overhemd",
+    "kids-blouse": "Blouse",
+    "kids-short-shirt": "Blouse of overhemd korte mouwen",
+    "kids-colbert": "Colbert",
+    "kids-pants": "Lange broek",
+    "kids-shorts": "Korte broek",
+    "kids-sweater": "Trui",
+    "kids-jacket": "Jas",
+    "kids-dress": "Jurk",
+    "kids-skirt": "Rok",
+    "kids-t-shirt": "T-Shirt",
+    "kids-polo": "Polo",
+    "linnen-category": "Linnen- en beddengoed",
+    "sheet-1": "Laken 1-persoons",
+    "sheet-2": "Laken 2-persoons",
+    "bed-1": "Dekbed 1-persoons",
+    "bed-2": "Dekbed 2-persoons",
+    "pillow-case": "Kussensloop",
+    "table-cloth": "Tafellaken",
+    "table-walker": "Tafelloper",
+    "laundry-6": "Tot 6 kg",
+    "laundry-extra": "Elke extra kg"
+  }
+}
