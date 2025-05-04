@@ -203,15 +203,23 @@ header {
   .language-select {
 
     position: absolute;
-    right: 0;
+    left: 15px;
     z-index: 1;
 
     padding: 14px;
 
+    @media screen and (min-width: $desktop) {
+      right: 0;
+    }
+
     img {
-      width: 70px;
+      width: 85px;
       height: auto;
       cursor: pointer;
+
+      @media screen and (min-width: $desktop) {
+        width: 70px;
+      }
 
       &:nth-child(2) {
         display: none;
