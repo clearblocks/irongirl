@@ -8,9 +8,10 @@ import {LaundryCalculatorItem} from "../molecules/LaundryCalculatorItem";
 import {saveInvoice} from "../../helpers/requests";
 import {Price} from "../atoms/Price";
 import {useNavigate} from "react-router";
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export function Calculator() {
-
+    const {translate} = useLanguage();
     const [itemAmounts, setItemAmounts] = useState<AmountMap>({})
     const [viewSelected, setViewSelected] = useState<boolean>(false)
     const [viewSave, setViewSave] = useState<boolean>(false)
@@ -76,7 +77,7 @@ export function Calculator() {
         </div>
         {ironPriceData.map((priceDataSet, i: number) =>
             <div key={i}>
-                {showCategory(priceDataSet.category) ? <h2>{priceDataSet.category}</h2> : null}
+                {showCategory(priceDataSet.category) ? <h2>{translate(`items.${priceDataSet.category}`)}</h2> : null}
                 {priceDataSet.priceDataSet.map((priceItem, j: number) => {
                     const id = `${i}-${j}`
                     const itemAmount = itemAmounts[id]
@@ -92,7 +93,7 @@ export function Calculator() {
         <div key={'laundry'}>
             {showCategory('laundry') ? <h2>Was Service</h2> : null}
             {(!viewSelected || itemAmounts['laundry']) ? <LaundryCalculatorItem id={'laundry'}
-                                    name={'Wasgoed (Kg)'}
+                                    name={'laundry-kg'}
                                     price={0}
                                     amount={itemAmounts['laundry']}
                                     setAmount={setAmount}

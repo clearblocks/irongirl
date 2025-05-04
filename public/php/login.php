@@ -4,7 +4,8 @@ if ($config['CORS']) {
     require_once "cors.php";
 }
 
-ini_set('session.cookie_lifetime', 5184000);
+$cookieLifeTime = 60 * 60 * 24 * 60;
+ini_set('session.cookie_lifetime', $cookieLifeTime);
 session_start();
 
 if ($_SESSION['logged_in'] ?? false) {

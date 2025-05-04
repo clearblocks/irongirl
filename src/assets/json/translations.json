@@ -343,6 +343,10 @@
     "laundry-extra": {
       "nl": "Elke extra kg",
       "en": "Each additional kg"
+    },
+    "laundry-kg": {
+      "nl": "Wasgoed (Kg)",
+      "en": "Laundry (Kg)"
     }
   }
 }

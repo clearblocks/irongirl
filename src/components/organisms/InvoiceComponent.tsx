@@ -48,10 +48,11 @@ export function InvoiceComponent() {
                 </div>
                 <div className={'invoice-items'}>
                     {invoice.invoiceItems.map((item, idx) =>
-                        <CalculatorItem id={`${idx}`} name={item.item} price={0} amount={item.amount}
+                        <CalculatorItem id={`${idx}`} key={idx} name={item.item} price={0} amount={item.amount}
                                         setAmount={() => {
                                         }} readOnly={true}
-                                        calculatePrice={() => item.totalPrice}/>)}
+                                        calculatePrice={() => item.totalPrice}
+                                        translateName={false}/>)}
                     <div className={"calculator-total-bottom"}>
                         <span>Totaal:</span>
                         <Price price={invoice.totalPrice}/>
