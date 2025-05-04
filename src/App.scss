@@ -203,14 +203,10 @@ header {
   .language-select {
 
     position: absolute;
-    left: 15px;
+
     z-index: 1;
-
+    left: 15px;
     padding: 14px;
-
-    @media screen and (min-width: $desktop) {
-      right: 0;
-    }
 
     img {
       width: 85px;
