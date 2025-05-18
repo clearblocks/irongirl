@@ -11,14 +11,13 @@ export type CalculatorItemProps = {
     setAmount: (id: string, amount: number | undefined) => void,
     readOnly: boolean,
     calculatePrice?: (amount: number | undefined, price: number) => number
-    translateName?: boolean
 }
 
 function calcIroningPrice(amount: number | undefined, price: number): number {
     return (amount || 0) * price
 }
 
-export function CalculatorItem({id, name, price, amount, setAmount, readOnly, calculatePrice = calcIroningPrice, translateName = true}: CalculatorItemProps) {
+export function CalculatorItem({id, name, price, amount, setAmount, readOnly, calculatePrice = calcIroningPrice}: CalculatorItemProps) {
     const {translate} = useLanguage();
 
     function up() {
@@ -44,8 +43,13 @@ export function CalculatorItem({id, name, price, amount, setAmount, readOnly, ca
         return amount
     }
 
+    let itemName = name
+    try {
+        itemName = translate(`items.${name}`)
+    } catch {}
+
     return <div className={classNames("calculator-item ", {'active': (amount || 0) > 0})}>
-        <span className={'item-name'}>{translateName ? translate(`items.${name}`): name}</span>
+        <span className={'item-name'}>{itemName}</span>
         {!readOnly && <div className={"calc-button calc-button-min"} onClick={down}>-</div>}
         {!readOnly && <div className={"calc-button calc-button-plus"} onClick={up}>+</div>}
         {readOnly ? <span className={'read-item-amount'}>{showAmount(amount)}:</span> :

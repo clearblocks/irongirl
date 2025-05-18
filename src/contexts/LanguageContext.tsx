@@ -9,7 +9,9 @@ type LanguageContextType = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<string>('nl');
+
+  const browserLanguage = navigator.language ? navigator.language.split('-')[0] : 'nl'
+  const [language, setLanguage] = useState<string>(browserLanguage);
 
   const translate = useCallback(<T extends string | string[]>(key: string): T => {
     const k = key.split(".");

@@ -51,8 +51,7 @@ export function InvoiceComponent() {
                         <CalculatorItem id={`${idx}`} key={idx} name={item.item} price={0} amount={item.amount}
                                         setAmount={() => {
                                         }} readOnly={true}
-                                        calculatePrice={() => item.totalPrice}
-                                        translateName={false}/>)}
+                                        calculatePrice={() => item.totalPrice}/>)}
                     <div className={"calculator-total-bottom"}>
                         <span>Totaal:</span>
                         <Price price={invoice.totalPrice}/>

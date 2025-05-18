@@ -27,9 +27,9 @@ export function WebApp() {
         <Hero/>
         <Services refs={refs} serviceOnClick={serviceOnClick}/>
         <SocialProof/>
-        <CallToActionPhone/>
-        <AboutUs washingRef={refs.washingRef} ironingRef={refs.ironingRef}/>
         <CallToActionWhatsApp ref={refs.contactRef}/>
+        <AboutUs washingRef={refs.washingRef} ironingRef={refs.ironingRef}/>
+        <CallToActionPhone/>
         <Contact/>
         <ImageDiv src={TwoMachines} alt={"washing machine and dryer"} />
         <Pricing ref={refs.pricesRef}/>
