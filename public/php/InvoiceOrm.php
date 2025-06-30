@@ -75,7 +75,9 @@ class InvoiceOrm {
     }
 
     public function createInvoice(string $customerName, int $totalPrice): array {
-        $vat = round(($totalPrice / 121) * 21);
+        // $vat = round(($totalPrice / 121) * 21);
+        // Currently no VAT is charged because of the KOR
+        $vat = 0;
         $totalPriceExVat = $totalPrice - $vat;
         $invoiceNumber = $this->getNextInvoiceNumber();
         $query = "INSERT INTO invoices (invoice_number, customer_name, total_price_ex_vat, vat, total_price, created_datetime)
@@ -86,7 +88,9 @@ class InvoiceOrm {
     }
 
     public function createInvoiceItem(int $invoiceId, string $item, int $amount, int $itemPrice, int $totalPrice) {
-        $vat = round(($totalPrice / 121) * 21);
+        // $vat = round(($totalPrice / 121) * 21);
+        // Currently no VAT is charged because of the KOR
+        $vat = 0;
         $totalPriceExVat = $totalPrice - $vat;
         $query = "INSERT INTO invoice_items (invoice_id, item, amount, item_price, total_price_ex_vat, vat, total_price)
                   VALUES     (?, ?, ?, ?, ?, ?, ?)";
