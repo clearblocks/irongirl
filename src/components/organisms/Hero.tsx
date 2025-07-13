@@ -13,8 +13,6 @@ export const Hero = () => {
         <span className={"span-large"}>{translate('hero.title')}</span><br/><br/>
         <span>{lines[0]}</span><br/>
         <span>{lines[1]}</span><br/><br/>
-        <span>{lines[2]}:</span><br/>
-        <span>06-33401173</span>
       </div>
     </div>
   )

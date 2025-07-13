@@ -167,15 +167,10 @@ h2, h3 {
 
 header {
   display: flex;
-  text-align: right;
-  padding-right: 20px;
+  justify-content: space-between;
   font-family: $font_inria;
   background-color: $header_color;
   color: $text_color;
-
-  div:first-child {
-    width: 90%;
-  }
 
   h1 {
     font-weight: normal;
@@ -188,26 +183,25 @@ header {
   }
 
   img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     padding: 20px 20px 20px 0;
 
 
     @media screen and (min-width: $desktop) {
+      width: 100px;
+      height: 100px;
       padding: 9px;
     }
   }
 
   .language-select {
 
-    position: absolute;
-
-    z-index: 1;
-    left: 15px;
-    padding: 14px;
+    margin-left: 30px;
+    margin-top: 20px;
 
     img {
-      width: 100px;
+      width: 120px;
       height: auto;
       cursor: pointer;
 
@@ -245,9 +239,9 @@ header {
     width: 50%;
 
     @media screen and (min-width: $desktop) {
-      width: 26%;
-      top: 150px;
-      left: 150px;
+      width: 35%;
+      top: 50px;
+      left: 50px;
       font-size: 34px;
     }
 
