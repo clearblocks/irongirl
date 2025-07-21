@@ -10,6 +10,7 @@ import TwoMachines from "./assets/img/two-machines.jpg";
 import {Pricing} from "./components/organisms/Pricing";
 import TableBasket from "./assets/img/table-basket.jpg";
 import {ImageDiv} from "./components/molecules/ImageDiv";
+import {TemporaryClosure} from "./components/organisms/TemporaryClosure";
 
 export function WebApp() {
     const refs = {
@@ -24,6 +25,7 @@ export function WebApp() {
     }
 
     return <>
+        <TemporaryClosure />
         <Hero/>
         <Services refs={refs} serviceOnClick={serviceOnClick}/>
         <SocialProof/>

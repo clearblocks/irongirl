@@ -694,10 +694,11 @@ footer {
 .temp-close {
   text-align: center;
   padding: 25px;
-  border-bottom: 10px solid $grey;
-  background-color: white;
+  //border-bottom: 10px solid $grey;
   z-index: 10000;
   height: 110px;
+
+  background-color: #ffc9e0;
 
   & + header {
     margin-top: 170px;
@@ -720,7 +721,15 @@ footer {
 
   h3 {
     margin: 0;
+    color: black;
+    font-size: 24px;
+    font-family: $font_inria !important;
   }
+}
+
+
+.fixed + * {
+  margin-top: 80px;
 }
 
 /*** Admin CSS ***/
