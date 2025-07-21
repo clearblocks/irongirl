@@ -696,7 +696,7 @@ footer {
   padding: 25px;
   //border-bottom: 10px solid $grey;
   z-index: 10000;
-  height: 110px;
+  min-height: 30px;
 
   background-color: #ffc9e0;
 
@@ -705,8 +705,6 @@ footer {
   }
 
   @media screen and (min-width: $desktop) {
-    height: 30px;
-
     & + header {
       margin-top: 90px;
     }
@@ -722,8 +720,12 @@ footer {
   h3 {
     margin: 0;
     color: black;
-    font-size: 24px;
+    font-size: 40px;
     font-family: $font_inria !important;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 24px;
+    }
   }
 }
 
