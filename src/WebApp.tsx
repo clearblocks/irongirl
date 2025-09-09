@@ -25,7 +25,6 @@ export function WebApp() {
     }
 
     return <>
-        <TemporaryClosure />
         <Hero/>
         <Services refs={refs} serviceOnClick={serviceOnClick}/>
         <SocialProof/>
