@@ -44,12 +44,13 @@
   "category": "linnen-category",
   "categoryType": "bed",
   "priceDataSet": [
-    { "name": "sheet-1", "price": 220 },
-    { "name": "sheet-2", "price": 300 },
-    { "name": "bed-1", "price": 250 },
-    { "name": "bed-2", "price": 370 },
-    { "name": "pillowcase", "price": 100 },
-    { "name": "table-cloth", "price": 300 },
-    { "name": "table-runner", "price": 110 }
+    { "name": "sheet-1", "price": 420 },
+    { "name": "sheet-2", "price": 500 },
+    { "name": "bed-1", "price": 450 },
+    { "name": "bed-2", "price": 570 },
+    { "name": "pillowcase", "price": 200 },
+    { "name": "table-cloth-small", "price": 500 },
+    { "name": "table-cloth-large", "price": 1000 },
+    { "name": "table-runner", "price": 310 }
   ]
 }]

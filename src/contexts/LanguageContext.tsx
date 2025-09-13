@@ -4,6 +4,7 @@ type LanguageContextType = {
   language: string;
   setLanguage: (lang: string) => void;
   translate: <T extends string | string[]>(key: string) => T;
+  translateHTML: (key: string) => TrustedHTML;
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -30,11 +31,17 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     throw Error(`Translation missing: ${key}`);
   }, [language]);
 
+  const translateHTML = useCallback((key: string): TrustedHTML => {
+    return translate(key) as unknown as TrustedHTML
+  }, [language])
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, translate }}>
+    <LanguageContext.Provider value={{ language, setLanguage, translate, translateHTML }}>
       {children}
     </LanguageContext.Provider>
   );
+
+
 };
 
 export const useLanguage = () => {

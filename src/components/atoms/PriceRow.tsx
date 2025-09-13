@@ -8,10 +8,10 @@ export type PriceData = {
 }
 
 export const PriceRow = ({name, price}: PriceData) => {
-  const {translate} = useLanguage();
+  const {translateHTML} = useLanguage();
   return (
     <div className={"price-row"}>
-      <span className={"item-name"}>{translate(`items.${name}`)}</span>
+      <span className={"item-name"} dangerouslySetInnerHTML={{__html: translateHTML(`items.${name}`)}} />
       <Price price={price}/>
     </div>
   )

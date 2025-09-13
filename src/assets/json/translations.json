@@ -326,9 +326,13 @@
       "nl": "Kussensloop",
       "en": "Pillowcase"
     },
-    "table-cloth": {
-      "nl": "Tafellaken",
-      "en": "Tablecloth"
+    "table-cloth-small": {
+      "nl": "Tafellaken (klein, tot 4m<sup>2</sup>)",
+      "en": "Tablecloth (small, up to 4m<sup>2</sup>)"
+    },
+    "table-cloth-large": {
+      "nl": "Tafellaken (groot, vanaf 4m<sup>2</sup>)",
+      "en": "Tablecloth (large, 4m<sup>2</sup> and up)"
     },
     "table-runner": {
       "nl": "Tafelloper",
