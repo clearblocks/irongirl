@@ -1,0 +1,526 @@
+.header,
+.mainScreenFrame {
+  overflow: hidden;
+  display: flex;
+}
+.mainScreenFrame {
+  width: 100%;
+  height: 956px;
+  position: relative;
+  background-color: var(--Hero-white);
+  border: 1px solid var(--color-lightpink);
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: var(--fs-32);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+.header {
+  align-self: stretch;
+  background-color: var(--color-pink);
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 7px 4px;
+  font-size: var(--fs-24);
+  color: var(--color-hotpink);
+  font-family: var(--font-italianno);
+}
+.logo {
+  width: 59px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.e868e74436704fa3990935fff8Icon {
+  width: 41px;
+  position: relative;
+  border-radius: 50px;
+  height: 49px;
+  object-fit: cover;
+  z-index: 0;
+}
+.irongirl {
+  width: 59px;
+  position: absolute;
+  margin: 0 !important;
+  top: 22px;
+  left: -2px;
+  display: inline-block;
+  z-index: 1;
+}
+.hero,
+.heroContent {
+  display: flex;
+  flex-direction: column;
+}
+.hero {
+  align-self: stretch;
+  height: 180px;
+  overflow: hidden;
+  flex-shrink: 0;
+  align-items: flex-start;
+  padding: var(--padding-15) 16px;
+  box-sizing: border-box;
+  background-image: url(/public/Hero@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  text-align: center;
+  font-size: var(--fs-15);
+  color: var(--Hero-white);
+  font-family: var(--font-inria-serif);
+}
+.heroContent {
+  align-items: center;
+  gap: 13px;
+}
+.strijkserviceVleutendeMeernContainer {
+  position: relative;
+}
+.enGoed,
+.strijkservice {
+  margin: 0;
+}
+.enGoed {
+  white-space: pre-wrap;
+}
+.telefoonOfWhatsappContainer {
+  position: relative;
+  font-size: 11px;
+}
+.services {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 25px var(--padding-20);
+  gap: 25px;
+}
+.wassenCard {
+  height: 255px;
+  width: 352px;
+  border-radius: var(--br-30);
+  background-color: var(--color-lavenderblush);
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-20) var(--padding-10);
+  box-sizing: border-box;
+  gap: var(--gap-18);
+  text-align: left;
+  font-size: var(--fs-24);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+.wassen {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+}
+.washingIcon1 {
+  width: 42px;
+  position: relative;
+  max-height: 100%;
+  object-fit: cover;
+}
+.laatWeZorgeloos {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--fs-16);
+  text-align: center;
+}
+.button {
+  width: 112px;
+  height: var(--height-36);
+  box-shadow: var(--shadow-inner);
+  padding: var(--padding-0) var(--padding-26);
+  box-sizing: border-box;
+}
+.ironIcon {
+  width: 57px;
+  height: 57px;
+  position: relative;
+  object-fit: cover;
+}
+.contactCard {
+  height: 255px;
+  width: 352px;
+  border-radius: var(--br-30);
+  background-color: var(--color-lavenderblush);
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-20) var(--padding-10);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-18);
+  text-align: left;
+  font-size: var(--fs-24);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+.contact {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  z-index: 0;
+}
+.call93809791Icon {
+  width: 44px;
+  position: relative;
+  max-height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.neemContactOpVertelWatVoParent {
+  width: 332px;
+  margin: 0 !important;
+  position: absolute;
+  top: 152px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-18);
+  z-index: 2;
+  text-align: center;
+  font-size: var(--fs-16);
+}
+.neemContactOpContainer {
+  width: 332px;
+  position: relative;
+  display: inline-block;
+}
+.button2 {
+  width: 112px;
+  height: var(--height-36);
+  box-shadow: var(--shadow-inner);
+  border-radius: 25px;
+  background-color: var(--color-hotpink);
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-0) var(--padding-26);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: var(--fs-20);
+  color: var(--Hero-white);
+}
+.meer {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 500;
+  font-family: inherit;
+}
+.priceTag77119861Icon {
+  width: 53px;
+  position: relative;
+  max-height: 100%;
+  object-fit: cover;
+}
+.button3,
+.cta2 {
+  display: flex;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  color: var(--Hero-white);
+}
+.button3 {
+  width: 112px;
+  height: var(--height-36);
+  box-shadow: var(--shadow-inner);
+  border-radius: 25px;
+  background-color: var(--color-hotpink);
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-0) var(--padding-26);
+  font-size: var(--fs-20);
+}
+.cta2 {
+  align-self: stretch;
+  height: 310px;
+  align-items: flex-start;
+  padding: 19px 14px;
+  position: relative;
+  gap: var(--gap-10);
+  background-image: url(/public/CTA-2@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  text-align: left;
+  font-size: var(--fs-24);
+  font-family: var(--font-inter);
+}
+.maakEenAfspraak {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 500;
+  font-family: inherit;
+  z-index: 0;
+}
+.ctaButton {
+  height: 73px;
+  width: 190px;
+  margin: 0 !important;
+  position: absolute;
+  top: 48px;
+  left: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.klikHier {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+.alexanderShatovQsuer9xyoyUIcon {
+  width: 65px;
+  position: relative;
+  height: 86px;
+  object-fit: contain;
+}
+.ironGirlWasEnStrijkseviceWrapper {
+  align-self: stretch;
+  height: 150px;
+  box-shadow: var(--shadow-inner);
+  background-color: var(--color-whitesmoke-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-10);
+  box-sizing: border-box;
+  position: relative;
+  flex-shrink: 0;
+  font-size: var(--fs-24);
+  font-family: var(--font-kaisei-tokumin);
+}
+.ironGirlWas {
+  margin: 0 !important;
+  width: 344px;
+  position: absolute;
+  top: 52px;
+  left: 48px;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 0;
+}
+.hebJeHetTeDrukEnGeenTijWrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px var(--padding-20) 13px;
+  font-size: var(--fs-20);
+}
+.hebJeHetContainer {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: -0.04px;
+}
+.adobestock327562945Preview1Parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-0) var(--padding-20);
+}
+.adobestock327562945Preview1Icon {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.onzeWerkwijzeWrapper {
+  align-self: stretch;
+  height: 122px;
+  background-color: var(--color-whitesmoke-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-10);
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+.onzeWerkwijze {
+  margin: 0;
+  width: 256px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+}
+.maakEenAfspraakLaatWetenWrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-18) var(--padding-20);
+  font-size: var(--fs-20);
+}
+.maakEenAfspraakContainer {
+  align-self: stretch;
+  position: relative;
+}
+.maakEenAfspraakLaatWeten {
+  margin: 0;
+  padding-left: var(--padding-27);
+}
+.mainScreenFrameStrijken,
+.wassen2 {
+  font-size: var(--fs-32);
+  font-weight: 500;
+}
+.wassen2 {
+  font-family: var(--font-inter);
+}
+.mainScreenFrameStrijken {
+  margin: 0;
+}
+.image9Icon,
+.washingBackground1Icon {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.washingBackground1Icon {
+  object-fit: contain;
+}
+.mainScreenFrameContact {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+}
+.contact2 {
+  height: 660px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 9px var(--padding-20);
+  box-sizing: border-box;
+}
+.contact2,
+.cta1Icon,
+.prijzenHeader {
+  align-self: stretch;
+  flex-shrink: 0;
+}
+.cta1Icon {
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.prijzenHeader {
+  height: 236px;
+  background-color: var(--color-whitesmoke-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 44px 82px;
+  box-sizing: border-box;
+  gap: var(--gap-0);
+}
+.deBetalingKan {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: var(--fs-24);
+  font-weight: 400;
+  font-family: inherit;
+}
+.prijzenFrame {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-20) 40px;
+  gap: var(--gap-10);
+}
+.image2Icon {
+  position: relative;
+  max-width: 100%;
+  height: 276px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.cta11Icon,
+.footer,
+.image2Icon {
+  align-self: stretch;
+  overflow: hidden;
+}
+.cta11Icon {
+  position: relative;
+  max-width: 100%;
+  height: 294px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.footer {
+  background-color: var(--color-whitesmoke-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-20) var(--padding-10);
+  gap: var(--gap-10);
+}
+.copyright2025IrongirlnlPadContainer {
+  position: relative;
+  font-size: var(--fs-24);
+  line-height: 30px;
+  font-family: var(--font-inter);
+  color: var(--color-black);
+  text-align: center;
+  white-space: nowrap;
+}
+.googleMaps1Icon {
+  width: 44px;
+  position: relative;
+  max-height: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 244px) {
+  .mainScreenFrame {
+    height: var(--height-auto);
+  }
+}

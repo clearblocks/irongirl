@@ -1,0 +1,108 @@
+.strijkenPrijzen {
+  width: 100%;
+  height: 330px;
+  border-radius: var(--br-5);
+  background-color: var(--color-lavenderblush);
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-20) var(--padding-15);
+  box-sizing: border-box;
+  gap: var(--gap-18);
+  max-width: var(--max-w-600);
+  text-align: left;
+  font-size: var(--fs-24);
+  color: var(--color-hotpink);
+  font-family: var(--font-inter);
+}
+.damesEnHerenkleding,
+.strijken {
+  margin: 0;
+  position: relative;
+  font-weight: 600;
+  font-family: inherit;
+}
+.strijken {
+  font-size: inherit;
+}
+.damesEnHerenkleding {
+  font-size: var(--fs-20);
+}
+.priceTier,
+.prijzenList {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+}
+.prijzenList {
+  flex-direction: column;
+  gap: var(--gap-10);
+  font-size: var(--fs-16);
+  color: var(--color-black);
+}
+.priceTier {
+  height: var(--height-19);
+  border-bottom: var(--border-1);
+  box-sizing: border-box;
+  justify-content: space-between;
+  gap: var(--gap-0);
+}
+.tot6Kg {
+  position: relative;
+}
+.priceTier2,
+.priceTier3,
+.priceTier4,
+.priceTier5,
+.priceTier6,
+.strijkenPrijzenPriceTier {
+  align-self: stretch;
+  height: var(--height-19);
+  border-bottom: var(--border-1);
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-0);
+}
+@media screen and (max-width: 437px) {
+  .priceTier2 {
+    height: var(--height-auto);
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 261px) {
+  .priceTier6 {
+    height: var(--height-auto);
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 252px) {
+  .priceTier,
+  .strijkenPrijzen {
+    height: var(--height-auto);
+  }
+  .priceTier {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 229px) {
+  .priceTier3 {
+    height: var(--height-auto);
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 224px) {
+  .strijkenPrijzenPriceTier {
+    height: var(--height-auto);
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 208px) {
+  .priceTier4 {
+    height: var(--height-auto);
+    flex-wrap: wrap;
+  }
+}

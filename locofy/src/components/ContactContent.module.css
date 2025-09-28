@@ -1,0 +1,139 @@
+.contactContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 17px;
+  text-align: left;
+  font-size: var(--fs-20);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+.belOns {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+.call93809792Parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-10);
+}
+.call93809792Icon {
+  width: 34px;
+  position: relative;
+  max-height: 100%;
+  object-fit: cover;
+}
+.callNumber {
+  margin: 0;
+  width: 134px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.adres {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-10);
+}
+.googleMaps1Icon {
+  width: 35px;
+  max-height: 100%;
+  object-fit: cover;
+}
+.googleMaps1Icon,
+.paddenstoelenlaan153451PzContainer {
+  position: relative;
+}
+.pzVleuten {
+  margin: 0;
+}
+.stuurBericht {
+  width: 398px;
+  display: flex;
+  align-items: flex-end;
+  gap: var(--gap-10);
+}
+.mailIcon1 {
+  width: 63px;
+  position: relative;
+  max-height: 100%;
+  object-fit: cover;
+}
+.naamInput {
+  width: var(--width-400);
+  height: var(--height-24);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-0);
+}
+.naam {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+}
+.inputFields {
+  height: var(--height-24);
+  width: 270px;
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-10);
+}
+.emailInputChild {
+  height: var(--height-24);
+  width: 268px;
+  position: relative;
+}
+.emailInputChild,
+.messageBox,
+.phoneInputChild {
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.phoneInputChild {
+  height: var(--height-24);
+  width: 268px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--padding-10);
+}
+.messageBox {
+  width: var(--width-400);
+  height: 156px;
+  position: relative;
+}
+.submitArea,
+.submitButtonArea {
+  display: flex;
+  align-items: center;
+}
+.submitArea {
+  width: var(--width-400);
+  flex-direction: column;
+  color: var(--Hero-white);
+}
+.submitButtonArea {
+  box-shadow: var(--shadow-inner);
+  border-radius: 25px;
+  background-color: var(--color-hotpink);
+  overflow: hidden;
+  justify-content: center;
+  padding: var(--padding-8) var(--padding-18);
+}
