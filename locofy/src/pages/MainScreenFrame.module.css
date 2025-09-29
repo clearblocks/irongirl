@@ -1,6 +1,5 @@
 .header,
 .mainScreenFrame {
-  overflow: hidden;
   display: flex;
 }
 .mainScreenFrame {
