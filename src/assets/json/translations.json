@@ -238,6 +238,10 @@
       "nl": "Pantalon",
       "en": "Trousers"
     },
+    "jumpsuit": {
+      "nl": "Jumpsuit",
+      "en": "Jumpsuit"
+    },
     "dress": {
       "nl": "Jurk",
       "en": "Dress"
