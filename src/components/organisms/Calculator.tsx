@@ -51,9 +51,9 @@ export function Calculator() {
             try {
                 const result = await saveInvoice(customerName, itemAmounts)
                 navigate(`/admin/invoice/${result.invoiceNumber}`)
-            } catch (e) {
+            } catch (e: any) {
                 console.error(e)
-                setSaveError("Fout bij opslaan")
+                setSaveError(`Fout bij opslaan: ${e.message}`)
             }
         }
     }
