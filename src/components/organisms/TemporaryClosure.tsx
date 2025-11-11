@@ -3,7 +3,6 @@ import React, {useEffect, useRef, useState} from 'react';
 export const TemporaryClosure = () => {
   const [isFixed, setIsFixed] = useState(false);
   const closureRef = useRef<HTMLDivElement>(null);
-  const [fixedTop, setFixedTop] = useState(0);
   const [scrollTopFixed, setScrollTopFixed] = useState(0);
 
   useEffect(() => {
@@ -29,6 +28,6 @@ export const TemporaryClosure = () => {
 
   return (
     <div ref={closureRef} className={`temp-close ${isFixed ? 'fixed' : ''}`}>
-      <h3>Wegens vakantie zijn wij tussen 23 juli en 6 september gesloten.</h3>
+      <h3>Wegens vakantie zijn wij tussen 17 november en 13 december gesloten.</h3>
     </div>)
 };

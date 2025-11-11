@@ -1,4 +1,4 @@
-import React, {createRef, RefObject, useState} from 'react'
+import React, {createRef, RefObject} from 'react'
 import {Hero} from "./components/organisms/Hero";
 import {Services} from "./components/organisms/Services";
 import {SocialProof} from "./components/organisms/SocialProof";
@@ -13,27 +13,28 @@ import {ImageDiv} from "./components/molecules/ImageDiv";
 import {TemporaryClosure} from "./components/organisms/TemporaryClosure";
 
 export function WebApp() {
-    const refs = {
-        washingRef: createRef<HTMLDivElement>(),
-        ironingRef: createRef<HTMLDivElement>(),
-        pricesRef: createRef<HTMLDivElement>(),
-        contactRef: createRef<HTMLDivElement>()
-    }
+  const refs = {
+    washingRef: createRef<HTMLDivElement>(),
+    ironingRef: createRef<HTMLDivElement>(),
+    pricesRef: createRef<HTMLDivElement>(),
+    contactRef: createRef<HTMLDivElement>()
+  }
 
-    const serviceOnClick = (ref: RefObject<HTMLElement>) => {
-        ref?.current?.scrollIntoView({ behavior: 'smooth' })
-    }
+  const serviceOnClick = (ref: RefObject<HTMLElement>) => {
+    ref?.current?.scrollIntoView({behavior: 'smooth'})
+  }
 
-    return <>
-        <Hero/>
-        <Services refs={refs} serviceOnClick={serviceOnClick}/>
-        <SocialProof/>
-        <CallToActionWhatsApp ref={refs.contactRef}/>
-        <AboutUs washingRef={refs.washingRef} ironingRef={refs.ironingRef}/>
-        <CallToActionPhone/>
-        <Contact/>
-        <ImageDiv src={TwoMachines} alt={"washing machine and dryer"} />
-        <Pricing ref={refs.pricesRef}/>
-        <ImageDiv src={TableBasket} alt={"washing table"} />
-    </>
+  return <>
+    <TemporaryClosure/>
+    <Hero/>
+    <Services refs={refs} serviceOnClick={serviceOnClick}/>
+    <SocialProof/>
+    <CallToActionWhatsApp ref={refs.contactRef}/>
+    <AboutUs washingRef={refs.washingRef} ironingRef={refs.ironingRef}/>
+    <CallToActionPhone/>
+    <Contact/>
+    <ImageDiv src={TwoMachines} alt={"washing machine and dryer"}/>
+    <Pricing ref={refs.pricesRef}/>
+    <ImageDiv src={TableBasket} alt={"washing table"}/>
+  </>
 }
