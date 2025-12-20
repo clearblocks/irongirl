@@ -1,9 +1,12 @@
 import React, {useEffect, useRef, useState} from 'react';
+import {useLanguage} from "../../contexts/LanguageContext";
 
 export const TemporaryClosure = () => {
   const [isFixed, setIsFixed] = useState(false);
   const closureRef = useRef<HTMLDivElement>(null);
   const [scrollTopFixed, setScrollTopFixed] = useState(0);
+
+  const {translate} = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +31,6 @@ export const TemporaryClosure = () => {
 
   return (
     <div ref={closureRef} className={`temp-close ${isFixed ? 'fixed' : ''}`}>
-      <h3>Irongirl strijkservice is voor onbepaalde tijd gesloten.</h3>
+      <h3>{translate("temp-closure.text")}</h3>
     </div>)
 };
