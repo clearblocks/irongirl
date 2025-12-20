@@ -29,13 +29,15 @@ function createServices(translate: (lang: string) => string, {washingRef, ironin
     text:  translate('services.ironing'),
     buttonLabel:  translate('general.ironing'),
     ref: ironingRef
-  }, {
-    iconType: IconType.WhatsApp,
-    title: translate('general.contact'),
-    text: translate('services.contact'),
-    buttonLabel: translate('general.contact'),
-    ref: contactRef
-  }, {
+  },
+  //   {
+  //   iconType: IconType.WhatsApp,
+  //   title: translate('general.contact'),
+  //   text: translate('services.contact'),
+  //   buttonLabel: translate('general.contact'),
+  //   ref: contactRef
+  // },
+    {
     iconType: IconType.Price,
     title: translate('general.pricing'),
     text: translate('services.pricing'),

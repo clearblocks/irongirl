@@ -28,6 +28,6 @@ export const TemporaryClosure = () => {
 
   return (
     <div ref={closureRef} className={`temp-close ${isFixed ? 'fixed' : ''}`}>
-      <h3>Wegens vakantie zijn wij tussen 17 november en 13 december gesloten.</h3>
+      <h3>Irongirl strijkservice is voor onbepaalde tijd gesloten.</h3>
     </div>)
 };

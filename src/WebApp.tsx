@@ -29,10 +29,10 @@ export function WebApp() {
     <Hero/>
     <Services refs={refs} serviceOnClick={serviceOnClick}/>
     <SocialProof/>
-    <CallToActionWhatsApp ref={refs.contactRef}/>
+    {/*<CallToActionWhatsApp ref={refs.contactRef}/>*/}
     <AboutUs washingRef={refs.washingRef} ironingRef={refs.ironingRef}/>
-    <CallToActionPhone/>
-    <Contact/>
+    {/*<CallToActionPhone/>*/}
+    {/*<Contact/>*/}
     <ImageDiv src={TwoMachines} alt={"washing machine and dryer"}/>
     <Pricing ref={refs.pricesRef}/>
     <ImageDiv src={TableBasket} alt={"washing table"}/>

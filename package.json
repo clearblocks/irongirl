@@ -1,6 +1,6 @@
 {
   "name": "irongirl",
-  "version": "2.67",
+  "version": "2.68",
   "private": true,
   "dependencies": {
     "@aws-crypto/sha256-browser": "~5.2",
